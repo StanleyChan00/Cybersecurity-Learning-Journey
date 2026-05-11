@@ -1,5 +1,3 @@
-<style>h1 { border-bottom: 0; } </style>
-
 # TryHackMe Pre Security - Module 1
 
 ## Offensive Security introduction
