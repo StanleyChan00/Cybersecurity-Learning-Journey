@@ -1,4 +1,4 @@
-# TryHackMe Pre Security - Module 1
+# TryHackMe Pre Security - Module 1: Introduction to Cybersecurity 
 
 ## Offensive Security introduction
 This is ethical hacking in the sense of attempting to find weaknesses in a system before real hackers do.
