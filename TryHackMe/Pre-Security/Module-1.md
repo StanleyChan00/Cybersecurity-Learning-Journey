@@ -13,7 +13,7 @@ I have found that this is what as knowns as a "forced browsing attack" which is 
 
 
 ## Defensive Security Introduction
-This is essentially the main process of defending systems. Rather than attempting to poke holes in a system to find weaknesses, like offensive security, defensive security monitors and defends against attacks, or prevents them from happening in the first place.
+This is essentially the main process of defending systems. Rather than attempting to poke holes in a system to find weaknesses like offensive security, defensive security monitors and defends against attacks or prevents them from happening in the first place.
 
 The lab in this lesson has us acting as an SOC analyst.
 
