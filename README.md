@@ -1,6 +1,5 @@
 # Cybersecurity-Learning-Journey
-Documenting my learning journey as I progress toward becoming a cybersecurity professional. My goal is not merely to complete these courses and obtain these certifications, but to ensure that I thoroughly comprehend the nuances and intricacies of each topic.
-
+Documenting my learning journey as I progress toward becoming a cybersecurity professional. My goal is to ensure that I thoroughly understand the nuances and intricacies of each topic I study here, not simply go through everything like a checklist. 
 ## Current Goals
 - [ ] Complete TryHackMe Pre Security course
 - [ ] Complete TryHackMe SOC Level 1 course
