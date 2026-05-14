@@ -4,7 +4,7 @@ Documenting my learning journey as I progress toward becoming a cybersecurity pr
 ## Current Goals
 - [ ] Complete TryHackMe Pre Security course
 - [ ] Complete TryHackMe SOC Level 1 course
-- [ ] Obtain a Security+ Comptia certification
-- [ ] Obtain a CySa+ Comptia certification
+- [ ] Obtain a Comptia Security+ certification
+- [ ] Obtain a Comptia CySA+  certification
 - [ ] Obtain an AWS Certified Security – Specialty certification
 - [ ] Develop successful home projects
