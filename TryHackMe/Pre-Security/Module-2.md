@@ -54,7 +54,9 @@ A router connects networks together. A home router, for example, connects that p
 
 ### Subnetting:
 
-This is the process of splitting up a network into smaller individually separated networks.
+This is the process of splitting up a network into smaller individually separated networks. An example would be a business that has different departments within their organization dividing up their network so each department has their own unique subnet.
+
+This is very important for security as it isolates groups that shouldn't have access to another. For example, a Starbucks having multiple networks, one for employees, one for customer Wi-Fi, one for cashiers, one for cameras, etc... Its very important for these groups to be isolated. 
 
 This is done through **subnet masks**. 
 
@@ -107,7 +109,13 @@ By doing this, the network was effectively cut in half. It went from one network
 
 Thus the network has successfully been divded and grouped up into 2 subnets. If we want to divide it up into more subnets, we do the same thing and "borrow" another bit from the subnet mask(now /26). Which would now make for 4 subnets. /27 would be 8 subnets and so on. 
 
-Lastly just broadcast and default gateway/ talk about how practically subnetting is used and security importance and lastly finish lesson with ARP and DHCP
+**Default Gateway & Broadcast address:** These are usually the first and last address respectively on each subnet. The default gateway is the router which sends data out to different subnets or the internet and the broadcast address is used to send out data to all the devices within a subnet. 
+
+**Address Resolution Protocol(ARP):** This is how a device finds another device on the network. It sends a broadcast out to the network asking "who has X IP address". The device with that IP address responds with their MAC address. Now that device is identified and can be stored on the ARP cache.
+
+**Dynamic Host Configuration Protocol(DHCP):** This is how a device obtains an IP address. The process in which this happens can be remembered by the acronym "DORA"("Disocver. Offer. Request. Acknowledge").
+
+The device looks broadcasts, searching for the DHCP server. The DHCP server responds with an available IP address that's open to use. The device then confirms that it wants that IP address and the DHCP acknowledges and finalizes it. 
 
 ## OSI Model
 
