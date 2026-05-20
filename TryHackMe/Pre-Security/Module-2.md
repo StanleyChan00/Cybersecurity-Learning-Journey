@@ -34,11 +34,11 @@ Visually speaking, it’s just a tree branch that has further branches that stem
 
 All the data travels through the same branching cable.
 
----
-
 #### Ring Topology:
 
 All the devices are connected to each other in a form of a loop. Data can only travel in one direction through each device, like a circle.
+
+---
 
 #### Switch:
 
@@ -141,7 +141,9 @@ This layer receives "packets" (Next lesson covers this more) from the network la
 Also every network enabled computer has a “NIC”(Network Interface Card) which has the MAC address burned onto it.
 
 ### 3.) Network
-This is where all the network routing takes place, where data is sent through subnets or the internet. It takes "segments" from the transport layer and wraps them with IP addresses as **"packets"** before sending them on their way. 
+This is where all the network routing takes place, where data is sent through subnets or the internet. 
+
+It takes "segments" from the transport layer and wraps them with IP addresses as **"packets"** before sending them on their way. 
 
  Protocols for routing include:
  
@@ -180,5 +182,16 @@ The interface **between** the user and the network, which allows them to send an
 GUI(Graphical User Interface) or DNS(Domain Name System, how website addresses are translated into IP addresses).
 
 ## Packets & Frames
+As covered already in the OSI model - packets are data that's encapsulated in layer 3, the Network layer containing IP address information. 
+
+When sent to the 2nd layer, the Data Link layer, they're wrapped as "frames" which includes the physical MAC address. 
+
+Some packet headers that may be attached in layer 3:
+
+* Time to Live: Expiry timer on the packet
+* Checksum: Checks if the data was corrupted 
+* Source Address: As it sounds. Where it's sent from
+* Destination Address: As it sounds. The IP it is sent to.
+
 
 ## Extending Your Network
