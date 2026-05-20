@@ -68,7 +68,7 @@ Example: IP address:
 
 `192.168.1.10` is actually `11000000.10101000.00000001.00001010`
 
-This conversion happens within each octet and each octet has 8 values. Whenever one bit is flipped “on” as “1”, that value will get added with the rest of the other bytes that are also flipped “1”
+This conversion happens within each octet and each octet has 8 values. Whenever one bit is flipped “on” as “1”, that value will get added with the rest of the other bits that are also flipped “1”
 
 The positional values within an octet are as follows:
 
@@ -87,7 +87,7 @@ It looks like this for example: `255.255.255.0` or in binary `11111111.11111111.
 
 You line this up with the IP address of a device. Each "1" that the IP address lines up represents the network address. To illustrate:
 
-`11000000.10101000.00000001.000010101` - IP address: `192.168.1.10/24`
+`11000000.10101000.00000001.00001010` - IP address: `192.168.1.10/24`
 
 `11111111.11111111.11111111.00000000` - Subnet Mask: `255.255.255.0` 
 
@@ -95,7 +95,7 @@ Every time the 1 appears, we just carry it down from that same position within t
 
 `11000000.10101000.00000001.00000000` - Network address: `192.168.1.0`
 
-*(Just to note that `/24` I used is the notation for expressing the amount of "1s" in the subnet mask. Here, there are 24 "1s" — 3 octets. This nottion is called Classless Inter-Domain Routing(CIDR))*
+*(Just to note that `/24` used is the notation for expressing the amount of "1s" in the subnet mask. Here, there are 24 "1s" — 3 octets hence "/24". This notation is called Classless Inter-Domain Routing(CIDR))*
 
 **Subnetting:** In regards to the example above, the entire last octet is available for use. That means that there is a maximum of 256 devices/IP address that can be used on that network.
 
@@ -113,11 +113,71 @@ Thus the network has successfully been divded and grouped up into 2 subnets. If 
 
 **Address Resolution Protocol(ARP):** This is how a device finds another device on the network. It sends a broadcast out to the network asking "who has X IP address". The device with that IP address responds with their MAC address. Now that device is identified and can be stored on the ARP cache.
 
-**Dynamic Host Configuration Protocol(DHCP):** This is how a device obtains an IP address. The process in which this happens can be remembered by the acronym "DORA"("Disocver. Offer. Request. Acknowledge").
+**Dynamic Host Configuration Protocol(DHCP):** This is how a device obtains an IP address. The process in which this happens can be remembered by the acronym "DORA"("Discover. Offer. Request. Acknowledge").
 
-The device looks broadcasts, searching for the DHCP server. The DHCP server responds with an available IP address that's open to use. The device then confirms that it wants that IP address and the DHCP acknowledges and finalizes it. 
+The device sends out a broadcast, searching for the DHCP server. The DHCP server responds with an available IP address that's open to use. The device then confirms that it wants that IP address and the DHCP acknowledges and finalizes it. 
 
 ## OSI Model
+Open Systems Interconnection Model. This is the conceptual framework in how devices send, receive, and interpret data. 
+
+There's 7 layers. It can be remembered by this mnemonic:
+
+"Please Do Not Throw Sausage Pizzas Away" as in "Physical. Data link. Network. Transport. Session. Presentation. Application"
+
+At each layer from layer 7 moving towards the physical layer, the data gets wrapped up before getting sent to the next layer via **encapsulation**.
+
+**De-encapsulation** is the opposite process as data gets unwrapped moving from layer 1 and on.
+
+### 1.) Physical
+This is the physical real world layer that sends data via electricity or otherwise. All the wires, ethernet cables, etc lives here.
+
+The data chunks here are **bits**.
+
+### 2.) Data Link
+This is where physical MAC addresses are used to forward the data to the correct physical device. The ARP and MAC address knowledge lives here.
+
+This layer receives "packets" (Next lesson covers this more) from the network layer and adds in the physical MAC address for the receiving point and wraps it as **"frames"**
+
+Also every network enabled computer has a “NIC”(Network Interface Card) which has the MAC address burned onto it.
+
+### 3.) Network
+This is where all the network routing takes place, where data is sent through subnets or the internet. It takes "segments" from the transport layer and wraps them with IP addresses as **"packets"** before sending them on their way. 
+
+ Protocols for routing include:
+ 
+* Open Shortest Path First(OSPF)  
+* RIP(Routing Information Protocol)
+
+### 4.) Transport
+This layer determines how data is split up and actually sent. It wraps data as **"segments"** before sending it to the network layer.
+
+Two different Protocols:
+
+TCP(Transmission Control Protocol):
+* Keeps constant connection between devices for the entire duration in which data is sent and received
+* Reliability and guarantee is the goal
+
+UDP(User Datagram Protocol):
+* No continuous connection.
+* This is much faster but is also less reliable and it doesn’t care if data is received.
+* Packets sent can be lost and the receiver gets only half the “picture”
+* (Data chunks from this protocol are called **"datagrams"**)
+### 5.) Session
+This is the connection between the devices that is maintained while the communication between them is established and open.
+
+“Checkpoints” can also be used, which is as it sounds like. Also, the session is called a session when connection is successfully established.
+
+### 6.) Presentation
+This is where data is translated and formatted so that it's ready to be seen.
+
+Since computers speak in binary so this binary data needs to be translated so that it can understood by the application layer.
+
+This is also where encryption and data compression happens.
+
+### 7.) Application
+The interface **between** the user and the network, which allows them to send and receive data. 
+
+GUI(Graphical User Interface) or DNS(Domain Name System, how website addresses are translated into IP addresses).
 
 ## Packets & Frames
 
