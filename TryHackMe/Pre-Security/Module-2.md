@@ -216,6 +216,8 @@ Some crucial TCP headers:
 
 #### Three Way Handshake:
 
+As I already noted, TCP is the reliable protocol which keeps a constant connection the entire time until everything is finished. 
+
 <img width="50%" height="50%" alt="Three Way Handshake" src="https://github.com/user-attachments/assets/4172dee9-a548-4e3f-bca7-25d4779bbb36" />
 
 The picture from the lesson above is what this protocol looks like. 
@@ -245,6 +247,31 @@ The proper closure of the connection via FIN packets looks like the above.
 
 ### UDP/IP
 
+As previously noted, UDP is the much faster protocol than TCP. However it can lose data and have unstable connections. 
 
+It's a **stateless** protocol which does not require constant connection between the devices. Checksum is also not here as there is no regard for whether data is received or not.
 
+Some UDP packet headers:
+
+* Time to Live(TTL): Expiry time for the packet
+* Source & Destination Address
+* Source Port: Same as TCP header
+* Destination Port: Same as TCP header
+* Data
+
+UDP for example would be used for a video call. TCP would be used for file transfer. 
+
+### Ports
+As noted already, ports range from 0-65,535. We can imagine them as rooms.
+
+Each device has it's own 65,535 available private "rooms"(called Ephemeral ports) and there is a public("Well-Known") set of 65,535 rooms. Each time we open a tab that connects to youtube or Netflix on our laptop for example, we open up a random private port on our device which connects to the corresponding public port to route data to the correct program.
+
+Any ports from 0-1024 are "common ports". Here are some protocols on public ports:
+
+* File Transfer Protocol(FTP) - Port 21 - Download files from here
+* Secure Shell(SSH) - Port 22 - Used to securely login to systems
+* HyperText Trasnfer Protocol(HTTP) - Port 80 - Websites
+* HyperText Transfer Protocol Secure(HTTPS) - Port 443 - Encryped and secure HTTP for websites
+* Server Message Block(SMB) - Port 445 - Shares files as well as devices
+* Remote Desktop Protocol(RDP) - Port 3389 - Control a device over a network. Proprietary from Microsoft
 ## Extending Your Network
