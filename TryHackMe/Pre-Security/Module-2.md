@@ -188,10 +188,63 @@ When sent to the 2nd layer, the Data Link layer, they're wrapped as "frames" whi
 
 Some packet headers that may be attached in layer 3:
 
-* Time to Live: Expiry timer on the packet
-* Checksum: Checks if the data was corrupted 
-* Source Address: As it sounds. Where it's sent from
-* Destination Address: As it sounds. The IP it is sent to.
+* Time to Live(Expiry timer on the packet)
+* Checksum(Checks if the data was corrupted)
+* Source Address
+* Destination Address
+
+### Transmission Control Protocol(TCP) - The three way handshake: 
+Unlike the OSI model, which is a theoretical concept, the **TCP/IP** model is the current foundational archtiteture used today for the internet and modern networks. 
+
+It has 4 layers and is pretty much just a condensed version of the OSI model.
+
+1.) Network Interface(Basically all the hardware and physical stuff)
+2.) Internet(Network)
+3.) Transport
+4.) Application
+
+Some crucial TCP headers:
+
+* Source Port: Random available port chosen from 0-65535 that's opened by the sender to send a TCP packet
+* Destination Port: The receiving port. This is not a random port number chosen.
+* Source IP & Destination IP: As it sounds
+* Sequence Number: Explained more below
+* Acknowledgement Number: Sequence number + 1
+* Checksum: As explained prior
+* Data:
+* Flag: Determines how the packet should be handled by the three way handshake process below
+
+#### Three Way Handshake:
+
+<img width="50%" height="50%" alt="Three Way Handshake" src="https://github.com/user-attachments/assets/4172dee9-a548-4e3f-bca7-25d4779bbb36" />
+
+The picture from the lesson above is what this protocol looks like. 
+
+* **SYN** = Synchronize 
+
+* **ACK** = Acknowledge
+
+What happens here is:
+
+1.) The initial person at "SYN" picks a random number called "Initial Sequence Number"(ISN) and sends it to the receiver. T
+
+2.) The receiver then acknowledges that ISN and adds one to it. This is the acknowledgment number. They also have their own sequence number and send that back to the initial person. 
+
+3.) That initial person then acknowledges that new sequence number(By adding one) along with confirming their ISN +1, then sends it back a final time 
+
+Now the connection is established and the **DATA** message is sent. 
+
+There is also:
+
+* FIN = Properly closes the connection 
+* RST = last resort aborts/ends all connection
+
+<img width="50%" height="50%" alt="Closing Three Way Handshake" src="https://github.com/user-attachments/assets/7d4176c5-2d2f-4b1a-9940-a8961319b19a" />
+
+The proper closure of the connection via FIN packets looks like the above. 
+
+### UDP/IP
+
 
 
 ## Extending Your Network
