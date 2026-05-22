@@ -286,3 +286,28 @@ So anyone knows on my public IP asking for this specific port - our Minecraft se
 
 Port forwarding essentially just opens up this door(our port) for entry. 
 
+It allows the network to go from this:
+
+<img width="50%" height="50%" alt="Network 1" src="https://github.com/user-attachments/assets/94b2cf0d-334a-4c7c-a650-176e07df1d3f" />
+
+
+To this:
+
+<img width="50%" height="50%" alt="Port Forwarding" src="https://github.com/user-attachments/assets/0e25981a-a425-4cbc-92f0-34fe50c5dbb4" />
+
+### Firewalls 
+This is the border security of our network. It filters what can come in or out of a network. This is crucial for security because it's like a security guard filtering who can come into a building. 
+
+Filters can be determined by factors such as the traffic source/destination, port entry, protocol usage, etc.
+
+Can be categorized into 2-5 types. But primary categories taught in this lesson:
+
+* Stateless 
+* Stateful
+  
+In essence, stateless does not have memory and is strictly rules based.
+
+Whereas stateful is much more intelligent, is context & memory based("State Table"), and adapts to dynamic situations. 
+
+### VPN Basics 
+
