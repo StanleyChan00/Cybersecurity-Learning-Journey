@@ -274,4 +274,15 @@ Any ports from 0-1024 are "common ports". Here are some protocols on public port
 * HyperText Transfer Protocol Secure(HTTPS) - Port 443 - Encryped and secure HTTP for websites
 * Server Message Block(SMB) - Port 445 - Shares files as well as devices
 * Remote Desktop Protocol(RDP) - Port 3389 - Control a device over a network. Proprietary from Microsoft
+  
 ## Extending Your Network
+
+### Port Forwarding 
+Say I'm hosting a webserver,a minecraft server for example. Without port forwarding, my friend(let's say Jack) will not be able to access my server. Only those within my network have access to it.
+
+So to "open" it, I use port forwarding. That is, allowing access to my minecraft server(the port) via my router.
+
+So anyone knows on my public IP asking for this specific port - our Minecraft server, my router will now send them to that port on our private IP address.
+
+Port forwarding essentially just opens up this door(our port) for entry. 
+
