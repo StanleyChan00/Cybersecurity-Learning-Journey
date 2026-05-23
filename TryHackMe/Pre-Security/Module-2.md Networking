@@ -310,4 +310,20 @@ In essence, stateless does not have memory and is strictly rules based.
 Whereas stateful is much more intelligent, is context & memory based("State Table"), and adapts to dynamic situations. 
 
 ### VPN Basics 
+Virtual Private Network(VPN)
 
+From a consumer standpoint, we understand VPNs as a service that hides our IP from the public internet as well as encrypts our data so it's not visible to the router or our ISP.(I am currently using a VPN today!)
+
+However, VPNs also have a corporate purpose that works in fundamentally the same way. For example, it would allow an employee to go home and access the office's network on their device at home while remaining secure as all the data is encrypted.
+
+They're virtually dropped right into the office network while they are at their home. 
+
+Another method, which is what the TryHackMe course is using as an example, is 2 offices forming a "tunnel" between them by connecting two devices across each other as a VPN, forming a "third" network. 
+
+Which allows files to be shared across each other securely in the same way through that "third" network. 
+
+Some VPN Technologies:
+
+* Point-to-Point Protocol(PPP) - PPTP uses this protocol. 
+* Point-to-Point Tunneling Protocol(PPTP)
+* IPSec
