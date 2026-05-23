@@ -338,4 +338,9 @@ Two different modes in which IPSec is used:
 1) Transport mode: Only encrypts the data, not the IP
 2) Tunnel mode: Encrypts both the data and IP by wrapping them in a new packet(Site-to-Site VPNs)
 
+### VLAN
+Switches can operate on both layer 2 and 3. However layer 2 switches can't operate on layer 3 as they lack the ability to read IP addresses. Layer 3 switches can do both. 
 
+Virtual Local Area Networks(VLANs) are very similar to subnets. However, subnets split up a network based off of IP addresses. Whereas VLANs split up a network right out of layer 2 using the switch. Switches isolate the "networks" within the device itself virtually. 
+
+Subnets and VLANs are almost always paired together, used alongside each other.
