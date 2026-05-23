@@ -318,12 +318,23 @@ However, VPNs also have a corporate purpose that works in fundamentally the same
 
 They're virtually dropped right into the office network while they are at their home. 
 
-Another method, which is what the TryHackMe course is using as an example, is 2 offices forming a "tunnel" between them by connecting two devices across each other as a VPN, forming a "third" network. 
+Another method, which is what the TryHackMe course is using as an example, is 2 offices forming a "tunnel" between them by connecting two devices across each other as a VPN, forming a "third" network. (These are Site-to-Site VPNs)
 
 Which allows files to be shared across each other securely in the same way through that "third" network. 
 
 Some VPN Technologies:
 
-* Point-to-Point Protocol(PPP) - PPTP uses this protocol. 
-* Point-to-Point Tunneling Protocol(PPTP)
-* IPSec
+* Point-to-Point Protocol(PPP) - PPTP uses this protocol. This is what authenticates the user and packages the data. Can not travel out of the network on it's own.
+* Point-to-Point Tunneling Protocol(PPTP) - This is what wraps the PPP data and allows it to travel
+  *(note PPP & PPTP are old and outdated/obsolete. Encryption is weak and big security flaws)*
+* Internet Protocol Security(IPSec) - This is the main VPN protocol suite(It's not a single protocol but a collection of protocols) used today. Quickly, how it's used:
+
+Three main protocols used by IPSec:
+1.) Authentication Header(AH) - Authenticates the data and also checks for data corruption(like checksum)
+2.) Encapsulating Security Payload(ESP) - Encrypts the data
+3.) Internet Key Exchange(IKE) - Sets up how the devices talks to each other and securely share the encryption keys
+
+Two different modes in which IPSec is used:
+1.) Transport mode: Only encrypts the data, not the IP
+2.) Tunnel mode: Encrypts both the data and IP by wrapping them in a new packet(Site-to-Site VPNs)
+
