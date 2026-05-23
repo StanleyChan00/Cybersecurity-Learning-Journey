@@ -330,11 +330,12 @@ Some VPN Technologies:
 * Internet Protocol Security(IPSec) - This is the main VPN protocol suite(It's not a single protocol but a collection of protocols) used today. Quickly, how it's used:
 
 Three main protocols used by IPSec:
-1.) Authentication Header(AH) - Authenticates the data and also checks for data corruption(like checksum)
-2.) Encapsulating Security Payload(ESP) - Encrypts the data
-3.) Internet Key Exchange(IKE) - Sets up how the devices talks to each other and securely share the encryption keys
-
+1) Authentication Header(AH) - Authenticates the data and also checks for data corruption(like checksum)
+2) Encapsulating Security Payload(ESP) - Encrypts the data
+3) Internet Key Exchange(IKE) - Sets up how the devices talks to each other and securely share the encryption keys
+   
 Two different modes in which IPSec is used:
-1.) Transport mode: Only encrypts the data, not the IP
-2.) Tunnel mode: Encrypts both the data and IP by wrapping them in a new packet(Site-to-Site VPNs)
+1) Transport mode: Only encrypts the data, not the IP
+2) Tunnel mode: Encrypts both the data and IP by wrapping them in a new packet(Site-to-Site VPNs)
+
 
