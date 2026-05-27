@@ -44,15 +44,36 @@ On top of this though. ypu can stack multiple subdomains on top of each other li
 However, the entire domain can't be more than 253 characters.
 
 ### DNS record Types
+If we imagine a DNS server to be a spreadsheet, each cell in that spreadsheet is a domain name for a website. Those cells are called "records". However, each cell doesn’t **have** to be a website name. 
+
+There are different "types" of records that exist within the DNS. Here are some commond kinds:
 
 #### A Records
-
+Points to an IPv4 IP address.
 #### AAAA Record
-
+Points to an IPv6 IP address.
 #### CNAME Record
+This points to a different domain name and thus the IP address associated with that separate domain name.
 
+For example, say `google.com` is an A type record resolved to the IP address: `192.0.2.1`
+
+`admin.google.com` can be pointed towards `google.com` and that same IP address associated with the `google.com` domain name. 
+
+This way, if the server or IP of google.com is changed, you don't have to go to each subdomain connected to it and individuallly change the IP address/server of each subdomain.
+
+Since each subdomain points towards that main domain, everything will be updated all at one time. 
 #### MX Record
+This stands for "Mail Exchanger" 
 
+This points a domain towards a server that's handling the emails.
+
+For example, if someone has an email `Stanley@tryhackme.com` and someone sends an email to this account, the DNS server will then look at the records for the MX record of this domain to direct traffic towardss.
+
+So in this case as an example, it would point to Outlook that's handling the emails. So the MX record would say: `mail.protection.outlook.com`
+
+Outlook gets the email and sees that its for `Stanley@tryhackme.com` and sends it to the inbox matched to that respective account. 
+
+(There are also priority values which directs directs traffic towards the next server if the previous one is down)
 #### TXT Record
 
 
