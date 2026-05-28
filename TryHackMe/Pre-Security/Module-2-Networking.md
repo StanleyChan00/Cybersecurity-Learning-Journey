@@ -105,7 +105,7 @@ Now, say we want to division out this network and have 2 seperate subnets instea
 
 By doing this, the network was effectively cut in half. It went from one network with 256 devices to two networks with 128 devices each. All the devices with an IP address of:
 
-`192.168.1.0/25 through `192.168.1.127/25` are now in the first subnet, say the accounting department. While the IP addresses of: `192.168.1.128/25` through `192.168.1.255/25` are in the second subnet, say the HR department.
+`192.168.1.0/25` through `192.168.1.127/25` are now in the first subnet, say the accounting department. While the IP addresses of: `192.168.1.128/25` through `192.168.1.255/25` are in the second subnet, say the HR department.
 
 Thus the network has successfully been divded and grouped up into 2 subnets. If we want to divide it up into more subnets, we do the same thing and "borrow" another bit from the subnet mask(now /26). Which would now make for 4 subnets. /27 would be 8 subnets and so on. 
 
