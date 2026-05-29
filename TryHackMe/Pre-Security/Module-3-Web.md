@@ -135,6 +135,32 @@ The command format looks like:
 Windows uses a single "-" while linux & macs uses two dashes: "--" but they also accept windows styles.
 ___
 ## HTTP in Detail
+**HyperText Transfer Protocol(HTTP)** is the protocol(**Port 80**) used to get or send data from a web server. 
+
+**HyperText Transfer Protocol Secure(HTTPS)** is the exact same protocol(**Port 443**) as HTTP but wrapped in encryption to ensure data sent is secure. On top of this, it also ensures that the website we are visiting is in fact the website it claims to be. It authenticates the site for our assurance. 
+
+HTTPS uses the protocol "Secure Sockets Layer/Transport Layer Security"(SSL/TLS) to **authenticate** the website and then to **encrypt** the data. 
+### Requests and Responses
+#### Parts of a URL(Uniform Resource Locator)
+Pictured below are the segments of a URL. (All the parts of the URL do not have to be in use)
+
+<img width="50%" height="50%" alt="URL" src="https://github.com/user-attachments/assets/748a62cd-a1d6-45c8-956e-ff7f172c678b" />
+
+**Scheme:** This is the protocol used to access the website like http, https, FTP(File Transfer Protocol), etc. This always ends with `://` or `:`(sometimes)
+
+**User:** If there is a log in used on the website - the username/password can be here or added here. However in modern times, this is no longer the case as it's a security nightmare. 
+
+**Host:** The domain or IP of the server 
+
+**Port:** The port we are connecting to. If the port is omitted in the URL, then it defaults to the port for the scheme within the URL(HTTPS = port 443 for example).
+
+**Path:** The file name/location of the exact data we are requesting
+
+**Query String:** This always starts with a "?" and is what gives further information to obtain more specific pieces of data on the server. It has A format that looks like this: `?[PARAMETE]=[VALUE]&[MORE PARAMETERS]=[VALUE]`. You can continue adding more values with the `&` symbol. 
+
+**Fragment:** This always starts with `#` and links you to certain spots on that exact webpage you are on. No loading or new information is needed from the server. It only allows you to jump to spots within a page you are already on unless the link itself is to a new page. 
+
+
 
 ## How Websites Work
 
