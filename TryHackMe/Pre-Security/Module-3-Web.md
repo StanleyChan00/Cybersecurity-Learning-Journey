@@ -123,6 +123,17 @@ As stated above, these store the DNS records.
 Depending on the record type, the DNS record is sent back to the recursive DNS server, where a copy will be stored in it's local cache for future use, then sent back to the original device requesting the domain. 
 
 DNS records all come with a Time To Live(TTL) value which represents how long it will live in the local cache before it "expires" and you'd have to look it up again. 
+
+___
+#### Quick lab
+We can use a DNS lookup tool at home on our devices via the respective terminals on our operating systems. 
+
+The command format looks like:
+
+`nslookup -type+[RECORD_TYPE] [DOMAIN]`
+
+Windows uses a single "-" while linux & macs uses two dashes: "--" but they also accept windows styles.
+___
 ## HTTP in Detail
 
 ## How Websites Work
