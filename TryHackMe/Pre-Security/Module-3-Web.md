@@ -75,10 +75,54 @@ Outlook gets the email and sees that its for `Stanley@tryhackme.com` and sends i
 
 (There are also priority values which directs directs traffic towards the next server if the previous one is down)
 #### TXT Record
+This stands for "text". As it sounds, it allows the domain owner to attach any free text onto that record like a sort of sticky note. 
 
+They were originally used as notes readable to humans. However, now they function more for things like **domain owner verification** or **email security**.
 
+For example: If I own a domain and want to use a third party service for that domain, that third party will need to verify I actually own the domain before they let me use it.
+
+So in doing so, they may send a random string of text that I will then paste as a TXT record for the domain. That verifies to them that I own the domain and things can now proceed. 
+
+It's also important for **email security**
+
+The protocol used for sending emails(Called "Simple Mail Transfer Protocol", "SMPT") has no verification check to authenticate if the user sending the email is actually using that email.
+
+Technically, any person could send an email using any "sender" address, pretending to be anyone in the world. 
+
+Receiving email servers use TXT records to prevent this. So anyone using an email address with their own domain name will be protected against others attempting to spoof their account when the receiving server's protocol checks(via TXT records) for authenticity fails.
+
+Three main frameworks used:
+
+* __Sender Policy Framework(SPF)__ - Lists all authorized IP addresses allowed to send emails on behalf of this domain
+* __DomainKeys Identified Mail(DKIM)__ - Uses a private key stored on email servers to generate a signature which has to match mathematically to the public key stored on the TXT record in order to be authenticated
+* __Domain-Based Message Authentication, Reporting, and Conformance(DMARC)__ - It tells the server what to do if SPF or DKIM fails. 
 ### What happens when you make a request.
+When a device requests a website, it goes through a series of steps to translate the domain name into the IP address. It looks as follows:
+<img width="50%" height="50%" alt="DNS Request" src="https://github.com/user-attachments/assets/135fdb1f-b541-483d-8a77-a3a13584fd5f" />
 
+#### 1.) Local Check
+This checks your local cache on your device to see if it remembers the address. If yes, then you don't need anymore steps!
+
+If no, then it sends a request to the "Recursive" DNS Server.
+#### 2.) Recursive DNS Server
+This server is usually provided by the ISP. It checks it's own local cache and if found, it returns the result back to your computer! 
+
+If not, it makes a request to the "Root" DNS Server.
+#### 3.) Root DNS Server
+This server does not have any DNS information in regards to the IP address, on it's own. However, it's job is to redirect us to the TLD of our DNS request.
+
+If `tryhackme.com` for example, it will send us to the respective `.com` TLD Server.
+#### 4.) TLD Server
+This server's job is to point us toward the "Authoritative" server, also called the Nameserver because it stores the actual DNS records and associated IP addresses, etc.
+
+There will usually be multiple nameservers as redundancy in case one fails. 
+
+#### 5.) Authoritative Server or Nameserver
+As stated above, these store the DNS records. 
+
+Depending on the record type, the DNS record is sent back to the recursive DNS server, where a copy will be stored in it's local cache for future use, then sent back to the original device requesting the domain. 
+
+DNS records all come with a Time To Live(TTL) value which represents how long it will live in the local cache before it "expires" and you'd have to look it up again. 
 ## HTTP in Detail
 
 ## How Websites Work
