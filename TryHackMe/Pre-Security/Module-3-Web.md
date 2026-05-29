@@ -213,12 +213,35 @@ Content-Length: 98
 
 Lastly, the body is the actual data sent back that we requested in it's raw form. In this case, it is HTML coded website data
 
-**Types of HTTP Status Codes**
+#### HTTP Status Codes
+Types of Status codes:
 * `1xx`(Informational) = The request was received and is currently in process(Rarely seen)
 * `2xx`(Success) = Everything is good
 * `3xx`(Redirection) = What we requested moved somewhere else and we need to be redirected to a different URL
 * `4xx`(Client Error) = We made a mistake on our end
 * `5xx`(Server Error) = The server crashed or something happened on their end
+
+Common Status Codes:
+* `200 OK` = All good. Successful
+* `201 Created` = Data has been created in response to what we requested
+* `301 Moved Permanently` = The URL was permanently moved to a different one
+* `302 Found` = The URL was only temporarily moved
+* `400 Bad Request` = Something is either wrong or missing in our request.
+* `401 Not Authorized` = We're not allowed to visit this page unless we have been authorized in like through a log-in for example.
+* `403 Forbidden` = You have specifically been blocked from visiting this page
+* `405 Method Not Allowed` = The specific method we used is not allowed for this specific resource/URL end point
+* `404 Page Not Found` = The URL entered does not exist.
+* `500 Internal Server Error` = The server has some error that it is unable to handle currently
+* `503 Service Unavailable` = The server is currently down.
+
+#### HTTP Methods
+These are how we tell the server what actions we want to do when making a request. The most common request methods are:
+
+* `GET` Request: How we obtain data from the server.
+* `POST` Request: How we submit data TO the server
+* `PUT` Request: How we replace data with new data
+* `PATCH` Request: How we modify part of an existing piece of data without replacing the whole thing. 
+* `DELETE` Request: How we remove data from the server
 
 ## How Websites Work
 
