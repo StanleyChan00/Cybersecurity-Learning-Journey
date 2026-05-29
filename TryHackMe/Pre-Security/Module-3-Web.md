@@ -146,7 +146,7 @@ Pictured below are the segments of a URL. (All the parts of the URL do not have 
 
 <img width="50%" height="50%" alt="URL" src="https://github.com/user-attachments/assets/748a62cd-a1d6-45c8-956e-ff7f172c678b" />
 
-**Scheme:** This is the protocol used to access the website like http, https, FTP(File Transfer Protocol), etc. This always ends with `://` or `:`(sometimes)
+**Scheme:** This is the protocol used to access the website like http, https, FTP(File Transfer Protocol), etc. This always ends with `://` or sometimes just `:`
 
 **User:** If there is a log in used on the website - the username/password can be here or added here. However in modern times, this is no longer the case as it's a security nightmare. 
 
@@ -160,7 +160,65 @@ Pictured below are the segments of a URL. (All the parts of the URL do not have 
 
 **Fragment:** This always starts with `#` and links you to certain spots on that exact webpage you are on. No loading or new information is needed from the server. It only allows you to jump to spots within a page you are already on unless the link itself is to a new page. 
 
+#### Making a Request
+When we type a URL into a browser, our browser converts it into a raw text block to send it over the network and make the request.
 
+It would look like this:
+
+```
+GET / HTTP/1.1
+
+Host: tryhackme.com
+User-Agent: Mozilla/5.0 Firefox/87.0
+Referer: https://tryhackme.com/
+
+```
+
+* The first line("Request Line" is the `GET` method along with the HTTP protocol version 1.1. The rest of the data are **headers** and are as follows:
+* The **host** is the website we want to access. 
+* The **User-Agent** is the web browser we are using. In this case, it is Firefox version 87.
+* The **Referer** is the web page that referred us to this website.
+* Lastly, these HTTP request **always** ends with a blank line which tells the server that our request is finished in regards to headers.
+
+#### HTTP Response
+After making the request to the server, the response we get back will look like this:
+
+```
+HTTP/1.1 200 OK
+
+Server: nginx/1.15.8
+Date: Fri, 09 Apr 2021 13:34:03 GMT
+Content-Type: text/html
+Content-Length: 98
+
+
+<html>
+<head>
+    <title>TryHackMe</title>
+</head>
+<body>
+    Welcome To TryHackMe.com
+</body>
+</html>
+
+```
+
+* HTTP/1.1 is again, version 1.1 of the HTTP protocol. `200 OK` is the **HTTP Status Code** which tells us whether the request failed or succeeded and why(Explained more below)
+**Response Headers:**
+* Server: The software the web server is running. In this case, its nginx, version 1.15.8
+* Date.
+* Content-Type: What kind of file is being delivered here(HTML, files, images, pdf, etc)
+* Content Length: The size of the response is so we know if data is missing
+* As always, the blank line confirms the end of the HTTP response in which the data of the body will start after
+
+Lastly, the body is the actual data sent back that we requested in it's raw form. In this case, it is HTML coded website data
+
+**Types of HTTP Status Codes**
+* `1xx`(Informational) = The request was received and is currently in process(Rarely seen)
+* `2xx`(Success) = Everything is good
+* `3xx`(Redirection) = What we requested moved somewhere else and we need to be redirected to a different URL
+* `4xx`(Client Error) = We made a mistake on our end
+* `5xx`(Server Error) = The server crashed or something happened on their end
 
 ## How Websites Work
 
