@@ -97,7 +97,8 @@ Three main frameworks used:
 * __DomainKeys Identified Mail(DKIM)__ - Uses a private key stored on email servers to generate a signature which has to match mathematically to the public key stored on the TXT record in order to be authenticated
 * __Domain-Based Message Authentication, Reporting, and Conformance(DMARC)__ - It tells the server what to do if SPF or DKIM fails. 
 ### What happens when you make a request.
-When a device requests a website, it goes through a series of steps to translate the domain name into the IP address. It looks as follows:
+When a device requests a website, it goes through a series of steps to translate the domain into the IP address. It looks as follows:
+
 <img width="50%" height="50%" alt="DNS Request" src="https://github.com/user-attachments/assets/135fdb1f-b541-483d-8a77-a3a13584fd5f" />
 
 #### 1.) Local Check
@@ -175,10 +176,12 @@ Referer: https://tryhackme.com/
 ```
 
 * The first line("Request Line" is the `GET` method along with the HTTP protocol version 1.1. The rest of the data are **headers** and are as follows:
-* The **host** is the website we want to access. 
-* The **User-Agent** is the web browser we are using. In this case, it is Firefox version 87.
-* The **Referer** is the web page that referred us to this website.
+* The `host` is the website we want to access. 
+* The `User-Agent` is the web browser we are using. In this case, it is Firefox version 87.
+* The `Referer` is the web page that referred us to this website.
+* In addition to these headers, there's also a common header: `Accept-Encoding`, which tells the server what kind of data compression methods our web browser accepts as well as `cookie` which is just stored information(explained more further below)
 * Lastly, these HTTP request **always** ends with a blank line which tells the server that our request is finished in regards to headers.
+
 
 #### HTTP Response
 After making the request to the server, the response we get back will look like this:
@@ -204,12 +207,19 @@ Content-Length: 98
 ```
 
 * HTTP/1.1 is again, version 1.1 of the HTTP protocol. `200 OK` is the **HTTP Status Code** which tells us whether the request failed or succeeded and why(Explained more below)
+  
 **Response Headers:**
+
 * Server: The software the web server is running. In this case, its nginx, version 1.15.8
 * Date.
 * Content-Type: What kind of file is being delivered here(HTML, files, images, pdf, etc)
 * Content Length: The size of the response is so we know if data is missing
 * As always, the blank line confirms the end of the HTTP response in which the data of the body will start after
+
+Aside from these headers, common response headers include:
+* Set-Cookie: This Stores information that would later automatically be sent back to the server by the browser in future requests(Cookies explained more further down)
+* Cache-Control: This defines the caching policy in regards to who can cache, how it's cached, as well as when it expires and needs to be revalidated/re-requested again
+* Content-Encoding: The data compression method used by the server. 
 
 Lastly, the body is the actual data sent back that we requested in it's raw form. In this case, it is HTML coded website data
 
@@ -242,6 +252,21 @@ These are how we tell the server what actions we want to do when making a reques
 * `PUT` Request: How we replace data with new data
 * `PATCH` Request: How we modify part of an existing piece of data without replacing the whole thing. 
 * `DELETE` Request: How we remove data from the server
+
+#### Cookies 
+Small pieces of saved information that is stored in the browser and automatically sent to the web server with subsequent HTTP requests. Here's a good illustration from TryHackMe's course:
+
+<img width="50%" height="50%" alt="Cookie" src="https://github.com/user-attachments/assets/e38df8dc-c66e-4016-aaeb-b473826d1314" />
+
+Essentially:
+
+1) HTTP Request
+2) Respond with server asking for data
+3) User inputs data
+4) The web server saves that data as a cookie via `Set-Cookie`
+5) The browser has that data stored as `Cookie` and automatically sends it back to the server with each request to which the server may use.
+
+The cookie usually isn't a readable text string but a "token" which hides the the actual cookie behind it's value.
 
 ## How Websites Work
 
