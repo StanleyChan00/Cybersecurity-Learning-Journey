@@ -256,7 +256,7 @@ These are how we tell the server what actions we want to do when making a reques
 #### Cookies 
 Small pieces of saved information that is stored in the browser and automatically sent to the web server with subsequent HTTP requests. Here's a good illustration from TryHackMe's course:
 
-<img width="50%" height="50%" alt="Cookie" src="https://github.com/user-attachments/assets/e38df8dc-c66e-4016-aaeb-b473826d1314" />
+<img width="75%" height="75%" alt="Cookie" src="https://github.com/user-attachments/assets/e38df8dc-c66e-4016-aaeb-b473826d1314" />
 
 Essentially:
 
@@ -271,7 +271,8 @@ The cookie usually isn't a readable text string but a "token" which hides the ac
 ## How Websites Work
 Here is a quick visual in how we obtain data when we visit a website:
 
-(imgage)
+<img width="50%" height="50%" alt="Website" src="https://github.com/user-attachments/assets/1802249b-de66-497b-951e-f14fe7129729" />
+
 
 In essence, our browser connects to the device hosting the website through the internet when we make a request. The server then responds to our device, through the internet, with data that our browser "converts" to render what we see on our end.
 
@@ -279,13 +280,38 @@ In essence, our browser connects to the device hosting the website through the i
 
 **Back End:** Server side which processes our HTTP requests and responds 
 
-### HTML
+### Coding Websites
 
 Websites use 3 core coding languages:
 
-* HyperText Markup Language(HTML):
-* Cascading Style Sheets(CSS):
-* JavaScript: 
+* HyperText Markup Language(HTML): Makes the body of the website
+* Cascading Style Sheets(CSS): Styles the websites
+* JavaScript: Adds complex functions to websites and makes it a lot more interactive
+
+I'm already familiar with and have experience with HTML, CSS, & JavaScript so there's no need to go over the entire language here.
+
+But the course went over how to create an HTML document as well as the concept of tags, classes, IDs, adding images, etc. It also went over Javascript quickly as well as linking it to the HTML document within that HTML code via `<script> </script>` or linking it in externally as a separate file.
+
+### Sensitive Data Exposure
+
+Sometimes a website may have data within the source code that we were not supposed to see or have access to as a user requesting the website.
+
+Sometimes they forget to remove it, or properly protect/hide the information and thus is made available for all tosee just by looking at the source code.
+
+For example, in the TryHackMe's lab, we were able to see login credentials hidden within the HTML code:
+
+<img width="80%" height="80%" alt="Unsecure" src="https://github.com/user-attachments/assets/18d475fe-9c02-4bd0-843b-39b8c0608f21" />
+
+### HTML Injection
+My study into the Security+ certification will go more into these types of attacks.
+
+But in essence, this is just injecting code into a website which allows for our input of text which then allows for so many vectors of malicious attacks.
+
+Here's an example of how that works:
+
+<img width="50%" height="50%" alt="Injection" src="https://github.com/user-attachments/assets/e7754d31-5908-483a-b93a-eab5da0c0233" />
+
+This usually happens on poorly made websites or sites that accidentally forget to secure input fields, but this shows why its so important to properly validate and sanitize user inputs into a website server to ensure it's not rendered as code. 
 
 ## Putting it all Together
 
