@@ -266,9 +266,26 @@ Essentially:
 4) The web server saves that data as a cookie via `Set-Cookie`
 5) The browser has that data stored as `Cookie` and automatically sends it back to the server with each request to which the server may use.
 
-The cookie usually isn't a readable text string but a "token" which hides the the actual cookie behind it's value.
+The cookie usually isn't a readable text string but a "token" which hides the actual cookie behind it's value.
 
 ## How Websites Work
+Here is a quick visual in how we obtain data when we visit a website:
+
+(imgage)
+
+In essence, our browser connects to the device hosting the website through the internet when we make a request. The server then responds to our device, through the internet, with data that our browser "converts" to render what we see on our end.
+
+**Front End:** Our browser rendering a website
+
+**Back End:** Server side which processes our HTTP requests and responds 
+
+### HTML
+
+Websites use 3 core coding languages:
+
+* HyperText Markup Language(HTML):
+* Cascading Style Sheets(CSS):
+* JavaScript: 
 
 ## Putting it all Together
 
