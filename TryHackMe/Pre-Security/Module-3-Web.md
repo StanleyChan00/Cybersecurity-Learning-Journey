@@ -271,7 +271,7 @@ The cookie usually isn't a readable text string but a "token" which hides the ac
 ## How Websites Work
 Here is a quick visual in how we obtain data when we visit a website:
 
-<img width="50%" height="50%" alt="Website" src="https://github.com/user-attachments/assets/1802249b-de66-497b-951e-f14fe7129729" />
+<img width="75%" height="75%" alt="Website" src="https://github.com/user-attachments/assets/1802249b-de66-497b-951e-f14fe7129729" />
 
 
 In essence, our browser connects to the device hosting the website through the internet when we make a request. The server then responds to our device, through the internet, with data that our browser "converts" to render what we see on our end.
@@ -300,7 +300,7 @@ Sometimes they forget to remove it, or properly protect/hide the information and
 
 For example, in the TryHackMe's lab, we were able to see login credentials hidden within the HTML code:
 
-<img width="80%" height="80%" alt="Unsecure" src="https://github.com/user-attachments/assets/18d475fe-9c02-4bd0-843b-39b8c0608f21" />
+<img width="100%" height="100%" alt="Unsecure" src="https://github.com/user-attachments/assets/18d475fe-9c02-4bd0-843b-39b8c0608f21" />
 
 ### HTML Injection
 My study into the Security+ certification will go more into these types of attacks.
@@ -309,9 +309,66 @@ But in essence, this is just injecting code into a website which allows for our 
 
 Here's an example of how that works:
 
-<img width="50%" height="50%" alt="Injection" src="https://github.com/user-attachments/assets/e7754d31-5908-483a-b93a-eab5da0c0233" />
+<img width="80%" height="80%" alt="Injection" src="https://github.com/user-attachments/assets/e7754d31-5908-483a-b93a-eab5da0c0233" />
 
 This usually happens on poorly made websites or sites that accidentally forget to secure input fields, but this shows why its so important to properly validate and sanitize user inputs into a website server to ensure it's not rendered as code. 
 
 ## Putting it all Together
 
+All put together, requesting a website will look like this behind the scenes:
+
+<img width="80%" height="80%" alt="Overview" src="https://github.com/user-attachments/assets/e66fa792-bf31-4be2-9f4e-573bda842ae8" />
+
+1) We request the website on our web browser using the domain name
+2) Our devices finds the IP address of that server using DNS
+3) We're connected to the website via the HTTP protocol which has us requesting data and the server responding with data
+4) Our browser then converts the code sent by the response into viewable content for us to see and interact with
+
+### Load Balancers
+
+This is how servers balance high amounts of traffic to a web server. 
+
+A web server will usually have multiple servers in case one goes down. A load balancer helps to direct traffic towards the different servers to manage traffic in case one gets too overloaded or fails.
+
+This is important because servers can crash or overload when there's too many requests.
+
+There are multiple algorithms load balancers' use to manage traffic. TryHackMe covered 2:
+
+**Round-Robin:** Which sends requests sequentially down the list of servers(Server 1 -> Server 2- > Server 3 -> etc)
+**Weighted Round-Robin:** Sends requests to each server which are weighted on their current capacity to handle requests. 
+
+There is also "Least Connections" which has traffic directs towards the server that's currently handling the least amount of requests.
+
+The Load Balancer also performs **"Health Checks"** which periodically checks each server to see if it's still working without a problem. If not, it stops sending requests to that server until it passes a separate health check.
+
+### Content Delivery Networks(CDN)
+Rather than having all the data from a website be sent from one origin server, static parts of that web server and other pieces of data/cache can be stored on data servers all around the world.
+
+When we do this, anyone all around the world can have faster and more reliable access to that content as the data will be sent to them from the hosting server closest to them.
+
+In effect, it also cuts down traffic to the main server and can act as a buffer towards attacks designed to overload a server. 
+
+### Databases
+These are the devices that store data which can be called upon and used by the web server. 
+
+All types of data can be stored here from simple text files to videos, and more. Personal and confidential data can also be store here which is crucial to protect.
+### Web Application Firewall(WAF)
+This operates on layer 7 of the OSI model and is the firewall of web servers.
+
+It filters IP addresses or incoming HTTP requests that appear to be malicious. If so, then the request is dropped and never sent to the server or the IP(s) are blocked.  
+
+---
+### How Web Servers Work
+The devices which hosts these sites use software to handle the requests and utilize the HTTP protocol.
+
+Most common web server softwares include:
+* Apache
+* Nginx
+* Internet Information Services(IIS)
+* NodeJS
+
+The web server delivers files from it's device called "root directory" which is defined in their software settings.
+
+Ex:
+
+NGINX & Apache have the same default location of `/var/www/html` in Linux. Thus requesting: `http://www.example.com/picture.jpg` would have the hosting device send the file `/var/www/html/picture.jpg` from it's local storage on it's device. 
