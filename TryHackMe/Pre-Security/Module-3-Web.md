@@ -288,7 +288,7 @@ Websites use 3 core coding languages:
 * Cascading Style Sheets(CSS): Styles the websites
 * JavaScript: Adds complex functions to websites and makes it a lot more interactive
 
-I'm already familiar with and have experience with HTML, CSS, & JavaScript so there's no need to go over the entire language here.
+I'm already familiar with HTML, CSS, & JavaScript so there's no need to go over the entire language here.
 
 But the course went over how to create an HTML document as well as the concept of tags, classes, IDs, adding images, etc. It also went over Javascript quickly as well as linking it to the HTML document within that HTML code via `<script> </script>` or linking it in externally as a separate file.
 
@@ -335,6 +335,7 @@ This is important because servers can crash or overload when there's too many re
 There are multiple algorithms load balancers' use to manage traffic. TryHackMe covered 2:
 
 **Round-Robin:** Which sends requests sequentially down the list of servers(Server 1 -> Server 2- > Server 3 -> etc)
+
 **Weighted Round-Robin:** Sends requests to each server which are weighted on their current capacity to handle requests. 
 
 There is also "Least Connections" which has traffic directs towards the server that's currently handling the least amount of requests.
@@ -372,3 +373,24 @@ The web server delivers files from it's device called "root directory" which is 
 Ex:
 
 NGINX & Apache have the same default location of `/var/www/html` in Linux. Thus requesting: `http://www.example.com/picture.jpg` would have the hosting device send the file `/var/www/html/picture.jpg` from it's local storage on it's device. 
+
+**Virtual Hosts:** Virtual hosts is how **one** device can host multiple different websites with different domain names using the same exact IP address and device.
+
+### Static vs Dynamic Content
+Static Content: Content that never changes. These are stuff like pictures, html code, files, etc that remain the same and are stored on the server with no changes that happen to them
+
+Dynamic Content: These are content that could change with different requests. An example would be the homepage of a blog that shows different blog posts depending on which blog entry is most recent. 
+
+These dynamic changes occur on the backend using programming/scripting languages. 
+
+Examples of coding languages used:
+
+* Python
+* Java
+* Ruby
+* PHP
+* etc
+
+(I currently already have experience with Python and Java)
+
+These coding languages would be on the backend code not the front end source code. They're executed only on the server's end while the output is sent to the front end.
