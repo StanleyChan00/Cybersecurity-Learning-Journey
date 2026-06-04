@@ -33,6 +33,18 @@ Here's all the steps our computer goes through when we first power on the device
 
 ## Computer Types
 
+* **Laptops:** Portable computers with battery
+* **Desktop:** Stationary computer that's typically stronger and can use the extra space for bigger and better components
+* **Workstation:** High performance "desktop" meant for professional work 
+* **Server:** Usually no monitors but serve to handle network requests and hosting 
+* **Smartphone:** Our mobile "computers" that fit in our pocket
+* **Tablet:** Larger screen "smartphone" 
+* **IoT devices:** Devices connected to networks with a single purpose like thermostats, smart doorbells, fitness tracking watches, etc
+* **Embedded Computers:** "Computers" built into another device like a coffee maker controller, automatic door sensor, lamp dimmer chips, etc
+
+The difference between IoT and Embedded Computers is mainly that IoT devices are connected to networks. 
+
+
 
 ## Client-Server Basics
 
