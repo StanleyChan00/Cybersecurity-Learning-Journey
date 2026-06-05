@@ -44,9 +44,42 @@ Here's all the steps our computer goes through when we first power on the device
 
 The difference between IoT and Embedded Computers is mainly that IoT devices are connected to networks. 
 
-
-
 ## Client-Server Basics
+This lesson gives an overview of the previous Module 3 - "How websites work", which I covered all in depth.
+
+However here, it gives us a nice analogy of ordering pizza as a visual in how interacting with a web server works:
+
+<img width="1109" height="749" alt="Visual" src="https://github.com/user-attachments/assets/bfbca077-c47f-48c0-93de-dec4c8906e59" />
+
+In essence:
+
+1) Alice wants to order Pizza and sends Bob to the Pizza shop.
+2) Bob uses the "DNS" to find the "Address"("IP address") of the shop.
+3) He chooses which "port" to enter through if he wants to get takeout, delivery, etc.
+4) When ordering the pizza at the register, him and the cashier use a "protocol" which is how they communicate
+5) Bob "requests" and the "server" responds back and Bob brings the pizza back to Alice.
+
+In technical terms, Alice is the client. She uses her web browser to connect to a web server. In order to do so, she uses the DNS to find the IP address of the website she wants to access along with the corresponding port. 
+
+She communicates with the web server using the HTTP protocol, by making an HTTP request and the server responding with their HTTP response. Then Alice's browser converts the code/data sent from the server into the visual readable data - ie. the website. 
+
+### HTTP Commands
+
+In addition to the commands explored in Module 3, this lesson gives us a few more examples:
+
+* Patch - Partially Modifies a resource (like updating an email address without changin anything else like their name/password)
+* Head - Just a `GET` request, except it only asks for the headers and not the body. It only asks for the metadata.
+* Options - Asks the server what HTTP commands are allowed on that server
+* Connect - Sets up a secure connection between the two devices without any intermediates that can see it. For example, when connecting to a web server while I'm at school using the school wifi, we can use this command to create a proxy connection which prevents the school from seeing our data sent through the website server.
+* Trace - Kind of like a diagnostic test. It sends a request to the server, in which the server echoes it back in the exact same way so we can see if anything between them altered the request
+
+(Quick note. Most web servers disable the `TRACE` request method due an attack called "Cross-Site Tracking(XST) which could force the browser to "echo" back hidden secure session cookies or more.)
+
+This lesson allowed us to use their virtual machine to see these commands in real time. It looks like this:
+
+<img width="1219" height="912" alt="Lab" src="https://github.com/user-attachments/assets/f0cbe7a0-801a-440c-b682-8c85ef89c1d6" />
+
+All the GET request methods we sent as well as the headers are there. We could also see the response the server sent back as well as the response's body on a separate tab.
 
 
 ## Virtualisation Basics
