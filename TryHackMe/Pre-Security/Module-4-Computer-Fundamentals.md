@@ -83,6 +83,22 @@ All the GET request methods we sent as well as the headers are there. We could a
 
 
 ## Virtualisation Basics
+Virtualisation is the concept of being able to run multiple operating systems on a single physical device.
+
+Without this concept, as it used to be in the past, organizations would have each major service be dedicated to a single isolated device. Each device would have it's own job. 
+
+One device would run one website. One device would run one email service. One device would run a database, etc.
+
+For obvious reasons, this is incredibly inefficient and is like one person living alone in a hotel with so many other rooms being free to use. 
+
+**Virtualisation** fixes this problem by allowing a piece of hardware to be used to its fullest extent and run multiple operating systems on it's own singular device.
+
+This is done through a layer of software called **"Hypervisor"** which splits up the hardware resources being run on a single device into different operating systems so that they all run independently, each thinking they have their own dedicated CPU, RAM, etc.
+
+With this, one singular device can host 50 separate websites, run an email service, and more all at the same time. 
+
+### Hypervisor
+
 
 
 ## Cloud Computing Fundamentals
