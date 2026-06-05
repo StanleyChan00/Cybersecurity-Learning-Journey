@@ -83,7 +83,7 @@ All the GET request methods we sent as well as the headers are there. We could a
 
 
 ## Virtualisation Basics
-Virtualisation is the concept of being able to run multiple operating systems on a single physical device.
+Virtualisation is the concept of being able to run multiple operating systems("Virtual Machines") on a single physical device.
 
 Without this concept, as it used to be in the past, organizations would have each major service be dedicated to a single isolated device. Each device would have it's own job. 
 
@@ -99,7 +99,20 @@ With this, one singular device can host 50 separate websites, run an email servi
 
 ### Hypervisor
 
+Two types of Hypervisors:
 
+1) **Bare Metal Hypervisors:** Software that runs directly on top of the physical hardware with no conventional operating system under it like Windows or MacOS.
+2) **Hosted Hypervisors:** This runs *on top* of an existing operating system. For instance, a MacOS machine that opens up a "window" of a virtual machine running a different OS. 
 
+Practically, Bare Metal Hypervisors are more for hosting servers or data centers while Hosted Hypervisors are more for isolating systems and compartmented testing
+
+### Containers 
+With virtualisation, each virtual machine that we have must have its own copy of the OS it operates on which eats up a lot more storage, memory, and time to get booted up.
+
+Containers solve this problem and allows isolated virtual environments without needing an entire copy of an OS to be run. The only caveat is that it requires the same OS as its host because it shares the same OS "kernal" as its host. 
+
+So a Windows container can not run on a MacOS machine. But regardless, containers allow us to isolate "machines" without using so much storage and also be able to run it a lot quicker than a regular VM. 
+
+**Docker** is currently the software used most to use Containers 
 ## Cloud Computing Fundamentals
 
