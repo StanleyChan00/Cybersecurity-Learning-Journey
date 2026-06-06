@@ -117,7 +117,7 @@ So a Windows container can not run on a MacOS machine. But regardless, container
 
 **Docker** is currently the software used most for Containers 
 
-### Lab
+### Virtualisation Lab
 In this lab, we used an application called "Virtualizon Manager" which allows us to see and manage all the virtual machines and Hosts that they are running on.
 
 Our task was to find out what went wrong with the email service as everyone in the company suddenly stopped receiving emails.
@@ -159,3 +159,18 @@ TryHackMe provided this good visual on the 3 models:
 
 <img width="75%" height="75%" alt="Cloud Service Models" src="https://github.com/user-attachments/assets/549c8f98-ed41-4574-a84c-ce85ef02ebac" />
 
+### Cloud Lab
+In this lab, we had access to an interface that's similar to AWS's platform.
+
+It allowed us to create VMs, choose which region for these VMS to live in, as well manage the VMs and the power capacity we want them to have. The platform looked like this:
+
+<img width="1191" height="919" alt="Cloud Lab" src="https://github.com/user-attachments/assets/85115cf4-e6b4-4a1d-9493-29704e7bd5e6" />
+
+
+#### Terms:
+
+**EC2(Virtual Computer/Server):** These are the virtual machines that the Cloud service provider(AWS) allows us to have, all with its own set of dedicated CPU, RAM, etc.
+
+**Instance Type:** These types allow us to choose how powerful we want out VM to be. The bigger the instance, the more power and expensive it is. 
+
+TryHackMe had us create 3 different VMs with different instance sizes and had us see the effects it had on our billing costs.
