@@ -113,6 +113,49 @@ Containers solve this problem and allows isolated virtual environments without n
 
 So a Windows container can not run on a MacOS machine. But regardless, containers allow us to isolate "machines" without using so much storage and also be able to run it a lot quicker than a regular VM. 
 
-**Docker** is currently the software used most to use Containers 
+**"Container Images"** are "read-only" templates used to create containers. The "blueprint" for containers. 
+
+**Docker** is currently the software used most for Containers 
+
+### Lab
+In this lab, we used an application called "Virtualizon Manager" which allows us to see and manage all the virtual machines and Hosts that they are running on.
+
+Our task was to find out what went wrong with the email service as everyone in the company suddenly stopped receiving emails.
+
+We looked at all the VMs and noticed that the VM for the emails was down in error. So we restarted it and got it up and runnning again. We also created a new VM for the marketing department to host their website. 
+
+We gave this VM 4 CPU cores, 8GB of Ram as well as 100GB of storage and got it running.
+
+<img width="1084" height="803" alt="VM Monitoring" src="https://github.com/user-attachments/assets/fd829821-dfb8-4382-ad2c-a622578688ab" />
+
+
+Lastly, we took a look at the curernt Hosts and noted potential problems and their status. "HV-PROD-02" is almost at full capacity while "HV-PROD-01" is able to handle much more. "HV-BACKUP-01" is also currently down and disconnected.
+
+<img width="1094" height="819" alt="Hosts" src="https://github.com/user-attachments/assets/ec1725d2-3b95-4828-a4dc-98b90ad644f0" />
+
 ## Cloud Computing Fundamentals
+Cloud is what allows us, anywhere all around the world, access to a vast amount of physical servers and data that's ready for use at a moment's notice.
+
+We can access scalable servers that are ready on demand to create VMs for hosting. We can store files and data that's accessible whenever and wherever we are. Cloud is what makes stuff like watching a video on youtube or watching a show on Netflix possible. 
+
+TryHackMe gave a nice visual in how Cloud came to be:
+
+<img width="75%" height="75%" alt="Cloud Evolution" src="https://github.com/user-attachments/assets/d29e31cc-f432-4659-b28d-776d9f6851a2" />
+
+
+### Types of Cloud
+
+1) **Public:** These are the vast amount of servers that's available for public use. A company like Amazon AWS owns a vast amount of these physical devices and allows the public to "rent" space on it. 
+2) **Private:** These are dedicated servers built for private use. For example, a bank buying a bunch of servers that they own and hosting their own "Cloud" for their own use
+3) **Hybrid:** A mix of both public and private. For example, they may keep some stuff on private Cloud servers for confidential data while  using public Cloud services for the rest. 
+
+#### Main Cloud Service Models:
+
+* **Infrastructure as a Service(IaaS):** You essentially just "rent" the hardware and network while you get to customize everything else for yourself, like the OS, application, etc
+* **Platform as a Service(PaaS):** The Cloud provider takes care of all the servers, hardware, and operating systems while you just build your application on top of it all. Like sending code for the Cloud provider to deploy and run without you having to worry about anything else. 
+* **Software as a Service(SaaS):** All the software, code, etc is handled and finished. You pay to use their software over the cloud
+
+TryHackMe provided this good visual on the 3 models:
+
+<img width="75%" height="75%" alt="Cloud Service Models" src="https://github.com/user-attachments/assets/549c8f98-ed41-4574-a84c-ce85ef02ebac" />
 
