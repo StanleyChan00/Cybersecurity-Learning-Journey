@@ -41,16 +41,34 @@ Interfaces are how we interact with the OS. There are two types in which we do s
 2) **Command Line Interface(CLI)** - These are commands we enter into the terminal. Rather than everything being programmed for us to see an interact with neatly, here we interact with the OS using the command line of our OS which gives us a lot more control and precision over the system without as much limitations.
 
 ### Operating System Landscape
-Each kind of device will have different uses and  applications and thus a different OS depending on the job of the device that is required.
+Each kind of device will have different uses and applications and thus a different OS depending on the job of the device that is required.
 
 5 main types:
 
-1) Desktop
-2) Server
-3) Mobile
-4) Embedded
-5) Virtual/Cloud
+**1.) Desktop** - Rich and user centered GUI made for personal computers and desktops 
 
+- Windows, MacOS, Linux, etc.
+
+Linux is a small core kernel software and "distributions"("distros") are the Operating Systems built on top of that kernel. Like Ubuntu, Debian, Fedora
+
+**2.) Server** - Usually no GUI and made for maximum uptime as well as remote access. 
+
+- Windows, Linux(Ubuntu Server, Debian, CentOS, Red Hat), Unix
+
+**3.) Mobile** - Touchscreen, network connectivity, battery efficient, etc
+
+- Android, IOS, etc
+
+**4.) Embedded** - Small OS made for lightweight hardware.
+
+- OpenWrt, Ubunutu Core, Yocto Project, etc, Real-Time OS(For apps in which guaranteed response times are required like aircraft controls or braking systems, etc)
+
+
+**5.) Virtual/Cloud** - OS made for data centers or cloud services. 
+
+- Hypervisors(For data centers & Hosting or streaming services. Ubuntu LTS, Amazon Linux, Rocky Linux). Container-optimized OS(Alpine Linux, Bottlerocket AWS, Flatcar Linux)
+
+Each type here is optimized for the function that is required of that specific device. 
 
 ## Windows Basics
 
