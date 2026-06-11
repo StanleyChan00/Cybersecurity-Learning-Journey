@@ -71,7 +71,13 @@ Linux is a small core kernel software and "distributions"("distros") are the Ope
 Each type here is optimized for the function that is required of that specific device. 
 
 ## Windows Basics
+This lesson goes over all the basics of how to use the Window OS. Since these foundational lessons are already well integrated into most people's technicals baseline, I have chosen to omit notes for this lesson of the module 
 
+However, in essence, it just went over authentication, how to navigate the OS, files, file hierarchy, menus, apps, apps updates and installation, OS updates, basic security like virus & threat protection, and window's firewall, etc.
+
+The lab in this lesson allowed us to a Windows VM and play with the security protection settings on that system. We ran a scan on the virus & threat protection software that comes with the OS and found a "threat", a program txt file which replicates by infecting other files.
+
+We were also able to take a look at the firewall and the inbound and outband rules being used. 
 
 
 
