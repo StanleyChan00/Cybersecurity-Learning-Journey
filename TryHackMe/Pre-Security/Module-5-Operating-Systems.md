@@ -77,13 +77,106 @@ However, in essence, it just went over authentication, how to navigate the OS, f
 
 The lab in this lesson allowed us to a Windows VM and play with the security protection settings on that system. We ran a scan on the virus & threat protection software that comes with the OS and found a "threat", a program txt file which replicates by infecting other files.
 
-We were also able to take a look at the firewall and the inbound and outband rules being used. 
-
-
+We were also able to take a look at the firewall as well as the inbound and outband rules being used. 
 
 ## Linux CLI Basics
 
+To reiterate, the CLI is how we navigate through and operate our device using the terminal rather than the standard GUI. 
 
+In this context, we start off in a specific file path and can navigate the directories to browse the file paths. 
+
+Some Linux CLI commands:
+
+`pwd` - Tells us exactly where we are in our device
+
+`ls` - This stands for "list" and thus "lists" the files and folders in the current directory we are in
+
+`ls -l` - "List Long". This gives us a more in detail list of all the files within the directory we are currently in.
+
+`ls -al` - This reveals all hidden files in the directory in detail. Hidden files are any files whose name begins with a `.`. These are usually critical system files, or caches, configuration files, logs, etc. The `-a` stands for "all" 
+
+`cd` -> `cd <directory>` This is how we move forward through the file systems. It stands for "Change Directory" 
+
+`cd ..` - This is how we go back to the previous file system in the hierarchy.
+
+`find` - This command finds files within our system. The format is `find <starting_point> -name <filename>` It begins it's search from the criteria you listed as the starting point. `~` starts from the home directory. `.` searches from the current directory you are in. `/` searches from the root of your system and thus searches your entire system for it. 
+
+`cat` - This stands for concatenate and is used to display the contents in the file for us to read
+
+TryHackMe gave us a VM to use for the Linux CLI as practice. We were able to play around with the commands and browse through the machine using the CLI before it gave us the task of finding a specific file within the home directory.
+
+<img width="1155" height="839" alt="Find File via Linux CLI" src="https://github.com/user-attachments/assets/a2007fc5-b839-44e7-9382-d3488b56e7af" />
+
+After this, the lesson gave us a few more commands in regards to finding out more information about our device. It also gave us the task of finding out said information as well as another file for practice. 
+
+`whoami` - Tells us our username 
+
+`uname -a` - Stands for "Unix Name"  + all and gives us detailed information about our system. As an example, the output from our VM in this lesson is as follows:
+
+`Linux tryhackme 6.14.0-1018-aws #18~24.04.1-Ubuntu SMP Mon Nov 24 19:46:27 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux`
+
+1) Kernel - `Linux`
+2) Hostname - `tryhackme(The local network's name of our device)`
+3) Kernel Release - `6.14.0-1018-aws`
+4) Kernel Version and Built Date - `#18~24.04.1-Ubuntu SMP Mon Nov 24 19:46:27 UTC 2025`
+5) The architecture of our CPU - `x86_64`
+6) The OS - `GNU/Linux`
+
+`uname` alone would give us our OS name
+
+
+`df -h` - Stands for "Disk Free" + human readable(otherwise it would display the data in raw numer blocks). This gives us data on the storage space of our device. The output from our VM looks like:
+
+```
+Filesystem      Size  Used Avail Use% Mounted on
+
+/dev/root        68G   11G   58G  16% /
+
+tmpfs           969M     0  969M   0% /dev/shm
+
+tmpfs           388M  1.2M  387M   1% /run
+
+tmpfs           5.0M     0  5.0M   0% /run/lock
+
+tmpfs           194M  188K  194M   1% /run/user/1000
+
+tmpfs           194M  172K  194M   1% /run/user/114
+```
+
+"Mounted on" tells us exactly where that file system is located or attached to. `/` is our root directory which means that this drive is where our main hard drive is located and we can thus see the storage information on it. 
+
+All the `tmpfs` types are on the RAM.
+
+To get more info on our distribution if `uname` is not sufficient, we can also head to the `os-release` file within the `/etc` directory(which itself is where a bunch of configuration and information data is located). The output by using the `cat` command gets us the following:
+
+```
+PRETTY_NAME="Ubuntu 24.04.1 LTS"
+
+NAME="Ubuntu"
+
+VERSION_ID="24.04"
+
+VERSION="24.04.1 LTS (Noble Numbat)"
+
+VERSION_CODENAME=noble
+
+ID=ubuntu
+
+ID_LIKE=debian
+
+HOME_URL="https://www.ubuntu.com/"
+
+SUPPORT_URL="https://help.ubuntu.com/"
+
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+
+UBUNTU_CODENAME=noble
+
+LOGO=ubuntu-logo
+
+```
 
 ## Windows CLI Basics
 
