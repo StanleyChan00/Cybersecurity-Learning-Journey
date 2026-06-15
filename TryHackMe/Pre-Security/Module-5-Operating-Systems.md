@@ -201,6 +201,15 @@ Just like the Linux lab, this lesson gave us a Windows VM to play around with th
 
 <img width="1169" height="801" alt="Find File via Windows CLI" src="https://github.com/user-attachments/assets/e53b2119-f1b3-4441-8f08-84ef77b52bdd" />
 
+The next lesson also taught us more commands in regards to finding out more information about our system.
+
+`whoami` - Tells us which user account we are currently using
+
+`hostname` - Displays our local network's device name
+
+`systeminfo` - This gives us very detailed information on our OS as well as system information
+
+`ipconfig` - This gives us IP data of our network. Including the subnet mask, default gateway, our IP, etc, 
 
 
 ## Operating Systems Security 
