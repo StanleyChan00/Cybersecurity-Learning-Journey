@@ -75,7 +75,7 @@ This lesson goes over all the basics of how to use the Window OS. Since these fo
 
 However, in essence, it just went over authentication, how to navigate the OS, files, file hierarchy, menus, apps, apps updates and installation, OS updates, basic security like virus & threat protection, and window's firewall, etc.
 
-The lab in this lesson allowed us to a Windows VM and play with the security protection settings on that system. We ran a scan on the virus & threat protection software that comes with the OS and found a "threat", a program txt file which replicates by infecting other files.
+The lab in this lesson allowed us to use a Windows VM and play with the security protection settings on that system. We ran a scan on the virus & threat protection software that comes with the OS and found a "threat", a program txt file which replicates by infecting other files.
 
 We were also able to take a look at the firewall as well as the inbound and outband rules being used. 
 
@@ -179,6 +179,27 @@ LOGO=ubuntu-logo
 ```
 
 ## Windows CLI Basics
+The Command Prompt in Windows works in the  same way as the Linux terminal. It's just that the commands are different but the premise itself is the same. 
+
+Here are the first few commands in this lesson:
+
+`cd` - This is similar to the `pwd` command in Linux. It shows us where we are in the system. Adding a file path/folder after it allows us to navigate through our device.
+
+`cd <directory>` - Just like Linux, this is how we navigate through the directories. We can also type the path of a file with multiple extentions to jump straight to it rather than going through one directory at a time. 
+
+`cd ..` - Goes back one level to the "previous" directory in the hierarchy 
+
+`dir` - This is the Linux `ls` equivalent. It lists the contents of the directory we are currently in.
+
+`dir /a` - This gives us all the hidden files within the directory
+
+`dir /s <filename>` - This searches for a file in all subfolders from the directory that we are currently in
+
+`type <filename>` - This is the `cat` of the Windows CLI. It prints the file for us to read.
+
+Just like the Linux lab, this lesson gave us a Windows VM to play around with the command prompt. It also gave us a simple task of finding a file through the CLI, which ended up looking like this:
+
+<img width="1169" height="801" alt="Find File via Windows CLI" src="https://github.com/user-attachments/assets/e53b2119-f1b3-4441-8f08-84ef77b52bdd" />
 
 
 
