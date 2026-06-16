@@ -213,3 +213,16 @@ The next lesson also taught us more commands in regards to finding out more info
 
 
 ## Operating Systems Security 
+
+Our devices are filled with private data that needs to be protected. From passwords, to bank login information, to private photos and emails, and more. If this data got into the wrong hands, they could be maliciously used and lives can be ruined. 
+
+Operating systems use the "CIA" Triad as a guide in understanding how to secure and protect said data.
+
+### CIA - Confidentiality, Integrity, Availability
+
+**Confidentiality:** This ensures that **only** the people that should have access to the data will have access to the data
+
+**Integrity:** This ensures that no file is tampered with or changed without authorization.
+
+**Availability:** This ensures the device/data is available for use whenever needed by the authorized user. 
+
