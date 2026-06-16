@@ -251,3 +251,23 @@ For example, I may only want the accounting department in an organization to hav
 #### 3.) Access to Malicious Programs
 
 More types of these malicious programs will be explored in my Sec+ study. However, these are just programs that can gain unauthorized access into a system and can potentially compromise the entire CIA triad.
+
+#### Lab - Practice an Authentication Attack Vector using the Linux CLI
+
+A couple more commands taught in this lesson via the lab:
+
+`ssh <username@IP/DomainName>` - This allows you to command and control a seperate device over an encrypted connection. 
+
+`history` - This gives us a list of the previous commands previously used on the terminal.
+
+Also, a System's Administrator account within a system has unrestricted access to that system. In Android, Apple, and Linux, this account is called `root` while it's called `administrator` on Windows. 
+
+This lab had us acting as security, presumably on the red team, testing the security of the organization’s system. We "found" a sticky note with the words "sammie" and "dragon" on a computer screen
+
+Via the `ssh` command, we were able to login to sammie's account with that password. 
+
+We also guessed the password of "Johnny" and were able to login to his account due to his weak password formulation. After doing so, we used the `history` command to see his past entries and found an odd "command" which was really his password to his root account.
+
+Due to his error, we were able to gain access into his systems administrator account. 
+
+This labs displays the importance of keeping passwords secure and also complexly formulated such that it's not easily guessed. Don't leave passwords out and always double check where we are typing our password into. 
