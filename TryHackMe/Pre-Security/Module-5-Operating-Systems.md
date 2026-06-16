@@ -216,7 +216,7 @@ The next lesson also taught us more commands in regards to finding out more info
 
 Our devices are filled with private data that needs to be protected. From passwords, to bank login information, to private photos and emails, and more. If this data got into the wrong hands, they could be maliciously used and lives can be ruined. 
 
-Operating systems use the "CIA" Triad as a guide in understanding how to secure and protect said data.
+Operating systems use the "CIA" Triad as a guide in understanding how to secure and protect said data. 
 
 ### CIA - Confidentiality, Integrity, Availability
 
@@ -226,3 +226,28 @@ Operating systems use the "CIA" Triad as a guide in understanding how to secure 
 
 **Availability:** This ensures the device/data is available for use whenever needed by the authorized user. 
 
+### Common Exploited Weaknesses 
+
+#### 1.) Authentication and Weak Passwords
+
+Authentication is how we verify our identity so a device knows we have authorized access to the data within. Authentication can be achieved using 3 main confirmation methods:
+
+1) Something you know (Like a password)
+2) Something you are (Like your fingerprint)
+3) Something you have (Like your phone via a code sent through text message)
+
+Passwords are the most common form of authentication and also the most attacked. Weak passwords can thus be an easily exploitable attack vector.
+
+So its important to ensure a password is not easily guessable. Whether it's a common phrase or sequence that's simple to type or an easily guessable piece of personal information used as a password. 
+
+#### 2.) Weak File Permissions
+
+Confidentiality and Integrity can be attacked here. 
+
+It's important to ensure that ONLY the people who should have access to specific pieces of data can access that data. Permission levels that allow anyone else to access it is an inherent security compromise. 
+
+For example, I may only want the accounting department in an organization to have access to specific financial data. So privilege needs to be set to ensure only this department can access this data. 
+
+#### 3.) Access to Malicious Programs
+
+More types of these malicious programs will be explored in my Sec+ study. However, these are just programs that can gain unauthorized access into a system and can potentially compromise the entire CIA triad.
