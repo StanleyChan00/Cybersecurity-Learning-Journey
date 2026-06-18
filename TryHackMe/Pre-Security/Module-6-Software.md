@@ -32,6 +32,52 @@ The hexadecimal digits of `0` - `9` represent the binary equivalent of `0000` al
 
 So, `10100011 11101010 00101010` for example would be `A3EA2A`
 
+### Binary Representation of Numbers
+As we understand already, computers communicate through binary numbers and these binary numbers are read through various means. For example
+
+* Low and High Voltage Signals(Voltage that is defined as high is "1" whereas low voltage would be "0")
+* North and South in Magnetic Polarity (Like in Hard Drives)
+* Light Presence(Like Fiber optics in which light presence will be "1" or "0" if "off" or in the modern sense determined by the intensity)
+
+In order to understand how these binary bits are represented as numbers, we have to understand that it operates as a base-2 system, meaning they only work with 2 digits: `0` and `1`.
+
+We understand numbers in human terms as base-10 due to the presence of 10 total digits(0-9). Once we hit 9, we "carry over" to the next "ten" by adding a one and then resetting our current counter back to 0. Like going from 9-10 would add a 1 in the tens spot while the single digit values would go back to 0. This goes on for each decimal point as each "tens" is just the previous "10" multipled by 10.
+
+10 is just ten single digit ones. 100 is just 10 sets of tens. 1,000 is 10 sets of 100 and so on. 
+
+Base-2 Binary works the same way, except it's 2 total digits. 
+
+`0` = 0
+
+`1` = 1
+
+`10` = 2
+
+`11` = 3
+
+and so on. 
+
+If we want to convert a long binary number into decimal, we would visually break it up in the same way a decimal number is broken up: through it's positional value added up together.
+
+314 is not actually 314, but 300 + 10 + 4(the positional values added up together). 
+
+10 is just ten single digit ones. 100 is just 10 sets of tens. 1,000 is 10 sets of 100 and so on. Each "ten's" positional value is just the previous tens multiplied by 10.
+
+Binary would be the same way but each positional value would be by times 2 instead of times 10. 
+
+For example:
+
+`11001010` has 8 total bits. 
+
+From the right, the first bit's positional value is `2^0 = 1`(However, the value here is `0`, so we can imagine it as turned "off" and not needing to add it to anything) while the last bit(the first one from the left) has the positional value of `2^7 = 128`.
+
+So to convert this binary into decimal, we just add up all the values that are turned "on" through the ones. Here, it would be `128 + 64 + 0 + 0 + 8 + 0 + 2 + 0` = `202`. 
+
+Thus `11001010` = `202`
+
+### Hexadecimal 
+
+### Octal
 
 ## Data Encoding
 
