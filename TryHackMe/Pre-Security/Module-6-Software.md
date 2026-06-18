@@ -22,6 +22,17 @@ The way that is currently used is by having each of these 3 main colors use 8 to
 
 This now gives us more than 16 million potential color combinations(256 x 256 x 256) each specified by 3 series of 8 bits. Each series of 8 bits is called a **byte** or an octet and each octet gives us the "shade" of each color(red, green, and blue respectively).
 
+#### Hexadecimal Representation of Colors:
+
+Since reading a string of 24 bits is quite impractical, we use hexadecimal digits to make it easier to read(Hexadecimal digits are explained more further below).
+
+Each Hexadecimal value here represents 4 bits. So to represent a color, we will have a total of 6 hexadecimal digits instead of 24 individual bits.
+
+The hexadecimal digits of `0` - `9` represent the binary equivalent of `0000` all the way to `1001` while `A` - `F` represents `1010` to `1111`
+
+So, `10100011 11101010 00101010` for example would be `A3EA2A`
+
+
 ## Data Encoding
 
 
