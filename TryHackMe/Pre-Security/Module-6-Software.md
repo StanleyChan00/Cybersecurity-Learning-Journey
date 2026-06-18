@@ -24,13 +24,15 @@ This now gives us more than 16 million potential color combinations(256 x 256 x 
 
 #### Hexadecimal Representation of Colors:
 
-Since reading a string of 24 bits is quite impractical, we use hexadecimal digits to make it easier to read(Hexadecimal digits are explained more further below).
+Since reading a string of 24 bits is quite impractical, we use hexadecimal digits to make it easier to read(Hexadecimal digits are explained more further below a couple sections down).
 
 Each Hexadecimal value here represents 4 bits. So to represent a color, we will have a total of 6 hexadecimal digits instead of 24 individual bits.
 
-The hexadecimal digits of `0` - `9` represent the binary equivalent of `0000` all the way to `1001` while `A` - `F` represents `1010` to `1111`
+The hexadecimal digits of `0-9` represent the binary equivalent of `0000` all the way to `1001` while `A-F` represents `1010-1111`
 
 So, `10100011 11101010 00101010` for example would be `A3EA2A`
+
+---
 
 ### Binary Representation of Numbers
 As we understand already, computers communicate through binary numbers and these binary numbers are read through various means. For example
@@ -77,7 +79,25 @@ Thus `11001010` = `202`
 
 ### Hexadecimal 
 
-### Octal
+Since binary is a nightmare to read on it's own, we can use hexadecimal numbers, as base-16, to condense it down and make it easier on our eyes to read.
+
+As stated already, hexadecimal digits go from `0-9`, then from `A-F` and represent the decimal numbers of 0-15(0-9 and 10-15 respectively). 
+
+It is slightly more complex than binary since we can't simply imagine each positional value as "turned on". Instead, we multiple the value of each digit by its positional value(as base-16) and add everything up together.
+
+For Example: `9BDF`
+
+The `9` in this case would be $9 * 16^3 = 36,864$.
+
+`B` Would be $11 * 16^2 = 2816$
+
+`D` Would be $13 * 16^1 = 208$
+
+`F` Would be $15 * 16^0 = 15$
+
+Thus `9BDF` = 39,903
+
+**Octal** digits would be base-8 and represent `0-7` using those same values as its digits(no letters like hexadecimal). The process is the exact same with each positional value being $8^x$
 
 ## Data Encoding
 
