@@ -113,9 +113,27 @@ It's an American system, so it covered basic English letters, digits, punctuatio
 
 It also had it mapped out in order sequentially . So the upper case letters `A`,`B`, and `C`, for example, would be mapped out in hexadecimal as 41, 42, and 43 respectively.
 
-Extended ASCII opened up more character space via an 8th bit which now expanded the limit to 256 characters vs 128. This allowed for the "ISO/IEC 8859" standard mapped out 15 different variations of these extra 128 usable characters to various language sets.
+Extended ASCII opened up more character space via an 8th bit which now expanded the limit to 256 characters vs 128. This allowed for the "ISO/IEC 8859" standard, which mapped out 15 different variations of these extra 128 usable characters to various language sets.
 
-However despite this, it was still limited as you could not use different variations of of this standard within the same document as only one of these variational maps could be used at a time. 
+However despite this, it was still limited as you could not use different variations of this standard within the same document as only one of these variational maps could be used at a time. 
+
+### Unicode 
+
+To solve these limitations, Unicode was developed which supports over a million characters from languages, to emojis, and more, all fitting within the same universal standard. 
+
+So rather than mapping characters to each byte, Unicode maps each character to **"Code Points", which are written as `U+XXX`
+
+Now, there are 3 different formats of Unicode, each with their unique pros and cons and use for different purposes. There is UTF-8, UTF-16, UTF-32.
+
+UTF-8 uses a variable width system meaning that it maps the code points to 1-4 bytes dynamically. English and the original ASCII set all use 1 byte. 2 bytes are for Greek, Hebrew, Arabic, etc. 3 bytes for Asian characters. 4 Bytes for emojis and more. 
+
+So the character being used by UTF-8 dictates how many bits it is using for that specific character. 
+
+UTF-32 on the other hand uses 4 bytes for every single character. Comparing these two formats, we can see that UTF-32 would then have the downside of wasting so much space and storage. However, it comes with the upside of being much faster as it does not have to spend the CPU power in determining which set of bytes represent which character. It's simply the 100th byte is the 100th character and so on.
+
+UTF-8 in contrast takes more processing power as it has to start from the beginning to see how wide each character is. (UTF-8 has a standard in which the start of the bytes tells the system how many bytes the character uses).
+
+UTF-16 would be like the "middle ground" which uses either 2 or 4 bytes. 
 
 
 ## Python: Simple Demo
