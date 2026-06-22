@@ -138,6 +138,21 @@ UTF-16 would be like the "middle ground" which uses either 2 or 4 bytes.
 
 ## Python: Simple Demo
 
+I am familiar with Python so I won't go over all the concepts here. However, the lesson went over variables, while loops, as well as if/else conditional statements.
+
+It then allowed us to use a VM to play with some Python code as a lab. This time, we had the system pick out a random number between 1 and 20.
+
+Then we allowed the user to input some text as a string to guess the random number the system picked. 
+
+We converted that string into an integer, then nested some conditional statements based off the users guess in relation to the system's number inside a while loop such that the "game" would continue until they correctly guessed the number.
+
+The finished code, along with my comments on what the code does, looks like the below. 
+
+<img width="1208" height="746" alt="Python Code" src="https://github.com/user-attachments/assets/f82d2535-879c-4498-b42e-f76e19ebf999" />
+
+A sample output of the "game" looks like this:
+
+<img width="884" height="367" alt="Python Output" src="https://github.com/user-attachments/assets/fdc4f8fa-e9fb-4fbe-9c82-a21193cd8e19" />
 
 
 ## JavaScript: Simple Demo
