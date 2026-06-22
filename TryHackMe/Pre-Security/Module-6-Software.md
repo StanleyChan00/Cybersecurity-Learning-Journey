@@ -101,11 +101,22 @@ Thus `9BDF` = 39,903
 
 ## Data Encoding
 
-Encoding is the process of turning these binary values into characters by agreeing on which values are used to represent which characters and it's the OS that converts these binary hardware signals into characters. 
+Encoding is the process of turning these binary values into characters by agreeing on which values are used to represent which characters. Thus, it's how these hardware signals are able to be converted into readable characters that we can actually interact with.
 
 Reading a file using a different encoding than the original user who made it is how we get gibberish on our end reading it. One of the earliest encoding protocols was the **American Standard Code for Information Interchange(ASCII)**
 
 ### ASCII
+
+ASCII is an encoding from 1963 which used 7 bits, and thus only had 128 usable characters. 
+
+It's an American system, so it covered basic English letters, digits, punctuation and some other command hardware characters(like Tab, DEL, etc).
+
+It also had it mapped out in order sequentially . So the upper case letters `A`,`B`, and `C`, for example, would be mapped out in hexadecimal as 41, 42, and 43 respectively.
+
+Extended ASCII opened up more character space via an 8th bit which now expanded the limit to 256 characters vs 128. This allowed for the "ISO/IEC 8859" standard mapped out 15 different variations of these extra 128 usable characters to various language sets.
+
+However despite this, it was still limited as you could not use different variations of of this standard within the same document as only one of these variational maps could be used at a time. 
+
 
 ## Python: Simple Demo
 
