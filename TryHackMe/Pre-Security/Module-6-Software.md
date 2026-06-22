@@ -1,12 +1,14 @@
 # Tryhackme Pre Security - Module 6: Software Basics 
 
 ## Data Representation 
-As we know, computers communicate through 1s and 0s, called bits. These bits can be used to represent colors and the process in which we specify colors is explained as follows:
+As we know, computers communicate through 1s and 0s, called bits. These bits can be used to represent colors.
+
+The process in which we specify colors is explained as follows:
 
 ### Representing Colors
-All colors come from red, green, and blue. Every color is just a different combination of these colors and by turning off or on one of these colors, we get a distinctly new color. 
+All colors come from red, green, and blue. Every color is just a different combination of these 3 colors and by turning off or on one of these colors, we get a distinctly new color. 
 
-We can thus understand this concept through bits. Red, green, and blue can each be represented as a bit of `0` for "off" and `1` for "on". 
+We can understand this concept through bits. Red, green, and blue can each be represented as a bit of `0` for "off" and `1` for "on". 
 
 For example, `000` would be all 3 colors "off". `101` would be red and blue turned "on" while green is "off. 
 
@@ -24,7 +26,7 @@ This now gives us more than 16 million potential color combinations(256 x 256 x 
 
 #### Hexadecimal Representation of Colors:
 
-Since reading a string of 24 bits is quite impractical, we use hexadecimal digits to make it easier to read(Hexadecimal digits are explained more further below a couple sections down).
+Since reading a string of 24 bits is quite impractical, we use hexadecimal digits to make it easier to read(Hexadecimal digits are explained more a couple sections down).
 
 Each Hexadecimal value here represents 4 bits. So to represent a color, we will have a total of 6 hexadecimal digits instead of 24 individual bits.
 
@@ -39,11 +41,11 @@ As we understand already, computers communicate through binary numbers and these
 
 * Low and High Voltage Signals(Voltage that is defined as high is "1" whereas low voltage would be "0")
 * North and South in Magnetic Polarity (Like in Hard Drives)
-* Light Presence(Like Fiber optics in which light presence will be "1" or "0" if "off" or in the modern sense determined by the intensity)
+* Light Presence(Like Fiber optics in which light presence will be "1" or "0" if light is detected or not, or in the modern sense determined by the intensity)
 
 In order to understand how these binary bits are represented as numbers, we have to understand that it operates as a base-2 system, meaning they only work with 2 digits: `0` and `1`.
 
-We understand numbers in human terms as base-10 due to the presence of 10 total digits(0-9). Once we hit 9, we "carry over" to the next "ten" by adding a one and then resetting our current counter back to 0. Like going from 9-10 would add a 1 in the tens spot while the single digit values would go back to 0. This goes on for each decimal point as each "tens" is just the previous "10" multipled by 10.
+We understand numbers in human terms as base-10 due to the presence of 10 total digits(0-9). Once we hit 9, we "carry over" to the next "ten" by adding a one and then resetting our current counter back to 0. For example, going from 9-10 would add a 1 in the tens spot while the single digit values would go back to 0, thus "10". This goes on for each decimal point as each "tens" is just the previous "10" multipled by 10.
 
 10 is just ten single digit ones. 100 is just 10 sets of tens. 1,000 is 10 sets of 100 and so on. 
 
@@ -61,9 +63,7 @@ and so on.
 
 If we want to convert a long binary number into decimal, we would visually break it up in the same way a decimal number is broken up: through it's positional value added up together.
 
-314 is not actually 314, but 300 + 10 + 4(the positional values added up together). 
-
-10 is just ten single digit ones. 100 is just 10 sets of tens. 1,000 is 10 sets of 100 and so on. Each "ten's" positional value is just the previous tens multiplied by 10.
+In decimal, 314 is not actually 314, but 300 + 10 + 4(the positional values added up together). 
 
 Binary would be the same way but each positional value would be by times 2 instead of times 10. 
 
@@ -83,7 +83,7 @@ Since binary is a nightmare to read on it's own, we can use hexadecimal numbers,
 
 As stated already, hexadecimal digits go from `0-9`, then from `A-F` and represent the decimal numbers of 0-15(0-9 and 10-15 respectively). 
 
-It is slightly more complex than binary since we can't simply imagine each positional value as "turned on". Instead, we multiple the value of each digit by its positional value(as base-16) and add everything up together.
+It is slightly more complex than binary since we can't simply imagine each positional value as "turned on/off". Instead, we multiple the value of each digit by its positional value(as base-16) and add everything up together.
 
 For Example: `9BDF`
 
@@ -101,7 +101,11 @@ Thus `9BDF` = 39,903
 
 ## Data Encoding
 
+Encoding is the process of turning these binary values into characters by agreeing on which values are used to represent which characters and it's the OS that converts these binary hardware signals into characters. 
 
+Reading a file using a different encoding than the original user who made it is how we get gibberish on our end reading it. One of the earliest encoding protocols was the **American Standard Code for Information Interchange(ASCII)**
+
+### ASCII
 
 ## Python: Simple Demo
 
