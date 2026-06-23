@@ -6,7 +6,7 @@ As we know, computers communicate through 1s and 0s, called bits. These bits can
 The process in which we specify colors is explained as follows:
 
 ### Representing Colors
-All colors come from red, green, and blue. Every color is just a different combination of these 3 colors and by turning off or on one of these colors, we get a distinctly new color. 
+All colors come from red, green, and blue. Every color is just a different combination of these 3 colors and by "turning off" or "on" one of these colors, we get a distinctly new color. 
 
 We can understand this concept through bits. Red, green, and blue can each be represented as a bit of `0` for "off" and `1` for "on". 
 
@@ -23,6 +23,13 @@ Now, there are obviously a lot more than 8 colors. So to get more of them, we ca
 The way that is currently used is by having each of these 3 main colors use 8 total bits, resulting in 256 total "shades" of red, 256 total "shades" of green, and 256 total "shades" of blue. 
 
 This now gives us more than 16 million potential color combinations(256 x 256 x 256) each specified by 3 series of 8 bits. Each series of 8 bits is called a **byte** or an octet and each octet gives us the "shade" of each color(red, green, and blue respectively).
+
+As a sample, this color:
+
+<img width="215" height="190" alt="Color" src="https://github.com/user-attachments/assets/5789097e-e3bf-4660-b0f2-3cea3310391b" />
+
+Would look like `10100011 11101010 00101010` in binary. 
+
 
 #### Hexadecimal Representation of Colors:
 
@@ -103,7 +110,9 @@ Thus `9BDF` = 39,903
 
 Encoding is the process of turning these binary values into characters by agreeing on which values are used to represent which characters. Thus, it's how these hardware signals are able to be converted into readable characters that we can actually interact with.
 
-Reading a file using a different encoding than the original user who made it is how we get gibberish on our end reading it. One of the earliest encoding protocols was the **American Standard Code for Information Interchange(ASCII)**
+Reading a file using a different encoding than the original user who made it is how we get gibberish on our end reading it.
+
+One of the earliest encoding protocols was the **American Standard Code for Information Interchange(ASCII)**
 
 ### ASCII
 
@@ -154,9 +163,16 @@ A sample output of the "game" looks like this:
 
 <img width="884" height="367" alt="Python Output" src="https://github.com/user-attachments/assets/fdc4f8fa-e9fb-4fbe-9c82-a21193cd8e19" />
 
+(Note, the lesson along with the JavaScript lesson also briefly went over input validation, although the code is not in the picture above 
+
 
 ## JavaScript: Simple Demo
 
+Same as with Python, I won't go over all the concepts but the lesson also went over variables, constant variables, while loops, as well as if/else statements. 
+
+It then created the same "game" as the previous lesson but in JavaScript. The code, along with my notes, looks like the below:
+
+<img width="1699" height="781" alt="JavaScript Code" src="https://github.com/user-attachments/assets/679f7222-4269-4ee1-9587-ec2fa80d170f" />
 
 
 ## DataBase SQL Basics
