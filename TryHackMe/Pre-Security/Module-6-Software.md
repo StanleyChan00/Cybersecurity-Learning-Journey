@@ -163,7 +163,7 @@ A sample output of the "game" looks like this:
 
 <img width="884" height="367" alt="Python Output" src="https://github.com/user-attachments/assets/fdc4f8fa-e9fb-4fbe-9c82-a21193cd8e19" />
 
-(Note, the lesson along with the JavaScript lesson also briefly went over input validation, although the code is not in the picture above 
+(Note, the lesson along with the JavaScript lesson also briefly went over input validation, although the code is not in the picture above)
 
 
 ## JavaScript: Simple Demo
@@ -174,5 +174,37 @@ It then created the same "game" as the previous lesson but in JavaScript. The co
 
 <img width="1699" height="781" alt="JavaScript Code" src="https://github.com/user-attachments/assets/679f7222-4269-4ee1-9587-ec2fa80d170f" />
 
-
 ## DataBase SQL Basics
+
+A database is just a storehouse of data/information. 
+
+In it, data is stored as a table with columns and rows. The rows represent new pieces of data while columns represent the types of data stored.
+
+We can imagine it as a café storing data of all the orders that's been placed at their shop. 
+
+The table would look like this:
+
+|Order #| Item |Price| Time  |
+|:-----:|:----:|:---:|:-----:|
+|   1   |Coffee|$2.00|11:00am|
+|   2   |Tea   |$1.50|11:05am|
+|   3   |Muffin|$2.50|11:10am|
+
+Each row would be a new data record set while each column gives us more information/properties about that data  
+
+In this case, we can see 3 orders that were entered in by the café. We can also see what was ordered as well as the the price and time in which it was ordered. 
+
+This is all stored on the café's database so they can keep track of their orders and can do an analysis on their orders like:
+
+* "How many coffees did we sell today?"
+* "What was sold the least today?"
+* "What was the highest price selling item?"
+* "How much revenue did Coffee bring us today?"
+* And much more
+
+
+
+
+
+
+
