@@ -202,9 +202,28 @@ This is all stored on the café's database so they can keep track of their order
 * "How much revenue did Coffee bring us today?"
 * And much more
 
+### Structured Query Language(SQL)
 
+SQL is the language used for databases. Writing SQL queries is how we analyze that data. By 
 
+Here are some commands we learend this lesson:
 
+`SELECT` - This is how we view/read the data within the database. By typing the names of the columns we want to see after this command, we can then list all said attributes of each record that we commanded. For example `SELECT item, price FROM orders;` would then list the data that looks like this:
 
+| Item |Price|
+|:----:|:---:|
+|Coffee|$2.00|
+|Tea   |$1.50|
+|Muffin|$2.50|
 
+Typing `SELECT *` would list all the columns as `*` means all columns. 
 
+`FROM` - This command, like in the example above, extracts data from the exact table that we want. `FROM orders;` for example takes it from the orders table or data set. 
+
+`ORDER BY` - This is how we sort the data. For example, `SELECT * FROM orders ORDER BY price` would sort the data we want to see according to the price. By default, it sorts in ascending order, so the lowest price would be first and highest last. `ORDER BY price DESC` would sort it in descending order. Listing multiple criteria would order it in priority of the first item, then the second, and so on. 
+
+`WHERE` - This is how we filter the data through conditional statements. Whatever criteria gets met here is what gets listed. For example `SELECT Orders WHERE drink = 'coffee';` would filter out all the records in which ONLY the drinks were coffee. 
+
+We can also combine commands together. for example, we can filter by orders after 9:00 and sort it in descending order by price:
+
+`SELECT * FROM orders WHERE time > '09:00' ORDER BY price DESC;`
