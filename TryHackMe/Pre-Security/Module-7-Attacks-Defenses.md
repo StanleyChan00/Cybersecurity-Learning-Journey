@@ -61,7 +61,7 @@ It's a very simple encryption. In the image, for example, every letter in the da
 * `B` becomes `E`
 * etc
 
-So in doing this, the word(the plaintext) `Hello` would become `KHOOR`(the ciphertext).
+So in doing this, the word `Hello`(the plaintext) would become `KHOOR`(the ciphertext).
 
 We can also see that the algorithm would in simple terms just be $Ciphertext = Plaintext + X$. And the key would be $X = 3$.
 
@@ -70,6 +70,20 @@ This kind of encryption is very fast and efficient. However, the problem lies in
 Encrypting the key itself doesn't work beacuse then you'd have to encrypt the key that unlocks that key and thus you'd end up in an infinite loop. Asymmetric encryption solves this problem. 
 
 ### Asymmetric Encryption 
+
+The difference here is that the encryption and decryption keys are not the same. The encryption key is public and shared to anyone while the decryption key is kept secret.
+
+In this case, anyone can encrypt a message using this encryption but ONLY the holder of the private key can decrypt and read that message. 
+
+This solves the problem of Symmetric encryptions because there is no longer a need to share the secret key. There is a public and a private key and *only* the public key is needed to encrypt and send secure data to another.
+
+Anything I need to send a secret message to my friend is through my friend's public key. I use that key to "lock" my message and no one else can open that lock besides my friend or whoever that has that private key. 
+
+The downside though is that it's extremely slow and requires more CPU power. So large files or services like streaming can't use it. However, **Hybrid encryptions** are used which allows for a lot more flexibility.
+
+Hybrid Encryptions combined both these methods by, in essence, using asymmetric encryption to create a secure channel in which the symmetrically encrypted key as well as the symmetrically encrypted data files can be shared securely.
+
+This combines the speed and efficiency of symmetric encryptions with the security of asymmetric encryptions. HTTPS for example uses hybrid encryption. 
 
 ## Become a Hacker
 
