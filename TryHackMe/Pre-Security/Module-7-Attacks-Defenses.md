@@ -87,6 +87,50 @@ This combines the speed and efficiency of symmetric encryptions with the securit
 
 ## Become a Hacker
 
+As covered in Module 1, offensive security has the role of actively attempting to break into systems, in a controlled manner, to find exploitative weaknesses that can be patched up.
+
+In order to perform in this role effectively, we need to place ourself in the mindset of a malicious attacker and constantly be asking questions like 
+
+* "What is exposed? What can be exposed?"
+* "What can be accessed? What can we do with that access"?
+* "What assumptions does the system make in how we will act? Can we act differently in a way the system does not expect?"
+* And so on.
+
+Some quick key terms:
+
+* **Red Teaming:** A real world test of a security’s defense that acts like an authentic malicious attacker. As in, it happens by suprise/without notice and tests the system/defense team as a whole. 
+* **Penetration Test**: This is like a structured inspection where every vulnerability is identified and exploited
+* **Vulnerability:** A weakness in a system that can be exploited
+* **Exploit:** Taking advantage of a vulnerability in a system
+* **Scope:** The boundries of what is allowed during offensive security "attack"
+
+### Lab
+
+This lab had us "attack" a new business owner's website.
+
+Here, we started off by attempting to identify any hidden pages that may not have been properly blocked off from the public. In this case, we can just keep trying different URLs like `http://www.onlineshop.thm/admin`, etc. 
+
+This can be time consuming and impractical in real world scenarios. 
+
+But there is a tool ethical hacker's use called `Gobuster` which is used in the terminal and allows us to scan a URL for a set of defined keywords as hidden pages.
+
+The command for it may look like this:
+
+`gobuster dir --url http://www.onlineshop.thm/ -w /usr/share/wordlists/dirbuster/directory-list.txt`
+
+`gobuster` calls the gobuster tool.
+
+`dir` tells the command to specifically look for directories/files. It directs the command in scanning for the hidden pages we are looking for. 
+
+`--url http://www.onlineshop.thm/` specifies the target we want to scan
+
+`-w` stands for wordlist and tells the command that the following is where it will find all the words to scan that target URL for. 
+
+`/usr/share/wordlists/dirbuster/directory-list.txt` This is the file path to the wordlist we are using to scan. 
+
+We then used that command in the terminal. The login web page popped up with a 200 status code, meaning it connected to the page successfully. 
+
+
 
 
 ## Become a Defender
