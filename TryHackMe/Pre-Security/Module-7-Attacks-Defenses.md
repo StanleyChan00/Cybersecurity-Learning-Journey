@@ -130,8 +130,35 @@ The command for it may look like this:
 
 We then used that command in the terminal. The login web page popped up with a 200 status code, meaning it connected to the page successfully. 
 
+So in entering that URL, we now have access to the login page which was supposed to be restricted. This now opens up more possibilities. 
 
+In this case, we can attempt to login and gain access. 
 
+This lab has us trying a few common passwords with the username "admin". Just like gobuster though, there is a tool to try to brute force it with a set of potential passwords for it to try. This tool is called "Hydra" and this type of attack is called a **dictionary attack**. 
+
+The command for this tool looks like this:
+
+`hydra -l admin -P passlist.txt www.onlineshop.thm http-post-form "/login:username=^USER^&password=^PASS^:F=incorrect" -V`
+
+`hydra` calls the hydra tool.
+
+`-l admin` is using the username "admin". `-l` indicates a single username while `-L` would give the option to try multiple usernames.
+
+`-P passlist.txt` gives a list of passwords to try. `p` would be a single password. 
+
+`www.onlineshop.thm` is the target 
+
+`http-post-form` the protocol and method used to login to the website. In this case HTTP & a POST request as a form submission.
+
+`"/login:username=^USER^&password=^PASS^:F=incorrect" ` has `/login` specifying the web page. While the username and password part tells the command the structure in which the username/password is expected to be used by the website. `F=incorrect` tells Hydra what it will see when it fails.
+
+`-V` stands for Verbose which displays the login attempts on our terminal for us. 
+
+We finally ran this command on our terminal in the lab and found the login as `username = admin` and `password = qwerty` after 17 attempts and was able to login to the admin account of the site!
+
+I will note though that this isn't as easy to do on a real system as even attempting it like this would automatically and very quickly be flagged and blocked via the firewall. 
+
+However, other mitigations of this may possibly be used like running the traffic through VPNs, delaying the attempts and buffering it so it does not seem out of the ordinary, and more. 
 
 ## Become a Defender
 
