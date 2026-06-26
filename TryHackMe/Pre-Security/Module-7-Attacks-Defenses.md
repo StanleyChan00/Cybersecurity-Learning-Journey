@@ -162,4 +162,33 @@ However, other mitigations of this may possibly be used like running the traffic
 
 ## Become a Defender
 
+The blue team! 
 
+Defending systems consists of defending against attacks as they happen and handling them appropriately as well as before they ever happen in the first place through prevention. 
+
+Some simple concepts provided by the lesson:
+
+* **Prevention:** Adding security defenses that prevent the attacks before they even happen such as firewalls and antivirus software, etc
+* **Detection:** Monitoring our systems and identifying potential threats.
+* **Mitigation:** Once a threat or potential threat is detected, mitigation is us taking action to stop, prevent or limit any further damage or leakage in vulnerabilities that were possibly exploited. 
+* **Analysis:** Investigating exactly what happened, how it happened, as well as finding how exactly what was affected.
+* **Response and Improvement:** Resolves the threat and takes steps to improve our defenses to reduce the risk of similar attacks in the future.
+
+We can imagine cybersecurity defense like defending a city.
+
+In a city, we are defending the buildings, homes, and people. We use cameras, patrols, and reports to detect threats. Potential threats are then identified and then mitigated or stopped via law enforcement. 
+
+Cybersecurity is similar. In our case, we are defending servers, data, users, etc. We use logs, alerts, or network traffic as our "cameras" to detect potential threats. Once potential threats are identified, like unusual IP address activity, steps are taken to mitigate or stop them like blocking them through the firewall. 
+
+### Mindset
+
+As seen in the last lesson, any weakness or openings lead to more potential attack vectors and vulnerabilities that can be exploited. One compromise of an employee's email could lead to login information being accesses, leading to mail server data being leaked, leading to potential more sensitive and dangerous data that a malicious attacker could use. 
+
+We need to understand the attackers mindset and constantly be aware of what paths can be taken to attack a system.
+
+We need:
+
+* **Threat anticipation:** Think like an attack and imagine what they would and could do
+* **Attack awareness:** Be aware of the methods commonly and currently used in modern systems so we can recognize it when it happens and act accordingly 
+* **Risk Prioritization:** Be aware of the higher risk/value systems to protect.
+* **Continuous adaptation:** Attackers are continually adapting and creating new attack vectors so we have to adapt with them, be able to evolve as well, and stay updated with the current tech and attacks. 
