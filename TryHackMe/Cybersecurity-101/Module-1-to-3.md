@@ -40,6 +40,15 @@ Attackers use it in all sorts of creative ways but as soon as a new CVE is publi
 
 ### Linux Man Pages 
 
+`Man` stands for "Manual" here. This is a built in manual/reference tool for Linux systems.
+
+It's very simple to use in the CLI. The syntax is simply `man <command>`.
+
+We can use it to learn more and get more information about any command we wish, right there in the terminal. Part of a sample output, provided by TryHackMe, looks like this:
+
+<img width="1231" height="292" alt="Linux Man" src="https://github.com/user-attachments/assets/70aec02d-7402-43a6-8814-0ca846096ccb" />
+
+(Note, Offensive and Defensive Security Lessons of this module were already completed in Module 1 of the Pre Security Course)
 
 # Module 2 - Linux Fundamentals
 
