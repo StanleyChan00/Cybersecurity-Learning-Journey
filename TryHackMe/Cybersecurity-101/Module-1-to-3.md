@@ -28,7 +28,15 @@ It's also not a perfect tool as it doesn't guarantee safety. However, it's a goo
 
 ### Common Vulnerabilities and Exposures(CVE)
 
+[CVE](https://www.cve.org/) and the ["National Vulnerability Database(NVD)](https://nvd.nist.gov/) is essentially a library of known vulnerabilities in tech. 
 
+Each vulnerability has its own specific identifier that uses the format of `CVE-YEAR-NUMBER` like `CVE-2025-55182`. If the vulnerability is significant enough, it may get an alias called a **"Moniker"**
+
+When looking up a CVE, its page gives us information on the vulnerability as well as references to get more info on it. They also are given a score known as "Common Vulnerability Scoring System"(CVSS) whch gives a value measuring its "significance" based off factors like its potential impact, complexity(how easy it is to exploit), as well as availability(how accessible it is to exploit).
+
+Defenders can use this to identify vulnerabilities on a system as well as have priority levels on which ones to patch first. 
+
+Attackers use it in all sorts of creative ways but as soon as a new CVE is published, attackers should immediately be looking for ways to exploit it before the defenders can patch it. 
 
 ### Linux Man Pages 
 
