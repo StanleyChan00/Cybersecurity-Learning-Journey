@@ -6,7 +6,7 @@
 
 [Shodan](https://www.shodan.io/) is really good scanning tool.
 
-It's a search engine of their database, which continually scans the internet for devices connected and accessible to the internet.
+It's a search engine of Shodan's database, which continually scans and logs the internet for devices connected and accessible to the internet.
 
 In doing so, you can find and search for so many devices that are just left out in the open. From traffic cams, to webcams, to printers and so much more.
 
@@ -24,7 +24,7 @@ If what we inputted has already been scanned, it will simply pull up its existin
 
 In that context, its also why it's important that we never input anything that has private or sensitive data within. 
 
-It's also not a perfect tool as it doesn't guarantee safety. However, it's a good tool to get a sort of consensus view on whether something may be malicious or not. 
+It's also not a perfect tool as it doesn't guarantee safety. However, it's a good tool to get a sort of "consensus" view on whether something may be malicious or not. 
 
 ### Common Vulnerabilities and Exposures(CVE)
 
@@ -48,7 +48,7 @@ We can use it to learn more and get more information about any command we wish, 
 
 <img width="1231" height="292" alt="Linux Man" src="https://github.com/user-attachments/assets/70aec02d-7402-43a6-8814-0ca846096ccb" />
 
-(Note, Offensive and Defensive Security Lessons of this module were already completed in Module 1 of the Pre Security Course)
+(Note, the Offensive and Defensive Security Lessons of this module were already completed in Module 1 of the Pre Security Course)
 
 # Module 2 - Linux Fundamentals
 
@@ -62,21 +62,11 @@ It was based off Unix and is used everywhere from smartphones, to TVs, cloud ser
 
 Many of these commands were covered in depth in the previous Pre Security course [here](../Pre-Security/Module-5-Operating-Systems.md#Linux-CLI-Basics). 
 
-However, this lesson went over the following commands:
+However, in addition to the previous commands taught, this lesson also went over the following:
 
 `echo` - Outputs the same text that we input
 
-`whoami`
-
-`ls`
-
-`cd`
-
-`cat`
-
-`pwd`
-
-`find` - In addition to the notes of the previous course, this lesson taught us the use of the "wildcard" `*`, which allows us to search for a file that we don't know the exact name of. For illustrative purposes, `find -name "*.txt"` would return us the location of every single file that ends in `.txt`. So `*` is a sort of "fill in" character that just means "any characters of any length".
+`find` - Adding to the notes of the previous course, this lesson taught us the use of the "wildcard" `*`, which allows us to search for a file that we don't know the exact name of. For illustrative purposes, `find -name "*.txt"` would return us the location of every single file that ends in `.txt`. So `*` is a sort of "fill in" character that just means "any characters of any length".
 
 `grep` - This allows us to search a for a specific keyword or term within a file and the terminal will then return all the lines in which that keyword appears. It's useful for getting to specific pieces of data quickly, or filtering data, etc. By default, this command searches only the files within the folder you are in; It does not dive any deeper. Adding `-r` (stands for recursive) would extend this search into ALL the subfolders within your directory. (`-r` ignores shortcut folders while `-R` does not). 
 
