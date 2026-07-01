@@ -52,8 +52,33 @@ We can use it to learn more and get more information about any command we wish, 
 
 # Module 2 - Linux Fundamentals
 
+## Linux Fundamentals Part 1
 
+As briefly covered in the Pre Security course already, Linux is a core OS that was built open-source. Because it is free to use for everyone, many variants(called distributions) have been built off of it to better specialize for the specific intended task that is needed.
 
+It was based off Unix and is used everywhere from smartphones, to TVs, cloud servers, many IoT devices, and more. This particular lesson from TryHackMe has us using the Ubuntu distro. 
+
+### Some Commands
+
+Many of these commands were covered in depth in the previous Pre Security course [here](../Pre-Security/Module-5-Operating-Systems.md#Linux-CLI-Basics). 
+
+However, this lesson went over the following commands:
+
+`echo` - Outputs the same text that we input
+
+`whoami`
+
+`ls`
+
+`cd`
+
+`cat`
+
+`pwd`
+
+`find` - In addition to the notes of the previous course, this lesson taught us the use of the "wildcard" `*`, which allows us to search for a file that we don't know the exact name of. For illustrative purposes, `find -name "*.txt"` would return us the location of every single file that ends in `.txt`. So `*` is a sort of "fill in" character that just means "any characters of any length".
+
+`grep` - This allows us to search a for a specific keyword or term within a file and the terminal will then return all the lines in which that keyword appears. It's useful for getting to specific pieces of data quickly, or filtering data, etc. By default, this command searches only the files within the folder you are in; It does not dive any deeper. Adding `-r` (stands for recursive) would extend this search into ALL the subfolders within your directory. (`-r` ignores shortcut folders while `-R` does not). 
 
 
 # Module 3 - Windows & AD Fundamentals 
