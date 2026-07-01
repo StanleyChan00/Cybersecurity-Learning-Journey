@@ -70,5 +70,24 @@ However, in addition to the previous commands taught, this lesson also went over
 
 `grep` - This allows us to search a for a specific keyword or term within a file and the terminal will then return all the lines in which that keyword appears. It's useful for getting to specific pieces of data quickly, or filtering data, etc. By default, this command searches only the files within the folder you are in; It does not dive any deeper. Adding `-r` (stands for recursive) would extend this search into ALL the subfolders within your directory. (`-r` ignores shortcut folders while `-R` does not). 
 
+### Shell Operators 
+
+This lesson went over a few operators we can use in the terminal. 
+
+`&` - This allows us to run a command in the background so that we are free to use the terminal for other tasks at the exact same time. It saves us a lot of time for tasks that can take a long time to execute or process like copying a large file. 
+
+`&&` - This allows us to chain commands together. The commands will execute sequentially but if one command fails, the rest will not trigger. 
+
+`>` - This allows us to redirect the output of a commamnd into something else. For example, we can output "hello" via the `echo` command and redirect that into a new file "welcome" via `echo hello > welcome.txt` If a welcome.txt file already exists, the `>` operator will overwrite and replace it
+
+`>>` - This does the same thing as the `>` operator, however it will not overwrite any files. Instead, it will simply add the output onto the bottom of the file as a new line. So in the previous example, if welcome.txt already exists with the word "hey" already in it and we run `echo hello >> welcome.txt` , then the welcome.txt file would now be:
+
+```
+hey
+
+hello
+```
+
+## Linux Fundamentals Part 2
 
 # Module 3 - Windows & AD Fundamentals 
