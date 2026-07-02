@@ -118,5 +118,22 @@ That of which, a sample output will look like the following:
 
 We can also use the [Man pages](#linux-man-pages) to get more information.
 
+### Managing Files
+
+Some more commands, specifically in relation to managing our file systems:
+
+`touch` - This creates a file It's a very simple command and just requires an inout for the file name like `touch <filename>`. Also note that the file created will be blank and commands would be needed to add to it or a text editor(like nano) can be used. 
+
+`mkdir` - This stands for "make directory" and creates a folder for us. We just title that folder within the input as so `mkdir <directoryname>`
+
+`cp` - This stands for "copy" and allows us to copy a file into a destination. That destination can be an entirely new file or overwrite an existing one. It takes two inputs - the copied file and the destination and is written as `cp <copiedfile> <destination/newfilename>`. Adding the `-i`(standing for interactive) allows for a warning before overwriting a file
+
+`mv` - This stands for "move" which not only allows us to move files but also rename them. Like `cp`, it takes two inputs - the initial file and the destination/new file name and looks like so: `mv <initialfile> <destination/renamedfile>`. Same as with `cp`, if the new filename already exists, it will be overwrittem so adding `-i` beforehand allows you to confirm before doing so.
+
+`rm` - This stands for "remove" and allows you to permanently delete a file or folder. We simply just input what we want to delete. If we want to delete a folder, we have to use the recursive flag `-r` which deletes the folder and everything inside it. `-d`(stands for directory) if the folder is specifically empty and we want to confirm we are deleting an empty folder. 
+
+`file` - This command tells us what type of content is in a file. Because Linux, unlike other OSs, don't really need file extentions, `file` is used to tell us what type of file we're dealing with: text, media, etc.
+
+Note that all these commands can take entire file paths as inputs for the arguments.
 
 # Module 3 - Windows & AD Fundamentals 
