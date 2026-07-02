@@ -100,5 +100,23 @@ This lesson had us go over this as well as use their ubuntu Linux VM to login to
 
 We then logged in using the given password: "tryhackme". Thus the username(from the command) and password(given in the lesson) is both "tryhackme" while the IP is `10.67.184.192`
 
+### Flags and Switches 
+
+In many of the commands covered [here](../Pre-Security/Module-5-Operating-Systems.md#Linux-CLI-Basics), we were able to add "modifiers" which slightly altered how the commands would execute. 
+
+For example, with `ls` we could add `-a` to show all the hidden files in a directory rather than the default command of `ls` not displaying them.
+
+These "modifiers" which allow for us to add extra arguments to the commands are called **flags** or **switches**.
+
+These flags start with a `-` followed by their specific identifiers.
+
+To get a list of possible flags a command can accept, we can type in `--help` after a command that accepts flags.
+
+That of which, a sample output will look like the following:
+
+<img width="1034" height="872" alt="--help" src="https://github.com/user-attachments/assets/6dbe1a1d-976e-43cc-a23d-f93b567989ad" />
+
+We can also use the [Man pages](#linux-man-pages) to get more information.
+
 
 # Module 3 - Windows & AD Fundamentals 
