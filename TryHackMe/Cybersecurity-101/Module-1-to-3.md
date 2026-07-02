@@ -90,4 +90,15 @@ hello
 
 ## Linux Fundamentals Part 2
 
+### Secure Shell(SSH)
+
+We also briefly went over this in the previous course and used it in a lab [here](../Pre-Security/Module-5-Operating-Systems.md#lab---practice-an-authentication-attack-vector-using-the-linux-cli).
+
+But to recap, SSH is a network protocol used to connect devices with a cryptographic encryption. Therefore, the connection is secure and is often used to login remotely to a server or device(like in the lab linked above). 
+
+This lesson had us go over this as well as use their ubuntu Linux VM to login to a remote device using the `ssh` command(syntax format is in the previous lesson) like so `ssh tryhackme@10.67.184.192`
+
+We then logged in using the given password: "tryhackme". Thus the username(from the command) and password(given in the lesson) is both "tryhackme" while the IP is `10.67.184.192`
+
+
 # Module 3 - Windows & AD Fundamentals 
