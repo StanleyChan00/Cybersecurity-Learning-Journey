@@ -155,9 +155,9 @@ Just as a quick overview, there's 7 total columns of data types listed when the 
 |:---------:|:--------:|:-----:|:-----:|:-------:|:----------:|:-------:|
 |-rw-r--r-- |1         |cmnatic|cmnatic|0        |Feb 19 10:37|file1    |
 
-Hard links is the number of files in which this file is identical to(essentially, how many files are copies of this file). If it's a directory, then it's the number of folders within that directory.
+Hard links is the number of times in which this file is pointed to. If it's a directory, then it's the number of folders within that directory plus 2(`.` and `..` which points to itself and its parent directory respectively.
 
-Owner is the user who created that file. Group is the group of users relevant to the permissions of this file(explained more in a second). File size is the size of the file and in this case is just 0(the human readable flag was also used in this command so it's not bytes being represented, as a note).
+Owner is the user who currently owns that file. Group is the group of users relevant to the permissions of this file(explained more in a second). File size is the size of the file and in this case is just 0(the human readable flag was also used in this command so it's not bytes being represented, as a note).
 
 Last changed is when the file was last modified and the file name is the last column. 
 
@@ -183,7 +183,7 @@ So, with the `ls -l` command, we can thus see the permission levels of the files
 
 **Groups:** Groups are, as it sounds, collections of users created by the system administrator. For example, within an organization, the finance department may be the finance "group". 
 
-Each file can ONLY be associated with **one** group at a time chosen by the owner of the file. That group is named in the `ls -l` command as seen above and the permission levels for the "group" section represent the permission levels for that specific respective group. "Others" represent all other users besides that group and the owner. 
+Each file can ONLY be associated with **one** group at a time chosen by the owner of the file(Note that they can only assign a file to a group that they belong to). That group is named in the `ls -l` command as seen above and the permission levels for the "group" section represent the permission levels for that specific respective group. "Others" represent all other users besides that group and the owner. 
 
 
 # Module 3 - Windows & AD Fundamentals 
