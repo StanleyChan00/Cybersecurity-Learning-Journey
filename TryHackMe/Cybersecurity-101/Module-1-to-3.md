@@ -207,6 +207,29 @@ Say the group and other uses also had `rwx`, then they both would also have the 
 
 `622` would mean that the owner can read and write while the group and other users can only write. `700` would mean ONLY the owner has access to everything. 
 
-The values for read, write, and execute are such that it's easy to see what permissions are allowed from a glance. 
+The values for read, write, and execute are such that it's easy to see what permissions are allowed from a glance because each value has only one unique combination of values that add up to it.
+
+### Common Directories 
+
+#### /etc
+
+This just stands for "etc" as in "etcetera" but its an incredibly important root directory as it is the commonplace location to store the system files used by our OS.
+
+For example, the `sudoers` which defines user privilege and more stored in the file in this directory. `passwd` and `shadow` is also stored here which contains information about our user accounts and passwords(encrypted). 
+
+#### /var
+
+This stands for variable data and as it sounds, holds data that dynamically changes depending on the application or tasks the system is doing. Managing or creating files here manually rarely hppens but the system updates and uses it automatically. 
+
+For example, log files would be here.
+
+
+#### /root
+
+This is just the home directory for the system administrator.
+
+#### /tmp
+
+This stands for "temporary" and as it sounds, stores temporary data similar to the RAM's role in hardware. Thus, the content here is volatile and cleared out each time the computer is restarted. 
 
 # Module 3 - Windows & AD Fundamentals 
