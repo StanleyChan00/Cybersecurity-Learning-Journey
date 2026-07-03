@@ -185,5 +185,28 @@ So, with the `ls -l` command, we can thus see the permission levels of the files
 
 Each file can ONLY be associated with **one** group at a time chosen by the owner of the file(Note that they can only assign a file to a group that they belong to). That group is named in the `ls -l` command as seen above and the permission levels for the "group" section represent the permission levels for that specific respective group. "Others" represent all other users besides that group and the owner. 
 
+#### Switching Between Users
+
+To switch between users, we can use the `su` command which stands for "switch user". We simply input the username after `su` and then the system will prompt us for the password of the user.
+
+We can also add the `-l` flag, which stands for "login", which essentially starts us up as if its a new login session. As in, we go to the new users home directory and loads all the settings and environments for that user rather than just staying where we were. 
+
+#### Permission Numeric Values
+
+Each of these permissions have a numeric value that adds together for the owner, group, and all other users respectively. In doing so, we end up having a sort of "status code" which allows us to quickly look at a value and see the permission levels of a file/directory at a glance. 
+
+Here are the values:
+
+* Read = 4
+* Write = 2
+* Execute = 1
+
+If the owner, for example, had the values `rwx`, then that would be $4 + 2 + 1=7$. So the owner's value would be 7. 
+
+Say the group and other uses also had `rwx`, then they both would also have the value of 7. So the numeric permission for this specific file would be `777`, meaning all users can do everything on this file(read, write, execute). 
+
+`622` would mean that the owner can read and write while the group and other users can only write. `700` would mean ONLY the owner has access to everything. 
+
+The values for read, write, and execute are such that it's easy to see what permissions are allowed from a glance. 
 
 # Module 3 - Windows & AD Fundamentals 
