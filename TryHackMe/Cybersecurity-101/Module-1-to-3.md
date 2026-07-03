@@ -136,4 +136,54 @@ Some more commands, specifically in relation to managing our file systems:
 
 Note that all these commands can take entire file paths as inputs for the arguments.
 
+### Permissions 101
+
+As we understand already, files can have specfic permission levels. Meaning certain users or groups of users can have more access to files or folders. 
+
+We can see these privilege levels using the `ls -l` command. A sample output provided by the lesson looks like the following:
+
+```
+tryhackme@linux2:~$ ls -lh
+-rw-r--r-- 1 cmnatic cmnatic 0 Feb 19 10:37 file1
+-rw-r--r-- 8 cmnatic cmnatic 0 Feb 19 10:37 file2
+
+```
+
+Just as a quick overview, there's 7 total columns of data types listed when the `ls -l` command is used. 
+
+|Permissions|Hard Links|Owner  |Group  |File Size|Last Changed|File Name|
+|:---------:|:--------:|:-----:|:-----:|:-------:|:----------:|:-------:|
+|-rw-r--r-- |1         |cmnatic|cmnatic|0        |Feb 19 10:37|file1    |
+
+Hard links is the number of files in which this file is identical to(essentially, how many files are copies of this file). If it's a directory, then it's the number of folders within that directory.
+
+Owner is the user who created that file. Group is the group of users relevant to the permissions of this file(explained more in a second). File size is the size of the file and in this case is just 0(the human readable flag was also used in this command so it's not bytes being represented, as a note).
+
+Last changed is when the file was last modified and the file name is the last column. 
+
+#### Permissions via the "list long" Command 
+
+As we can see, the permissions came out as `-rw-r--r--`. There are 3 sections of data here within this output.(Technically 4 if we include the first character. Here is a `-` meaning the item we are looking at is a file. `d` is a directory. `l` is "link" as in it is a shortcut file)
+
+Ignoring the first character, it is `rw-r--r--`. Each 3 characters represent the permission levels of the owner, group, and all other users respectively.
+
+It comes in the format of `rwx` meaning:
+
+* Read: Permission to read the file
+* Write: Permission to alter the file
+* Execute: The file is treated as a script and this gives permission to execute the program inside it
+
+If instead the content is a directory:
+
+* Read: Permission to use `ls` and see what is inside the directory
+* Write: Permission to change or modifer what is or is not inside the directory itself.(ex mv, cp, rm, etc).
+* Execute: Permission to enter anything inside the directory like via `cd`
+
+So, with the `ls -l` command, we can thus see the permission levels of the files/directories. The first 3 characters represent the permission levels of the owner of that file. The next 3 characters represent the permission levels of the group associated with that file. While the last 3 characters represent the permission levels for all other users.
+
+**Groups:** Groups are, as it sounds, collections of users created by the system administrator. For example, within an organization, the finance department may be the finance "group". 
+
+Each file can ONLY be associated with **one** group at a time chosen by the owner of the file. That group is named in the `ls -l` command as seen above and the permission levels for the "group" section represent the permission levels for that specific respective group. "Others" represent all other users besides that group and the owner. 
+
+
 # Module 3 - Windows & AD Fundamentals 
