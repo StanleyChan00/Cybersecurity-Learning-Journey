@@ -232,4 +232,28 @@ This is just the home directory for the system administrator.
 
 This stands for "temporary" and as it sounds, stores temporary data similar to the RAM's role in hardware. Thus, the content here is volatile and cleared out each time the computer is restarted. 
 
+## Linux Fundamentals Part 3
+
+### Terminal Text Editors 
+
+As refrenced earlier, text editors are a great and more efficient way to handle/manipulate stored text in files. One of these editors is "nano". All we have to do to call upon it is simply use the syntax `nano <filename>`
+
+Here is what it looks like when we open up a file in nano:
+
+<img width="823" height="564" alt="nano sample" src="https://github.com/user-attachments/assets/012a249a-10dd-48d9-ad02-2db81a8bf478" />
+
+Nano is fairly straightforward and simple to use. It works just as one would expect.
+
+However just to note a few of the shortcut commands on the bottom with irregular language:
+
+* "Write Out" saves the changes to the file
+* "Justify" essentially is just like wrapping the text in Microsoft Word
+* "Cur Pos" brings us to where our current position is with the cursor
+* "Read File" allows us to insert the contents of another file into this one
+* "To Spell" launches the spell checker
+
+After clarifying these shortcuts, everything is pretty self-intuitive to use. 
+
+This lesson also refrenced "VIM" as another text editor that's more advanced. 
+
 # Module 3 - Windows & AD Fundamentals 
