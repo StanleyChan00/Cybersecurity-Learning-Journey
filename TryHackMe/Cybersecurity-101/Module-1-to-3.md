@@ -258,6 +258,8 @@ This lesson also refrenced "VIM" as another text editor that's more advanced.
 
 ### Transferring and Downloading Files
 
+#### Wget
+
 The `wget` command allows us to download files off the internet. The syntax is simply `wget <URL>`. 
 
 We can also add flags to alter the command a bit. Here are a few:
@@ -271,5 +273,23 @@ We can also add flags to alter the command a bit. Here are a few:
 `wget -i <listofURLsfile>` - This allows us to input a file which contains a list of URLs of files that we wish to download. It will then download them all sequentially.
 
 `wget -m <URL>` - This creates an entire clone of a whole website from the URL we input. We "Crawls" through the entire thing and downloads everything so it can be accessed offline. This needs to be used with care due to the invasive and aggressive nature of it. 
+
+#### Secure Copy(SCP)
+
+The `scp` command is essentially what allows us to transfer files between devices securely over the network through the `ssh` protocol. 
+
+Since it uses the same underlying protocol as `ssh`, we still need the username, IP, and password of the remote machine/host we are accessing for the files. 
+
+The syntax is simply `scp <sourcefile> <destination>`, in which case, it will prompt us for the password of the account we are accessing.
+
+With this command, we can either transfer files from a remote device to ours or transfer files from our local device to a remote computer. Either works; We just have to ensure the syntax order is correct for the source/destination files. 
+
+It will look like this:
+
+`scp important.txt ubuntu@192.168.1.30:/home/ubuntu/transferred.txt` - This transfers `important.txt` from our device to the "Ubuntu" user of IP `192.168.1.30`. It will also be renamed as `trasnferred.txt`.
+
+Or like this:
+
+`scp ubuntu@192.168.1.30:/home/ubuntu/documents.txt notes.txt` - This transfers the `documents.txt` from a remote device onto our local device with the new file name as `notes.txt`
 
 # Module 3 - Windows & AD Fundamentals 
