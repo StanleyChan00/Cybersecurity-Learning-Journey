@@ -292,4 +292,26 @@ Or like this:
 
 `scp ubuntu@192.168.1.30:/home/ubuntu/documents.txt notes.txt` - This transfers the `documents.txt` from a remote device onto our local device with the new file name as `notes.txt`
 
+#### Hosting a Web Server to Share Files
+
+Because Ubuntu comes with Python3, we can use Python to host a web server to share files to other devices.
+
+The syntax is very simple. All we do is call upon Python to run their HTTPServer, which will immediately start up running the module and allow us to serve files!
+
+`python3 -m http.server` - The `-m` flag tells python to run the `http.server` module.
+
+By default, when we enter this command, this will host the **entire directory** that we are currently in. We need to be mindful of this to not ensure we are not sharing sensitive data.
+
+We can specify a certain path to share via the `-d` flag and input the file/directory path if we would like as well. In which case, it would look like: `python3 -m http.server <port> -d <filepath>`
+
+It also defaults to port 8000, but we can also alter that in the command.
+
+Now, our server is live while the process is running. Now anyone, so long as they know our IP and port number, can access those shared files. It will look something like this:
+
+<img width="817" height="847" alt="Python3 Web Server" src="https://github.com/user-attachments/assets/3eeceb35-bd5c-4b43-809d-6b1bd48a31a9" />
+
+The top is what it looks like hosting the server in the terminal and the bottom is obtaining the file.
+
+To obtain the file, we used the `wget` command and input the IP, as well as the port number, to transfer over the task3 file. 
+
 # Module 3 - Windows & AD Fundamentals 
