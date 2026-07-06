@@ -256,4 +256,20 @@ After clarifying these shortcuts, everything is pretty self-intuitive to use.
 
 This lesson also refrenced "VIM" as another text editor that's more advanced. 
 
+### Transferring and Downloading Files
+
+The `wget` command allows us to download files off the internet. The syntax is simply `wget <URL>`. 
+
+We can also add flags to alter the command a bit. Here are a few:
+
+`wget -O <newfilename> <URL>`  - This allows us to rename the file from its original source name. We can also specify where we want to save it here by adding the path as well.
+
+`wget -P <savedfilepath> <URL>` - This allows us to specify where we are saving this file while retaining its original source name
+
+`wget -b <URL>` - This pushes the download in the background so our terminal is free to use while it's still downloading.
+
+`wget -i <listofURLsfile>` - This allows us to input a file which contains a list of URLs of files that we wish to download. It will then download them all sequentially.
+
+`wget -m <URL>` - This creates an entire clone of a whole website from the URL we input. We "Crawls" through the entire thing and downloads everything so it can be accessed offline. This needs to be used with care due to the invasive and aggressive nature of it. 
+
 # Module 3 - Windows & AD Fundamentals 
