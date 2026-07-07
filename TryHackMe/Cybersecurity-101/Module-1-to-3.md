@@ -331,4 +331,11 @@ We can get even more information about these data types, as well as reveal a lot
 In essence, the main difference between these two switches are that `aux` will tell you more about CPU/Memory usage while `-ef` tells you more about the parent processes and relationships, as in what started these processes. 
 
 We can also use the `top` command which is most akin to the task manager in giving us a dashboard of all the processes running in real time. 
+
+We can end processes via the `kill` command by simplying typing in the PID of the process we want to end after the command. There are 3 main signals we can add to the command to alter how the process is ended:
+
+* SIGTERM - This is the default that is used with the command. It asks the process to end but allows it to clean up properly before closing shop. The catch though is that sometimes the process will not close due to a variety of reasons like corrupted files.
+* SIGKILL - This authoritatively ends the process forcefully. 
+* SIGSTOP - This simply pauses the process. `SIGCONT` would continue or start it back up again. 
+
 # Module 3 - Windows & AD Fundamentals 
