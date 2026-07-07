@@ -314,4 +314,21 @@ The top is what it looks like hosting the server in the terminal and the bottom 
 
 To obtain the file, we used the `wget` command and input the IP, as well as the port number, to transfer over the task3 file. 
 
+### Processes 101
+
+This is the equivalent of the "Task Manager" from Windows and allows us to see the processes that our computer is currently running as well as more information about those processes.
+
+We do this via the `ps` command, which stands for "Process Status". A sample output from our VM looks as follows:
+
+<img width="314" height="86" alt="Linux ps" src="https://github.com/user-attachments/assets/ed4dfec1-3576-4536-b378-d1ec024b91f0" />
+
+In it, we can see the "PID" which stands for Process Identifier. It's important to note that this identifies the processes incrementally. So if one process has a PID of 45, the next one will be 46 and so on. 
+
+This lesson didn't go over the rest of the column data types. However to cover them quickly, we have Teletypewriter(TTY), Time, and Command(CMD). Which tells us the terminal being used by the process, the accumulated amount of time used by the CPU for that process, as well as the command name used for that process respectively. 
+
+We can get even more information about these data types, as well as reveal a lot more processes(including system processes or processes run by other users, etc), by the `-ef` and `aux` switches.
+
+In essence, the main difference between these two switches are that `aux` will tell you more about CPU/Memory usage while `-ef` tells you more about the parent processes and relationships, as in what started these processes. 
+
+We can also use the `top` command which is most akin to the task manager in giving us a dashboard of all the processes running in real time. 
 # Module 3 - Windows & AD Fundamentals 
