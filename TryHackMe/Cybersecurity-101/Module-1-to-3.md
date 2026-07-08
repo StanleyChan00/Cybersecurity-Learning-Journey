@@ -155,7 +155,7 @@ Just as a quick overview, there's 7 total columns of data types listed when the 
 |:---------:|:--------:|:-----:|:-----:|:-------:|:----------:|:-------:|
 |-rw-r--r-- |1         |cmnatic|cmnatic|0        |Feb 19 10:37|file1    |
 
-Hard links is the number of times in which this file is pointed to. If it's a directory, then it's the number of folders within that directory plus 2(`.` and `..` which points to itself and its parent directory respectively.
+Hard links is the number of times in which this file is pointed to. If it's a directory, then it's the number of folders within that directory plus 2(`.` and `..` which points to itself and its parent directory respectively).
 
 Owner is the user who currently owns that file. Group is the group of users relevant to the permissions of this file(explained more in a second). File size is the size of the file and in this case is just 0(the human readable flag was also used in this command so it's not bytes being represented, as a note).
 
@@ -332,10 +332,32 @@ In essence, the main difference between these two switches are that `aux` will t
 
 We can also use the `top` command which is most akin to the task manager in giving us a dashboard of all the processes running in real time. 
 
-We can end processes via the `kill` command by simplying typing in the PID of the process we want to end after the command. There are 3 main signals we can add to the command to alter how the process is ended:
+We can end processes via the `kill` command by simply typing in the PID of the process we want to end after the command. There are 3 main signals we can add to the command to alter how the process is ended:
 
 * SIGTERM - This is the default that is used with the command. It asks the process to end but allows it to clean up properly before closing shop. The catch though is that sometimes the process will not close due to a variety of reasons like corrupted files.
 * SIGKILL - This authoritatively ends the process forcefully. 
-* SIGSTOP - This simply pauses the process. `SIGCONT` would continue or start it back up again. 
+* SIGSTOP - This simply pauses the process. `SIGCONT` would continue or start it back up again.
+
+#### The First PID 
+
+The very first process that begins when the system boots up is `systemd` which has a PID of 1. This is the initializer and acts as the parent process for every single other process that we run on our device. It's essentially the "root" of processes. 
+
+This also creates one big global namespace by default. A namespace being how the OS splits up its resources and isolates departments of our system such that processes can only see and interact with other processes within its own namespace. 
+
+#### Background Processes and Daemons 
+
+We can run many processes in the background while our terminal remains free to use. We can start these background processes on our own or have it automatically run when the system boots up as daemons, which are just continually running background processes that run outside of the terminal. 
+
+We can manage these background processes via the `systemctl`, standing for "System Control", with the syntax of `systemctl <option> <service>`.
+
+The service is simply the process we want to manage, like apache for example(a web server), while the option is one of 5 common arguments we can input.
+
+* Start
+* Stop
+* Enable
+* Disable
+* Status
+
+With this command, we can now manage these background processes. 
 
 # Module 3 - Windows & AD Fundamentals 
