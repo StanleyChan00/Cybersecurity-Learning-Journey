@@ -360,4 +360,11 @@ The service is simply the process we want to manage, like apache for example(a w
 
 With this command, we can now manage these background processes. 
 
+We can also manually push something from the terminal foreground into the background via the [`&`](#shell-operators) operator. Which, as we covered, pushes a command into the background. 
+
+In doing so, it will output the ID of the process while it runs in the background. This way, copying a large file for example, can run in the background while we still have access to the terminal.
+
+If a script is currently running in our terminal, we can pause it with `CTRL + Z` and then use the `bg` command to throw it into the background while the inverse `fg` brings it back into the foreground. 
+
+The syntax for both of these would be either `bg` or `fg` followed by a `%<jobnumber>`. If we have only one job running or paused, just typing it on its own will also work. 
 # Module 3 - Windows & AD Fundamentals 
