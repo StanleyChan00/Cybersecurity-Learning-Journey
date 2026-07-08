@@ -367,4 +367,26 @@ In doing so, it will output the ID of the process while it runs in the backgroun
 If a script is currently running in our terminal, we can pause it with `CTRL + Z` and then use the `bg` command to throw it into the background while the inverse `fg` brings it back into the foreground. 
 
 The syntax for both of these would be either `bg` or `fg` followed by a `%<jobnumber>`. If we have only one job running or paused, just typing it on its own will also work. 
+
+#### Cron and Crontab
+
+`crond` is daemon that is constantly running and checks every minute if there is a scheduled job it needs to do.
+
+We can use this to schedule and automate processes that we don't want to have to do manually. This could be launching specific apps like spotify or running a backup that automatically occurs at specific times. 
+
+`crontab` is the file used by `crond` to check what jobs it has scheduled. So if we want to edit or add any jobs, we can go to the `crondtab` file via `crontab -e` to do so. This opens a text editor of the file for us. 
+
+The format taken for these commands can be a bit hard to read and make. So we can use a [crontab generator](https://crontab-generator.org/) to make the commands for us.
+
+We just pick the command and time in which we want it to be automated to. Then we add it to the crontab file. 
+
+An example of this will look like:
+
+`0 12 */10 * * cp -R /home/cmnatic/Documents /var/backups/ >/dev/null 2>&1`
+
+Which copies our documents folder and places it inside our backups folder every 10 days at noon, essentially backing up our documents every 10 days. 
+
+For reference, the first section of the command is the timing. The second is the actual command and the last is where we want any outputs to go(Like error messages, etc). In this case, all the output is getting muted.
+
+
 # Module 3 - Windows & AD Fundamentals 
