@@ -388,5 +388,16 @@ Which copies our documents folder and places it inside our backups folder every 
 
 For reference, the first section of the command is the timing. The second is the actual command and the last is where we want any outputs to go(Like error messages, etc). In this case, all the output is getting muted.
 
+### Repositories 
+
+Repositories are just folders. However, in this case of Linux, they act as storage for software or packages that we can use or download. 
+
+The vendor of our OS is responsible for maintaining our repos and ensuring everything there is safe, stable, and updated. We however can add Community repos to our system if we want more functionalities.
+
+This is one of the benefits of the open-source nature of Linux.
+
+To manage our repos, we use the `apt` command and any extra modifications thereof. We can search using the `search` command for software packages in our repos by typing in keywords to search for. We can use `show` to get more details on a specific package. 
+
+We can use `update` to check if there's packages we have that's not updated to the latest version yet and then use the `upgrade` command to actually update it.
 
 # Module 3 - Windows & AD Fundamentals 
