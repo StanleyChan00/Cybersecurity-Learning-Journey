@@ -400,4 +400,24 @@ To manage our repos, we use the `apt` command and any extra modifications thereo
 
 We can use `update` to check if there's packages we have that's not updated to the latest version yet and then use the `upgrade` command to actually update it.
 
+#### Adding Repos and Downloading Software
+
+We can also use the `add-apt-repository` command to add community repos not already on our system. 
+
+A nice benefit of downloading software through adding it into our repos is that the `apt` command will automatically be checking it for updates for us. 
+
+So, for example, if we wanted to download the "Sublime" Text Editor as a repo, there's a few things we have to do.
+
+For one, developers use "GPG" keys to achieve integrity(of the [CIA triad](../Pre-Security/Module-7-Attacks-Defenses.md#the-cia-triad)) and ensure nothing was altered from what they intended to be downloaded. 
+
+We need to download these keys from the developer so that that we can trust it has not been altered. The command would look like so:
+
+`wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -`
+
+From here, we want to make a new file for the repo of the 3rd party we want to download from in the /etc/apt/sources.list.d file path. 
+
+And in that file, we can finally add Sublime Text repo URL. 
+
+Now, the last two steps would be using the `apt update` command to recognize this as a repo and finally then the `apt install` command to install the text editor.
+
 # Module 3 - Windows & AD Fundamentals 
