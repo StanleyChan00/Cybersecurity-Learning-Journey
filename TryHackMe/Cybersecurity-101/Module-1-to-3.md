@@ -420,4 +420,22 @@ And in that file, we can finally add Sublime Text repo URL.
 
 Now, the last two steps would be using the `apt update` command to recognize this as a repo and finally then the `apt install` command to install the text editor.
 
+### Logs
+
+Lastly, various types of logs for software, applications, or the system are found in the /var/log directory.
+
+Operating Systems usually have a great process of managing these logs and preventing htem from overflowing storage by an automatic rotating system which deletes, archives, or compresses olds logs, making space for new ones. 
+
+Here we can see some log files for a few services.
+
+* Apache2 Web Server
+* Fail2Ban (Monitors stuff like attempted brute force attacks)
+* UFW (Like a firewall)
+
+<img width="626" height="457" alt="Logs" src="https://github.com/user-attachments/assets/49e08f8c-21fa-4319-9890-1352eb26425e" />
+
+There we can get important security data or status updates from those applications. For example, we can see all the requests made to our Apache Web serevr. We can see error logs, access logs and more. 
+
+It's a great place to monitor the health and security of our systems.
+
 # Module 3 - Windows & AD Fundamentals 
