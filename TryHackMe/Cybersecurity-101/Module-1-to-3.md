@@ -439,3 +439,37 @@ There we can get important security data or status updates from those applicatio
 It's a great place to monitor the health and security of our systems.
 
 # Module 3 - Windows & AD Fundamentals 
+
+Windows is quite intuitive so in depth notes here aren't needed. Thus, for value and time efficiency, I will just be giving a general overview of what the lessons went over. 
+
+## Windows Fundamentals 1
+
+- The GUI, Settings, and Control Panel
+- Files & file permissions
+- Alternate Data Streams(ADS) - Allows for multiple streams of data in a file like hidden files. This is a feature of the file system used by Windows(NFTS - New Technology File System)
+- C:\Windows(Which can be represented in commands and such as `%windir%`)
+- User Accounts, profiles, permissions, and User Account Control(UAC)
+- Task Manager
+
+## Windows Fundamentals 2
+
+- Advanced System Settings and Page File RAM. A Page file serves as extra "memory" like when the RAM is full, using the hard drive/SSD storage on the device.
+- Changing UAC settings
+- System Configuration and the following tools within
+  - Computer Management and some notable utilities within:
+      - Task Scheduler(Automate and manage scheduled processes like we learnt in Linux)
+      - Event Viewer(View a record of events that occurred on our device. We can use this to investigate when we encounter a problem with the computer)
+      - Disk Management and Partioning
+  - System Information
+  - Resource and Performance Monitor
+  - Registry Editor
+
+The lesson also went over some commands in the command prompt. Many that were already covered [here](../Pre-Security/Module-5-Operating-Systems.md#Windows-CLI-Basics). However, here are a few more that the lesson went briefly over:
+
+`cls` - This clears the command prompt screen
+
+`/?` or `help` - Gets more information on a command. `/?` will be used for almost every command while `help` will be used on others like `net`
+
+`netstat` - Essentially gives a lot of potential network information like active TCP or UDP connections and more. A lot of switches can be used for specific data.
+
+`net` - Allows us to manage network related matters. 
