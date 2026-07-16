@@ -440,7 +440,7 @@ It's a great place to monitor the health and security of our systems.
 
 # Module 3 - Windows & AD Fundamentals 
 
-Windows is quite intuitive so in depth notes here aren't needed. Thus, for value and time efficiency, I will just be giving a general overview of what the lessons went over. 
+Windows is quite intuitive so in depth notes here aren't needed. Thus, for value and time efficiency, I will just be noting a general overview of what the lessons went over. 
 
 ## Windows Fundamentals 1
 
@@ -464,7 +464,7 @@ Windows is quite intuitive so in depth notes here aren't needed. Thus, for value
   - Resource and Performance Monitor
   - Registry Editor
 
-The lesson also went over some commands in the command prompt. Many that were already covered [here](../Pre-Security/Module-5-Operating-Systems.md#Windows-CLI-Basics). However, here are a few more that the lesson went briefly over:
+The lesson also went over some commands in the command prompt. Many that were already covered [here](../Pre-Security/Module-5-Operating-Systems.md#Windows-CLI-Basics). However, here are a few more that the lesson briefly went over:
 
 `cls` - This clears the command prompt screen
 
@@ -473,3 +473,12 @@ The lesson also went over some commands in the command prompt. Many that were al
 `netstat` - Essentially gives a lot of potential network information like active TCP or UDP connections and more. A lot of switches can be used for specific data.
 
 `net` - Allows us to manage network related matters. 
+
+## Windows Fundamentals 3
+
+- Windows OS Updates
+- Windows Security(Basic settings of Virus/Threat protection & Firewall/network protection)
+- App & Browser Control as a "screener" for apps/files downloaded from the web + Exploit Protection settings
+- Device Security Settings(Usually never change from the default)
+- Bitlocker - Encrypts our entire hard drive
+- Volume Shadow Copy Service - Essentially takes a screenshot of our drives, which can be used to download a backup later on. It is not a backup on it's own but can be used to copy into a backup or used as restore points. 
