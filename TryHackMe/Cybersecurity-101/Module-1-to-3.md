@@ -438,7 +438,7 @@ There we can get important security data or status updates from those applicatio
 
 It's a great place to monitor the health and security of our systems.
 
-# Module 3 - Windows & AD Fundamentals 
+# Module 3 - Windows & Active Directory Fundamentals 
 
 Windows is quite intuitive so in depth notes here aren't needed. Thus, for value and time efficiency, I will just be noting a general overview of what the lessons went over. 
 
@@ -481,4 +481,21 @@ The lesson also went over some commands in the command prompt. Many that were al
 - App & Browser Control as a "screener" for apps/files downloaded from the web + Exploit Protection settings
 - Device Security Settings(Usually never change from the default)
 - Bitlocker - Encrypts our entire hard drive
-- Volume Shadow Copy Service - Essentially takes a screenshot of our drives, which can be used to download a backup later on. It is not a backup on it's own but can be used to copy into a backup or used as restore points. 
+- Volume Shadow Copy Service - Essentially takes a screenshot of our drives, which can be used to download a backup later on. It is not a backup on it's own but can be used to copy into a backup or used as restore points.
+
+## Active Directory Basics 
+
+Active Directory is how organizations are able to handle and manage the network and security of a vast number of devices.
+
+If an organization is small, this wouldn't be needed. A team of 5 people would simply be able to open up each of the 5 computers and manually set each one up. Create users, set privilege levels, etc... 
+
+However, this becomes infeasible with an increasing number of devices. A school, for example, may have 500 computers to hand out to students.
+
+It is impractical to manually set up each device. Thus, Active Directory solves this problem by allowing the school to handle all those devices at once. 
+
+The 500 devices in this case would be the **Domain**, which is the group of devices being managed by a centralized source in the Active Directory.
+
+The server that manages all these devices is called the **Domain Controller(DC)**.
+
+
+
