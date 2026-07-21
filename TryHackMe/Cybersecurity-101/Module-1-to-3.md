@@ -495,7 +495,20 @@ It is impractical to manually set up each device. Thus, Active Directory solves 
 
 The 500 devices in this case would be the **Domain**, which is the group of devices being managed by a centralized source in the Active Directory.
 
-The server that manages all these devices is called the **Domain Controller(DC)**.
+The server that manages all these devices is called the **Domain Controller(DC)** while the particular service that does all this is called **Active Directory Domain Service(AD DS).
+
+### Objects 
+
+All the individual entries within our AD DS managed by the DC are called "objects". There can be many types of objects like users, groups, machines, printers, and more. 
+
+**Users:** There are two types of users. People and Services. Service users are different in that each service requires a user to run. So, service users are made with the intention and privilege levels catered towards that specific service(Like IIS, which is like a web hosting service).
+
+User objects are known as one of the **Security Principals**, meaning that they are objects that can be authenticated(Like with a password for example) and given privilege levels. 
+
+**Machines:** Every device that joins an Active Directory Domain becomes a machine object within that "repository". They are also a security principal like user objects. On top of the local administrator account that comes with the machine, any admins on the domain also automatically becomes a local administrator on the machine and can login simply by using their AD login.
+
+Identification of these machines follow a specific naming scheme of the `machine account name + $`. So a machine named `DC01` will have  amachine account named `DC01$`
+
 
 
 
