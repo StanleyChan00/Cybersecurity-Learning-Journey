@@ -495,11 +495,11 @@ It is impractical to manually set up each device. Thus, Active Directory solves 
 
 The 500 devices in this case would be the **Domain**, which is the group of devices being managed by a centralized source in the Active Directory.
 
-The server that manages all these devices is called the **Domain Controller(DC)** while the particular service that does all this is called **Active Directory Domain Service(AD DS).
+The server that manages all these devices is called the **Domain Controller(DC)** while the particular service that does all this is called **Active Directory Domain Service(AD DS)**.
 
 ### Objects 
 
-All the individual entries within our AD DS managed by the DC are called "objects". There can be many types of objects like users, groups, machines, printers, and more. 
+All the individual entries within our AD DS, managed by the DC, are called "objects". There can be many types of objects like users, groups, machines, printers, and more. 
 
 **Users:** There are two types of users. People and Services. Service users are different in that each service requires a user to run. So, service users are made with the intention and privilege levels catered towards that specific service(Like IIS, which is like a web hosting service).
 
@@ -507,8 +507,18 @@ User objects are known as one of the **Security Principals**, meaning that they 
 
 **Machines:** Every device that joins an Active Directory Domain becomes a machine object within that "repository". They are also a security principal like user objects. On top of the local administrator account that comes with the machine, any admins on the domain also automatically becomes a local administrator on the machine and can login simply by using their AD login.
 
-Identification of these machines follow a specific naming scheme of the `machine account name + $`. So a machine named `DC01` will have  amachine account named `DC01$`
+Identification of these machines follow a specific naming scheme of the `machine account name + $`. So a machine named `DC01` will have a machine account named `DC01$`
 
+### Security Groups
 
+As routine privilege management, we can assign objects into groups that will have access to specific levels of rights or permission levels catered specifically towards that group's role. Groups can also have nested groups inside. 
 
+Here are some of the default Security Groups in AD:
 
+* Domain Admins - Administrators of the entire domain
+* Server Operators - They manage the Domain Controller and servers related to the domain.
+* Backup Operators - They have access to all files, bypassing any permissions, for the purpose of backing up data,
+* Account Operators - Manages and modifies the accounts on the domain.
+* Domain Users - All users on the domain
+* Domain Computers - All computers on the domain
+* Domain Controllers - All the Domain Controllers on the domain
