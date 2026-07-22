@@ -511,7 +511,7 @@ Identification of these machines follow a specific naming scheme of the `machine
 
 ### Security Groups
 
-As routine privilege management, we can assign objects into groups that will have access to specific levels of rights or permission levels catered specifically towards that group's role. Groups can also have nested groups inside. 
+As routine privilege management, we can assign objects into groups that will have access to specific levels of rights or permission levels catered specifically towards that group's role. Groups can also have nested groups inside if needed.
 
 Here are some of the default Security Groups in AD:
 
@@ -522,3 +522,17 @@ Here are some of the default Security Groups in AD:
 * Domain Users - All users on the domain
 * Domain Computers - All computers on the domain
 * Domain Controllers - All the Domain Controllers on the domain
+
+### Organizational Units(OUs)
+
+OUs are like folders in which objects can be placed into as a classification system. The main difference between OUs and Security Groups is that Security Groups are used for permission levels over resources while OUs are used for dictating policies or stuff like configuration settings.
+
+An organization may have an accounting department. In which case, they would make an OU for that department and set the system up such that any Accounting computer would automatically use "X" printer on the 2nd floor, or have specific apps downloaded, or have automatic updates at specific times, and more. 
+
+Also note that one object can ONLY be in one OU at a time whereas that limitation does not apply to Security Groups.
+
+To manage these OUs, we can do so via the "Active Directory Users and Computers" application. Creating a new "Students" OU will look like this, alongside the other departmental OUs that already exist in our lab. 
+
+<img width="1185" height="777" alt="OU" src="https://github.com/user-attachments/assets/c3f94df8-bab9-45b1-9cb6-09c722349294" />
+
+
