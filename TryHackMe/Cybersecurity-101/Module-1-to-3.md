@@ -535,4 +535,14 @@ To manage these OUs, we can do so via the "Active Directory Users and Computers"
 
 <img width="1185" height="777" alt="OU" src="https://github.com/user-attachments/assets/c3f94df8-bab9-45b1-9cb6-09c722349294" />
 
+By default when we create an OU, a box is checked to enable "accidental deletion prevention".
 
+So if this is enabled for an OU we would like to delete, we have to do a couple more simple steps. First, we turn on the advanced features via the "View" menu. Then we go to the properties of the OU we would like to delete, and disable the accidental deletion protection in the "Objects" tab. Then, we can finally delete the OU.
+
+We can also delegate control over specific OUs. For example, if we have an IT manager in the IT department, we would like him to have power to reset the passwords of various other department OUs. 
+
+We can do that simply in the GUI through right clicking on the OU and following the proper steps after clicking "Delegate Control". To which, it would look like this:
+
+<img width="1278" height="681" alt="Delegate" src="https://github.com/user-attachments/assets/02d5ed3c-d76b-4dc3-b306-109612de0223" />
+
+The TryHackMe Lab allowed us to play around with this in managing our OUs. We then tested it out by connecting to the desktop of the IT manager and resetting the password for "Sophie" in the Sales department. We lastly confirmed its usage by using the RDP to connect to Sophie's desktop and use the new password to login.
