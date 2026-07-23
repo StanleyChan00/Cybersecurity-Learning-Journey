@@ -525,7 +525,7 @@ Here are some of the default Security Groups in AD:
 
 ### Organizational Units(OUs)
 
-OUs are like folders in which objects can be placed into as a classification system. The main difference between OUs and Security Groups is that Security Groups are used for permission levels over resources while OUs are used for dictating policies or stuff like configuration settings.
+OUs are like folders in which objects can be placed into as a classification system. The main difference between OUs and Security Groups is that Security Groups are used for permission levels over resources while OUs are used for dictating policies or configuration settings.
 
 An organization may have an accounting department. In which case, they would make an OU for that department and set the system up such that any Accounting computer would automatically use "X" printer on the 2nd floor, or have specific apps downloaded, or have automatic updates at specific times, and more. 
 
@@ -541,8 +541,40 @@ So if this is enabled for an OU we would like to delete, we have to do a couple 
 
 We can also delegate control over specific OUs. For example, if we have an IT manager in the IT department, we would like him to have power to reset the passwords of various other department OUs. 
 
-We can do that simply in the GUI through right clicking on the OU and following the proper steps after clicking "Delegate Control". To which, it would look like this:
+We can do that simply in the GUI by right clicking the OU and following the proper steps after clicking "Delegate Control". To which, it would look like this:
 
 <img width="1278" height="681" alt="Delegate" src="https://github.com/user-attachments/assets/02d5ed3c-d76b-4dc3-b306-109612de0223" />
 
 The TryHackMe Lab allowed us to play around with this in managing our OUs. We then tested it out by connecting to the desktop of the IT manager and resetting the password for "Sophie" in the Sales department. We lastly confirmed its usage by using the RDP to connect to Sophie's desktop and use the new password to login.
+
+### Group Policies 
+
+Group Policy Objects(GPOs) are how we configure the settings or policies of the objects within an OU. 
+
+For example, if we wanted to restrict access to the control panel to ONLY the IT department while everyone else is locked out from it, we can do that via GPOs. We do that via the Group Policy Management application. 
+
+Opening up the application will look like this:
+
+<img width="1892" height="865" alt="Group Policy Management GUI" src="https://github.com/user-attachments/assets/f7f01995-a4ea-4434-b5a6-3e2b9b7b4f73" />
+
+(Note that this screenshot is after I've played around with the lab and configured a few GPOs to the existing domain provided by the lab).
+
+The circled icon with a scroll and a diagnoal arrow represents the GPOs. In the picture, we can see the GPOs that are applied to the root `thm.local` domain, which means that these GPOs will be applied to every object within that domain(which is easier than adding it individually to each container and OU).
+
+We can also see the GPOs added to individual OUs. As the example I talked about previously, I added the control panel restriction to every department besides the IT OU.
+
+We can add new GPOs by going to the GPO folder, right clicking, and adding a new GPO there. Then, we would right click that GPO and click edit, which will open up the Group Policy Management Editory Window.
+
+There, we can choose a wide host of different configuration settings to the GPO. In the screenshot below is what it looked like adding a minimum password length of 10 characters to the root domain via the `Default Domain Policy`
+
+<img width="1919" height="895" alt="GPO Password Length" src="https://github.com/user-attachments/assets/712547d8-fb31-45c6-b475-48417229f50b" />
+
+In our lab, we were able to play around with these settings like adding an auto screen lock GPO. Much of this is also quite intuitive and straightforward. However if we need more information on what a specific setting does, we can simply right click to get the properties to which case, there will be a convenient "Explain" tab which tells us more about the setting. 
+
+Lastly, these GPOs are distributed to all the objects on the network through a shared folder on the Domain Controller called `SYSVOL`. The folder pathway is `C:\Windows\SYSVOL\sysvol\`.
+
+By default, every computer on the domain will constantly check this folder to see if it neededs to download any new or updated policies. If it does see a change needed to be downloaded, it will do so as scheduled.
+
+However, if needed to push for a check immediately, we can do so via the following command:
+
+`gpupdate /force`
