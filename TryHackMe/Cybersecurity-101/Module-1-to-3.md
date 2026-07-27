@@ -600,14 +600,13 @@ Put simply, it's a three step process in getting connected to a server that we w
 2) We request the DC for access to the server we want to connect to.
 3) We finally connect to that server and establish the connection.
 
-
 Throughout each step, we are authenticated each time but without needing to send over any passwords. What's interesting here is that instead of sending over passwords, we send over encrypted time stamps that are then verified by the party we are sending it over to. 
 
 For example, when we type in the password of the first step for authentication to the Domain Controller, our system generates a "User Hash" based off the password we type in.
 
-This hash is then used to encrypt the time stamp of the time we are logging in.
+This hash is then used to encrypt the time stamp of the time that we are logging in.
 
-We send this encrypted time stamp over to the "Key Distribution Cenrer(KDC -- which is just a service on the Domain Controller)". In the Active Directory, our credentials are already stored there along with the User Hash that is correct and points to the correct password.
+We send this encrypted time stamp over to the "Key Distribution Center"(KDC -- which is just a service on the Domain Controller). In the Active Directory, our credentials are already stored there along with the User Hash that is correct and points to the correct password.
 
 The KDC will then use this stored user hash to decrypt the sent time stamp. IF the decrypted time stamp comes out unreadable, then that tells us that the password entered by the user was incorrect.
 
@@ -615,17 +614,59 @@ This way, we are able to verify the login information of the user without having
 
 On top of this, the time stamp allows the system to automatically reject any request older than 5 minutes(5 minutes is the default in AD). 
 
-This way, Malicious actors attempting attacks like a "replay attack"(Which intercepts a valid authentication and replays it with a delay, attempting to login) will not be able to access the system.
+With this, Malicious actors attempting attacks like a "replay attack"(Which intercepts a valid authentication and "replays" it with a delay, attempting to login) will not be able to access the system.
 
-Kerberos also has a replay cache for the time frame in which it accepts time stamps. This way, replay attacks happening within the 5 minute time frame will be seen as a clear duplicate and also rejected. 
+Kerberos also has a "replay cache" which stores all valid attempts for the time frame in which it accepts time stamps(5 minutes as default). This way, replay attacks happening within that 5 minute time frame will be seen as a clear duplicate and also rejected. 
 
 This method of encrypted time stamps happens at each of the 3 steps listed above. 
 
 
+#### 1.) Authentication with The Domain Controller 
 
+**Login:** 
+This step starts out with the User inputting their login information. As said before, the password is used to generate a User Hash which is used to encrypt the time stamp.
 
+That time stamp is sent to the KDC in the DC, which is then decrypted by the correct user hash the domain has stored.
 
+If the time stamp is now readable, recent, and is not a duplicate entry, then the user will be authenticated.
 
+**After Authenticated:**
+
+At this point, the KDC will create a "Ticket Granting Ticket"(TGT). Within this TGT will be packaged some identifying information on the user as well as a login "session key" which will be used in the next step for further authentication. 
+
+Within an AD domain, there is a default service account named `krbtgt`. This account's password hash will be used to encrypt the entire TGT "file", making it inaccessible to the user.
+
+Alongside this TGT, the KDC will also send back the same session key that's inside the TGT but instead encrypted with the User Hash, thus being accessible to the user(They can decrypt it with their hash).
+
+#### 2.) Requesting The Server
+
+**User Request:**
+
+Now that the User has the "locked" TGT as well as the login session key, they will use that unlocked login session key to encrypt a new time stamp.
+
+They will send this newly encrypted time stamp along with a "Service Principal Name"(SPN -- This is the service/service name they want to access) to the KDC for a "Ticket Granting Service"(TGS). 
+
+**KDC Response:**
+
+Now, the KDC will use their `krbtgt` password hash to "unlock" the TGT. They will then take the stored login session key within the TGT and use it to decrypt the newly user-sent time stamp. 
+
+As always, if the time stamp is readable, recent, and not a duplicate entry, then they will be authenticated. 
+
+In which case, the KDC will now send them the TGS, which will now be encrypted with the service(That we wish to access) owner's hash, along with a new "Service Session Key" that is accessible to the user(by decrypting now with the initial login session key).
+
+This uses the same format as the previous step. The locked TGS will also include the unlocked service session key.
+
+So again, we will now end up with a locked "package"(TGS) + an accessible(to the user) service session key. 
+
+Now the user will use this to connect to the server.
+
+#### 3.) Establishing a Connection with The Server
+
+Finally, the user will go to the Server and use the service session key to encrypt a new timestamp and send that over along with the TGS.
+
+The Server will then take the TGS, unlock it using their password hash, and then decrypt the time stamp.
+
+Again, if readable, recent, and not a duplicate entry, they will be authenticated and thus can establish a connection for file/resource share.
 
 
 
