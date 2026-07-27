@@ -578,3 +578,54 @@ By default, every computer on the domain will constantly check this folder to se
 However, if needed to push for a check immediately, we can do so via the following command:
 
 `gpupdate /force`
+
+### Authentication Methods
+
+When we need to login to an Active Directory Domain or access resources/files on a server within, we evidently have to be authenticated as ordained users for security purposes, so the credentials for all these user accounts are stored on the DC. 
+
+Now, there are 2 protocol methods used for authentication here. 
+
+1) Kerberos
+2) NetNTLM
+
+Kerberos is the primary and default authentication protocol used while NTLM is the older, more obsolete protocol. However, it is still kept and used mainly for backwards compatibility.
+
+### Kerberos
+
+It took me some time to wrap my head around this protocol. However, after taking the time to understand it, it is quite an ingenious protocol of authentication that provides mutual assurance of identification while also not needing to transmit any actual passwords over the network, which is GREAT for security.
+
+Put simply, it's a three step process in getting connected to a server that we would like to access for files or resources(like SYSVOL). It's a lot more intricate than this. However in essence, this is what's happening: 
+
+1) We authenticate ourselves with the DC.
+2) We request the DC for access to the server we want to connect to.
+3) We finally connect to that server and establish the connection.
+
+
+Throughout each step, we are authenticated each time but without needing to send over any passwords. What's interesting here is that instead of sending over passwords, we send over encrypted time stamps that are then verified by the party we are sending it over to. 
+
+For example, when we type in the password of the first step for authentication to the Domain Controller, our system generates a "User Hash" based off the password we type in.
+
+This hash is then used to encrypt the time stamp of the time we are logging in.
+
+We send this encrypted time stamp over to the "Key Distribution Cenrer(KDC -- which is just a service on the Domain Controller)". In the Active Directory, our credentials are already stored there along with the User Hash that is correct and points to the correct password.
+
+The KDC will then use this stored user hash to decrypt the sent time stamp. IF the decrypted time stamp comes out unreadable, then that tells us that the password entered by the user was incorrect.
+
+This way, we are able to verify the login information of the user without having to send over a single actual password.
+
+On top of this, the time stamp allows the system to automatically reject any request older than 5 minutes(5 minutes is the default in AD). 
+
+This way, Malicious actors attempting attacks like a "replay attack"(Which intercepts a valid authentication and replays it with a delay, attempting to login) will not be able to access the system.
+
+Kerberos also has a replay cache for the time frame in which it accepts time stamps. This way, replay attacks happening within the 5 minute time frame will be seen as a clear duplicate and also rejected. 
+
+This method of encrypted time stamps happens at each of the 3 steps listed above. 
+
+
+
+
+
+
+
+
+
