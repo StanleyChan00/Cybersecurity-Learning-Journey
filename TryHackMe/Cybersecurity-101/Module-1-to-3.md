@@ -624,6 +624,7 @@ This method of encrypted time stamps happens at each of the 3 steps listed above
 #### 1.) Authentication with The Domain Controller 
 
 **Login:** 
+
 This step starts out with the User inputting their login information. As said before, the password is used to generate a User Hash which is used to encrypt the time stamp.
 
 That time stamp is sent to the KDC in the DC, which is then decrypted by the correct user hash the domain has stored.
@@ -667,6 +668,32 @@ Finally, the user will go to the Server and use the service session key to encry
 The Server will then take the TGS, unlock it using their password hash, and then decrypt the time stamp.
 
 Again, if readable, recent, and not a duplicate entry, they will be authenticated and thus can establish a connection for file/resource share.
+
+### NetNTLM
+
+This protocol is a bit different, especially in that the user goes directly to the server immediately while the server talks to the DC for Authentication. 
+
+Rather than encrypted time stamps like Kerberos, NetNTLM uses a "challenge" that the user has to succeed in completing by using their password.
+
+Here's a nice conceptual overview of what happens.
+
+1) The User requests the Server for access
+2) The Server sends a challenge for the User to complete/prove.(NTLM Challenge)
+3) In response to the challenge, the User sends his "answer" as a response to the Server.(NTLM Response)
+4) The Server checks in with the DC to confirm whether the User's "answer" is correct and authenticates the User.
+
+Same as with Kerberos, no actual passwords are sent over the network. What happens here is that the User's password is used to generate a hash(Like Kerberos).
+
+That hash(along with some other user data) is run through an algorithm onto the challenge, generating a new output that is essentially combining the challenge with the user's NTLM Hash. 
+
+The server authenticates this NTLM response by asking the DC to use the correct NTLM hash(Stored on the system with the User's password and credentials) onto the challenge.
+
+If these two outputs end up matching, that means that the user did indeed input the correct password and thus will be authenticated.
+
+TryHackMe had a nice visual of this here:
+
+<img width="1067" height="595" alt="NetNTLM" src="https://github.com/user-attachments/assets/77884dce-28ce-4e53-a9d9-c23bf3d3c577" />
+
 
 
 
