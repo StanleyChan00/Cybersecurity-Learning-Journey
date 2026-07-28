@@ -710,3 +710,22 @@ For example, the DC needs the user's password/user hash to unlock the first time
 
 NetNTLM does not have this. So the User has no proof that he is talking to the server. A malicious attacker may intercede(as a Relay attack), pretending to be the server, and thus use the User's response to login. 
 
+### Trees, Forests & Trusts
+
+Trees and Forests are the terms in how we understand the hierarchical structure of these nested domains.
+
+Put simply:
+
+**Tree:** Multiple domains connected together through one overarching namespace with a parent-child relational structure. For example, a TryHackMe AD may have a UK and a US domain that form a tree together as pictured below.
+
+<img width="1088" height="803" alt="Tree" src="https://github.com/user-attachments/assets/28528f20-99e7-4f67-a73d-c0a6808fb4e2" />
+
+**Forest:** These would be multiple tress with different namespaces connected together. Heres a visual from TryHackMe. In this example, TryHackMe acquired a company called "MHT Inc." and thus acquired their "tree". 
+
+<img width="1325" height="540" alt="Forest" src="https://github.com/user-attachments/assets/4eab6395-2eab-40da-aec0-79c544628764" />
+
+**Trusts** would be how files or resources are shared between trees or forests through authorizations. For example, in the picture above, if THM USA trusted the Asia MHT domain, that would thus authorize the Asian domain to have access to the resources on the THM USA domain. 
+
+We could also have two way trust relationships which authorizes the domain both ways. This is also further refined into giving access to specific users or specifying resources.
+
+Lastly, **Enterprise Admins** would be the new security group that has administrative privileges over all these domains, trees, and forests to manage them. It's the highest level admin group. 
