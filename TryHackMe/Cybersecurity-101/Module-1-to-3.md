@@ -694,6 +694,19 @@ TryHackMe had a nice visual of this here:
 
 <img width="1067" height="595" alt="NetNTLM" src="https://github.com/user-attachments/assets/77884dce-28ce-4e53-a9d9-c23bf3d3c577" />
 
+#### NetNTLM Vulnerabilities 
 
+As said before, NetNTLM is now pretty much obsolete due to Kerberos taking over and is mostly just used for backwards compatibility.
 
+This is because NetNTLM has some big security flaws. For one, the cryptography the protocol uses is outdated. However a bigger problem is that if someone intercepts the message and captures the user response(The challenge, username, challenge response, etc), then they can effectively figure out the user's password offline by brute forcing millions of potential passwords to see which one will match the user's correct challenge response, thus giving them the user's login information. 
+
+Despite the fact that the challenge itself changes with every request and the user's response never contains any actual password, these security contingencies becomes redundant due to the fact that everything a malicious attacker needs to figure out the password is contained within the user's response. 
+
+More than that, they don't even have to attempt a brute force on the active directory server itself. They can take it all offline and figure out the password on their own time, whenever they want, with as many attempts as they want. 
+
+On top of this, unlike Kerberos, NetNTLM does not have mutual authentication. In Kerberos, the server or DC has to prove its identity at each step due to requiring the "key" to decrypt the ticket or time stamp it needs to open. 
+
+For example, the DC needs the user's password/user hash to unlock the first timestamp for login authentication. The server needs its owner's hash in order to unlock the TGS and so on.
+
+NetNTLM does not have this. So the User has no proof that he is talking to the server. A malicious attacker may intercede(as a Relay attack), pretending to be the server, and thus use the User's response to login. 
 
