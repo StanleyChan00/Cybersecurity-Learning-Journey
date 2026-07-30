@@ -24,6 +24,13 @@ They're called "Functions" and are as follows(They're fairly straightforward):
 
 ### Access Control
 
+This is how we manage the Security of how users interact with our systems. There are 4 elements:
+
+- **Identification:** This is how a user claims a specific identity, like typing in a username.
+- **Authentication:** Unlike identification, this is how we CONFIRM the user's identity like through passwords
+- **Authorization:** These are permission levels and limits access to specific resources or systems to specific users. It determines the privilege levels of each user or group.
+- **Accounting:** This is when we track the activity of our users and log everything that happens.
+
 
 ## Security Controls
 
