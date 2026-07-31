@@ -47,6 +47,19 @@ There are 4 categories here:
 
 ### Security Control Types
 
+There are 6 types of Security Controls.
+
+1) **Preventive:** This prevents an attack from occurring and actively stops it if it happens. For example, like a firewall or a lock. 
+2) **Deterrent:** As opposed to preventive which actively blocks attacks, deterrents only discourage attack attempts. This would be like a "No Trespassing" warning sign on private property or a security camera.
+3) **Detective:** This identifies when Security events occur and logs it. This would be things like SIEM alerts or motion detectors.
+4) **Corrective:** This "corrects" the damage or effect of a security attack, attempting to reverse or mitigate any damage. We also take steps to prevent it from happening again. This would be like restoring a backup. 
+5) **Compensating:** When a primary security control is compromised or is not working/sufficient, then this is the alternative that also works to support the security to compensate for that "loss". For example, if we are unable to patch a vulnerability of an app quick enough, we may just block it using the firewall instead. This could also be like a backup generator when the power goes out.
+6) **Directive:** This would be us "directing" specific actions of people or handling procedures/setting policies. For example, directing users to store sensitive files into an encrypted/protected folder.
+
+Professor Messer has a nice chart to visualize this below.
+
+<img width="991" height="427" alt="Control Types:Categories Examples" src="https://github.com/user-attachments/assets/17b99a35-9014-40ad-8f87-87b5ac852c52" />
+
 
 
 ### Information Security Roles and Responsibilities 
