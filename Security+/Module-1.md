@@ -27,16 +27,23 @@ They're called "Functions" and are as follows(They're fairly straightforward):
 This is how we manage the Security of how users interact with our systems. There are 4 elements:
 
 - **Identification:** This is how a user claims a specific identity, like typing in a username.
-- **Authentication:** Unlike identification, this is how we CONFIRM the user's identity like through passwords
+- **Authentication:** Unlike identification, this is how we CONFIRM the user's identity, like through passwords
 - **Authorization:** These are permission levels and limits access to specific resources or systems to specific users. It determines the privilege levels of each user or group.
 - **Accounting:** This is when we track the activity of our users and log everything that happens.
 
-
 ## Security Controls
+
+These are the actual mechanisms put into place for the Security Operations of an organization. We classify them in two ways: Categories and "types"(Which entails the functions of what we are trying to achieve). 
 
 
 ### Security Control Categories 
 
+There are 4 categories here:
+
+1) **Managerial:** This is the leadership, oversight, policies, etc that govern the security operation. 
+2) **Operational:** These are the day-to-day operations handled by the **people** working to keep the security up on a daily basis.
+3) **Technical:** These are the technologies that automatically handle security for us like firewalls, software, hardware, etc.
+4) **Physical:** These are the mechanisms which protect us physically rather than digitally. This entails things like gates, security cameras, alarms, etc.
 
 ### Security Control Types
 
