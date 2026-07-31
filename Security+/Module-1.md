@@ -64,9 +64,19 @@ Professor Messer has a nice chart to visualize this below.
 
 ### Information Security Roles and Responsibilities 
 
+These are some of the roles and responsibilities in Information Security. It's quite straightforward.
 
-
-### Information Security Competencies 
+- **Chief Information Officer(CIO)** and **Chief Security Officer** - They handle the executive responsibilities and overall direction of the organization in regards to security and data.
+- **Managers** - They manage the local domains within their specific department and are responsible for enforcing the security policies there
+- **Technical Staff** - They handle the actual operational duties of the security. This would be roles like the Information Systems Security Officer(ISSO)
+- **Non-Technical Staff** - These are the ordinary workers in the organization whose job in regards to security is to comply with the security directives.
+- **Due Care/Liability** - This is the practical execution of our security protocols like training staff, keeping systems updated, etc... Liability is the legal consequences if security fails
 
 
 ### Information Security Business Units
+
+The following 3 units are some of the most common institutional "teams" organized together for specified security.
+
+- **Security Operations Center(SOC)** - This is where SOC analyst lives. It's the heart of defense in detecting and responding to security incidents
+- **DevSecOps** - These are the people that manage security during the entire time in which software is being built, ensuring the software is built with the precept of being secure from the onset rather than patched afterwards. 
+- **Cyber Incident Response Team(CIRT)** - This is a dedicated, specialized team that goes directly to individual security incidents to handle them.
