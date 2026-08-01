@@ -9,13 +9,13 @@ I put in a lot of effort into ensuring these notes are very comprehensive. Not o
 
 # My Study Method
 
-This is the general study methodology I use when I go through these courses or topics that really ensure true comprehension of the material. 
+This is the general study methodology I use when I go through these courses or topics that ensure true comprehension of the material. 
 
 1) Go through the entire lesson, concept, or lab.
-2) Take the time to fully wrap my head around the concept. This usually includes going to external resources and extracurricular study. 
+2) Take the time to fully wrap my head around the concept. This usually includes going to external resources and doing extracurricular study. 
 3) Take everything that I have learned and explain it thoroughly, in my own words, in such a way that displays how I've visualized the concept in my head.
 
-In doing so, my notes usually go beyond the original scope of the lessons or courses I am studying at that time. 
+In doing so, my notes usually go beyond the original scope of the lessons or courses that I am studying at that time. 
 
 # Current Goals
 - [x] Complete TryHackMe Pre Security course(Finished with 15,800+ words)
@@ -28,7 +28,7 @@ In doing so, my notes usually go beyond the original scope of the lessons or cou
 
 # Repository Structure
 
-This is how this repository is currently structured. I will be updating this as I continue through my study and expand my documentation.
+This is how the repository is currently structured. I will be updating this as I continue through my study and expand my documentation.
 
 ```
 Cybersecurity-Learning-Journey/
