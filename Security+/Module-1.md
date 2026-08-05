@@ -80,3 +80,29 @@ The following 3 units are some of the most common institutional "teams" organize
 - **Security Operations Center(SOC)** - This is where SOC analyst lives. It's the heart of defense in detecting and responding to security incidents
 - **DevSecOps** - These are the people that manage security during the entire time in which software is being built, ensuring the software is built with the precept of being secure from the onset rather than patched afterwards. 
 - **Cyber Incident Response Team(CIRT)** - This is a dedicated, specialized team that goes directly to individual security incidents to handle them.
+
+
+# Module 2 - Comparing Threat Types
+
+Much of this module consists of basic security concepts that can be understood or deduced intuitively. So for value of time and efficiency, I will just be noting what the lessons went over. 
+
+## Threat Actors
+
+This segment essentially just covered different types of threat actors as well as their attributes. 
+
+* Vulnerability + Threat = Risk
+* Known threats vs adversary behaviors(Identifiable threats and tools, etc vs how threat actors behave)
+* Internal & external threat actors
+* High or low capability and funding/resource levels of these threat actors, creating different levels of threats. 
+* Various motivations of threat actors - Malicious vs accidental. Chaotic, financial, political, and curious motivations.
+* White Hat vs Black Hat Hackers(Authorized "ethical" hackers vs non-authorized hackers)
+* Nation-state Actors and Advanced Persistent Threat(APT - gaining unauthorized access and staying undetected for a long time "persistently". Usually done by nation states)
+* Organized crime, as well as corporate competition, threat actors
+
+
+## Attack Surface
+
+
+
+## Social Engineering 
+
