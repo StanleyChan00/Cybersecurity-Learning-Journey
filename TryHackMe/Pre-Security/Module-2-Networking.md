@@ -264,36 +264,43 @@ UDP for example would be used for a video call. TCP would be used for file trans
 ### Ports
 As noted already, ports range from 0-65,535. We can imagine them as rooms.
 
-Each device has it's own 65,535 available private "rooms"(called Ephemeral ports) and there is a public("Well-Known") set of 65,535 rooms. Each time we open a tab that connects to youtube or Netflix on our laptop for example, we open up a random private port on our device which connects to the corresponding public port to route data to the correct program.
+Each device has it's own set of 65,535 available private "rooms". Whenever we connect to another server, we temporarily open up one of our "rooms" to establish a connection to that server's "room", essentially making a path from our room to theirs. 
 
-Any ports from 0-1024 are "common ports". Here are some protocols on public ports:
+So for example, if I wanted to go to youtube on my laptop, I would connect to Youtube's IP via the Domain Name Service(Covered in the next web module [here](Module-3-Web.md)) and knock on one of their ports, specifically port 443, to connect to their website.
+
+Our device would open up a temporary port, usually one between 49,152 and 65,535(These are called ephemeral ports, which are the temporary ports we use to browse the web), to connect to them and finally establish a connection.
+
+Now, we specifically ask for port 443 because port 443 is the port agreed upon by the internet to be designated for the HTTPS protocol. So whenever we want to visit a HTTPS website, we always knock on port 443 of that IP address to get there.  
+
+All the ports from 0-1023 are like this and are known as "common ports" or "well-known ports" reserved for specific services or protocols. Here are a few more as examples.
 
 * File Transfer Protocol(FTP) - Port 21 - Download files from here
 * Secure Shell(SSH) - Port 22 - Used to securely login to systems
 * HyperText Trasnfer Protocol(HTTP) - Port 80 - Websites
-* HyperText Transfer Protocol Secure(HTTPS) - Port 443 - Encryped and secure HTTP for websites
+* HyperText Transfer Protocol Secure(HTTPS) - Port 443 - Encrypted and secure HTTP for websites
 * Server Message Block(SMB) - Port 445 - Shares files as well as devices
 * Remote Desktop Protocol(RDP) - Port 3389 - Control a device over a network. Proprietary from Microsoft
+
   
 ## Extending Your Network
 
 ### Port Forwarding 
-Say I'm hosting a webserver,a minecraft server for example. Without port forwarding, my friend(let's say Jack) will not be able to access my server. Only those within my network have access to it.
+Say I'm hosting a server, a minecraft server for example. Without port forwarding, my friend(let's say Jack) will not be able to access my server. Only those within my network have access to it.
 
 So to "open" it, I use port forwarding. That is, allowing access to my minecraft server(the port) via my router.
 
-So anyone knows on my public IP asking for this specific port - our Minecraft server, my router will now send them to that port on our private IP address.
+So when someone requests a connection to my public IP asking for this specific port(our minecraft server), my router will now send them to that port on our private IP address.
 
-Port forwarding essentially just opens up this door(our port) for entry. 
+Port forwarding essentially just opens up this door(our port) for entry and allows "Jack" to get into my minecraft server. 
 
 It allows the network to go from this:
 
-<img width="50%" height="50%" alt="Network 1" src="https://github.com/user-attachments/assets/94b2cf0d-334a-4c7c-a650-176e07df1d3f" />
+<img width="100%" height="100%" alt="Network 1" src="https://github.com/user-attachments/assets/94b2cf0d-334a-4c7c-a650-176e07df1d3f" />
 
 
 To this:
 
-<img width="50%" height="50%" alt="Port Forwarding" src="https://github.com/user-attachments/assets/0e25981a-a425-4cbc-92f0-34fe50c5dbb4" />
+<img width="100%" height="100%" alt="Port Forwarding" src="https://github.com/user-attachments/assets/0e25981a-a425-4cbc-92f0-34fe50c5dbb4" />
 
 ### Firewalls 
 This is the border security of our network. It filters what can come in or out of a network. This is crucial for security because it's like a security guard filtering who can come into a building. 
