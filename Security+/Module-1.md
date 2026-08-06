@@ -100,9 +100,14 @@ This segment essentially just covered different types of threat actors as well a
 * Organized crime, as well as corporate competition, threat actors
 
 
-## Attack Surface
+## Attack Surfaces
 
-
+* What attack surfaces are, the various types of attack surfaces(Like physical, network, application, and human surfaces), as well as threat vectors(Specific method or path of attack)
+* Potential software vulnerabilities like flaws in code, delays in patching updates, outdated systems, as well as client-based vs agentless software(Installed software on the device itself vs non-installed software working remotely or as a network protocol, etc)
+* Unsecured Network vectors and Potential vulnerabilities in open service ports(See TryHackMe write up on ports [here](../TryHackMe/Pre-Security/Module-2-Networking.md#ports))
+* Lure-Based Vectors(Bait, removable devices, executable files, etc)
+* Message-based Vectors
+* Supply Chain Attack Surface & Managed Service Providers(MSPs - Third party that remotely handles the IT & Security of a company)
 
 ## Social Engineering 
 
