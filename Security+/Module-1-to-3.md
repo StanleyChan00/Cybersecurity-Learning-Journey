@@ -111,3 +111,19 @@ This segment essentially just covered different types of threat actors as well a
 
 ## Social Engineering 
 
+* Human-based attack vectors, purposes, and potential scenarios like persuading someone to give up sensitive data
+* Impersonation and Pretexting(The script they prepare beforehand to trick you)
+* Phising, Vishing(V = Voice), SmiShing(SMS text messages), and Pharming(Sending users to fake websites. Redirecting a URL through DNS spoofing is an example which visually looks like you've got a correct URL typed but the request is poisoned likely through the DNS server which sends you to a fake website).
+* Typosquatting(Registering variations of domains of official websites that have been misspelled or looks similar such that whenever someone mistypes that URL, they will be sent to this fake website.) and email spoofing(touched upon [here](../TryHackMe/Pre-Security/Module-3-Web.md#txt-record) in the TryHackMe Web module)
+
+### Watering Hole Attack
+
+If an attacker is unable to get access to someone's network because they are so secure, they could instead attempt a watering hole attack.
+
+Rather than attempting to get into the victim's/organizations network directly, they will instead attack a third party that the victim trusts and uses. By doing so, they can infect or gain access to their target victim. 
+
+For example, say someone wants to attack an employee. However, that employee is very secure on his own and is inaccessible. The attacker notices that he uses a coffee shop web server to order coffee everyday. 
+
+If this attacker could gain access to the coffee shop's web server, they would now have various potential options and attack vectors to infect or attack the employees system. They may target a group of individuals within an organization rather than a singular employee and thus go for a third party website the organization frequently uses, like an industry blog. 
+
+It's like waiting at a lake for an animal to come drink water and killing it there, rather than chasing the animal itself around. 
