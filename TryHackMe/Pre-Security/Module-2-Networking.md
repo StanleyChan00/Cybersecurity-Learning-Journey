@@ -264,9 +264,9 @@ UDP for example would be used for a video call. TCP would be used for file trans
 ### Ports
 As noted already, ports range from 0-65,535. We can imagine them as rooms.
 
-Each device has it's own set of 65,535 available private "rooms". Whenever we connect to another server, we temporarily open up one of our "rooms" to establish a connection to that server's "room", essentially making a path from our room to theirs. 
+Each device has its own set of 65,535 available private "rooms". Whenever we connect to another server, we temporarily open up one of our "rooms" to establish a connection to that server's "room", essentially making a path from our room to theirs. 
 
-So for example, if I wanted to go to youtube on my laptop, I would connect to Youtube's IP via the Domain Name Service(Covered in the next web module [here](Module-3-Web.md)) and knock on one of their ports, specifically port 443, to connect to their website.
+So for example, if I wanted to go to youtube on my laptop, I would connect to Youtube's IP via the Domain Name System(Covered in the next web module [here](Module-3-Web.md)) and knock on one of their ports, specifically port 443, to connect to their website.
 
 Our device would open up a temporary port, usually one between 49,152 and 65,535(These are called ephemeral ports, which are the temporary ports we use to browse the web), to connect to them and finally establish a connection.
 
