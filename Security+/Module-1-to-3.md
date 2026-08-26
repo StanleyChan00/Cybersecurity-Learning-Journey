@@ -132,6 +132,14 @@ It's like waiting at a lake for an animal to come drink water and killing it the
 
 Some of the concepts in this module like symmetric/asymmetric encryption were covered already in the TryHackMe course [here](../TryHackMe/Pre-Security/Module-7-Attacks-Defenses.md#cryptography-concepts).
 
+Some quick notes on top of this:
+
+Cryptanalysis: The art of cracking cryptography.
+
+In regards to encryption, the longer the length of the key, the stronger the encryption and the harder it is to crack. It scales exponentially.
+
+Advanced Encryption Standard(AES) is the current most common encryption algorithm. AES-256 uses 256 bits for the key and is thus much stronger than the AES-128 bit version. Larger keys also take more power and time to encrypt. 
+
 ## Hashing 
 
 Hashing is when we take data of any length and convert it, using an algorithm, into a fixed length string that now represents that data. 
