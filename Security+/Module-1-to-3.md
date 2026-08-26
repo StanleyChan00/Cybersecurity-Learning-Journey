@@ -144,8 +144,29 @@ This is used for passwords like the Kerberos protocol I covered in-depth previou
 
 Hashing needs to be "anti-collision" meaning that two different data inputs cannot create the same hash. Doing so is called a collision and needs to be avoided in the algorithm or extremely rare.
 
-**Secure Hash Algorithm(SHA)**: This is currently the primary and most common hashing algorithm used. Specifically SHA-256 which uses 256 bits, meaning the resulting hash will always be 256 bits or 64 characters.
+**Secure Hash Algorithm(SHA)**: This is currently the primary and most common hashing algorithm used. Specifically SHA-256 which uses 256 bits, meaning the resulting hash will always be 256 bits or 64 hexadecimal characters.
 
 **Message Digest Algorithm(MD5)** This is an older hashing algorithm which shouldn't be used for anything important due to its collision risk. 
+
+### Salting Hashes
+
+If we were storing hashes of passwords for a service, some of our users may use the exact same password as another user. 
+
+In doing so, their resulting hash will now be the exact same as one another and thus produces many security problems like leakage. For example, if a malicious attacker has access to the database and cracks one user's password, then they now will be able to access all the accounts that have the exact same hash, automatically. 
+
+In order to prevent this, we "salt" the hashes.
+
+As it sounds, we "sprinkle" random data on top of the password before it gets converted into a hash. In doing so, we ensure the users' resulting hash will now each be unique regardless of whether or not their passwords are the same.
+
+This also prevents a "Rainbow Table" attack. 
+
+This attack essentially uses a database of a vast amount of potential passwords and their resulting hash that's generated. 
+
+Thus if hashes aren't salted, they will be able to use their "Rainbow Table" to simply look up someone's hash within their database and obtain their password in seconds. 
+
+Salting hashes prevent this from happening entirely due to the unique resulting hash that is generated.
+
+
+
 
 
