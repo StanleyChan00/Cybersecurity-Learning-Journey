@@ -51,7 +51,7 @@ Cybersecurity-Learning-Journey/
 │   └── README.md
 │   
 ├── Security+/
-│   ├── Module-1.md
+│   ├── Module-1-to-3.md
 │   └── README.md
 │
 └── README.md
