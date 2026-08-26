@@ -174,6 +174,27 @@ Thus if hashes aren't salted, they will be able to use their "Rainbow Table" to 
 
 Salting hashes prevent this from happening entirely due to the unique resulting hash that is generated.
 
+## Digital Signatures
+
+Using asymmetric keys and hashing, we can have digital signatures to achieve authentication, integrity, as well as non-repudiation(The principle that prevents someone from being able to deny that they performed an action, like sent a message).
+
+It works like this:
+
+1) The string someone would like to send to another will be hashed. For example, the string could be someone typing out their name or it could be a message to a candidate that they will be hired.
+2) That hash is then "encrypted" using that person's PRIVATE key. The result is the digital signature
+3) That digital signature is sent along with the original plaintext
+4) The receiver uses the sender's PUBLIC key to decrypt the signature.
+5) The receiver now takes the original plaintext sent along with the signature and runs it through the same hashing algorithm
+6) Finally, IF the hashes now match, that verifies the digital signature.
+
+Throughout this process we can see a few things.
+
+The hashing is what achieves integrity as IF the two hashes match, that tells us that the data sent was not changed.
+
+On top of this, we achieve authentication and non-repudiation through the use of the private key because it is only the sender that has the private key(unless it was stolen). 
+
+The combination of these two factors is what allows us to trust the digital signature was indeed from the user and was not altered on the way through. 
+
 
 
 
