@@ -127,3 +127,25 @@ For example, say someone wants to attack an employee. However, that employee is 
 If this attacker could gain access to the coffee shop's web server, they would now have various potential options and attack vectors to infect or attack the employees system. They may target a group of individuals within an organization rather than a singular employee and thus go for a third party website the organization frequently uses, like an industry blog. 
 
 It's like waiting at a lake for an animal to come drink water and killing it there, rather than chasing the animal itself around. 
+
+# Module 3 - Cryptography 
+
+Some of the concepts in this module like symmetric/asymmetric encryption were covered already in the TryHackMe course [here](../TryHackMe/Pre-Security/Module-7-Attacks-Defenses.md#cryptography-concepts).
+
+## Hashing 
+
+Hashing is when we take data of any length and convert it, using an algorithm, into a fixed length string that now represents that data. 
+
+That hash will be the same length no matter what data is input into it. If a single letter `a` is input to be hashed, then that hash will always be the same fixed length as another input like `abcdefghijklmnopqrstuvwxyz`.
+
+In contrast to encryption, this hash can not be reverted back to its original contents or be decoded. It is one-way. Meaning once hashed, that original data is gone and cannot be retrieved or "unlocked" to reveal the original contents. 
+
+This is used for passwords like the Kerberos protocol I covered in-depth previously [here](../TryHackMe/Cybersecurity-101/Module-1-to-3.md#kerberos) or checksums to verify downloaded files to achieve integrity. 
+
+Hashing needs to be "anti-collision" meaning that two different data inputs cannot create the same hash. Doing so is called a collision and needs to be avoided in the algorithm or extremely rare.
+
+**Secure Hash Algorithm(SHA)**: This is currently the primary and most common hashing algorithm used. Specifically SHA-256 which uses 256 bits, meaning the resulting hash will always be 256 bits or 64 characters.
+
+**Message Digest Algorithm(MD5)** This is an older hashing algorithm which shouldn't be used for anything important due to its collision risk. 
+
+
