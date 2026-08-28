@@ -20,10 +20,8 @@ In doing so, my notes usually go beyond the original scope of the lessons or cou
 # Current Goals
 - [x] Complete TryHackMe Pre Security course(Finished with 15,800+ words)
 - [ ] Complete TryHackMe Cyber Security 101 course(In progress, now on module 4)
-- [ ] Complete TryHackMe SOC Level 1 course(Pending)
 - [ ] Build a home Active Directory Lab for IT Support practice(Planned)
 - [ ] Obtain a CompTIA Security+ certification(In progress, now on Module 3)
-- [ ] Obtain a Splunk Core Certified User certification(Pending)
 - [ ] Obtain a CompTIA CySA+ certification(Pending)
 
 # Repository Structure
