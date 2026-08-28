@@ -1,7 +1,7 @@
 # Cybersecurity-Learning-Journey
 Hello!
 
-This repository is where I will be documenting the concepts that I encounter in my ongoing studies into cybersecurity! It will include various courses, certification prep, as well as hands-on lab work.
+This repository is where I will be documenting the concepts that I encounter in my ongoing studies into IT & cybersecurity! It will include various courses, certification prep, as well as hands-on lab work.
 
 I put in a lot of effort into ensuring these notes are very comprehensive. Not only do they serve as good material for me to look back on if needed, but the method I use to study and document these notes really solidify my understanding of all these concepts
 
@@ -21,10 +21,10 @@ In doing so, my notes usually go beyond the original scope of the lessons or cou
 - [x] Complete TryHackMe Pre Security course(Finished with 15,800+ words)
 - [ ] Complete TryHackMe Cyber Security 101 course(In progress, now on module 4)
 - [ ] Complete TryHackMe SOC Level 1 course(Pending)
-- [ ] Obtain a CompTIA Security+ certification(In progress, now on Module 2)
+- [ ] Build a home Active Directory Lab for IT Support practice(Planned)
+- [ ] Obtain a CompTIA Security+ certification(In progress, now on Module 3)
 - [ ] Obtain a Splunk Core Certified User certification(Pending)
 - [ ] Obtain a CompTIA CySA+ certification(Pending)
-- [ ] Develop successful home projects
 
 # Repository Structure
 
