@@ -30,9 +30,16 @@ This is how the repository is currently structured. I will be updating this as I
 
 ```
 Cybersecurity-Learning-Journey/
-│
+├── Projects/
+│   └── Active-Directory-Lab/
+│       ├── 00-Plan-and-Structure.md
+│       ├── 01-Build.md
+│       ├── 02-IT-Support-Tickets.md
+│       └── README.md
+├── Security+/
+│   ├── Module-1-to-3.md
+│   └── README.md
 ├── TryHackMe/
-│   │
 │   ├── Pre-Security/
 │   │   ├── Module-1-Introduction.md
 │   │   ├── Module-2-Networking.md
@@ -41,16 +48,9 @@ Cybersecurity-Learning-Journey/
 │   │   ├── Module-5-Operating-Systems.md
 │   │   ├── Module-6-Software.md
 │   │   └── Module-7-Attacks-Defenses.md
-│   │
 │   ├── Cybersecurity-101/
 │   │   ├── Module-1-to-3.md
 │   │   └── Module-4-to-5.md
-│   │
 │   └── README.md
-│   
-├── Security+/
-│   ├── Module-1-to-3.md
-│   └── README.md
-│
 └── README.md
 ```
