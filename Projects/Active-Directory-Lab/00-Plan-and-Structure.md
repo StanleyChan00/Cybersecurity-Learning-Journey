@@ -27,9 +27,9 @@ VirtualBox's NAT engine acts like a virtual router for us, handing the DC a priv
 
 **NIC2**(We will name this "Internal") - This will connect internally to form a little LAN with the client machine. We will set a static IP address here. There are a few ranges that we can pick from that don't collide with the public internet IPs.
 
-However, for simplicity sake, we will just use 10.10.10.10. We will use a standard /24 subnet mask for 1 network and the gateway will be left empty as the Gateway is itself, the DC.
+However, for simplicity sake, we will just use `10.10.10.10`. We will use a standard /24 subnet mask for 1 network and the gateway will be left empty as the Gateway is itself, the DC.
 
-After promotion to DC, the DNS server will be 127.0.0.1, which is an IP that means it is pointing to itself as the DNS server. 
+After promotion to DC, the DNS server will be `127.0.0.1`, which is an IP that means it is pointing to itself as the DNS server. 
 
 ### The Client Machine
 
@@ -47,7 +47,9 @@ We will also be adding a DNS forwarder pointing to `8.8.8.8` on the DC so that t
 
 All of this, in theory, should leave us with a fully functioning network. 
 
+*I made a diagram using draw.io to visualize this network structure below. It will look like this:*
 
+<img width="613" height="627" alt="AD-LAB drawio" src="https://github.com/user-attachments/assets/08208877-6f90-4fb7-9852-19065fb92d7c" />
 
 
 
