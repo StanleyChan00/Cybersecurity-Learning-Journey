@@ -51,6 +51,25 @@ All of this, in theory, should leave us with a fully functioning network.
 
 <img width="613" height="627" alt="AD-LAB drawio" src="https://github.com/user-attachments/assets/08208877-6f90-4fb7-9852-19065fb92d7c" />
 
+## Active Directory Structure
+
+Much of this will be more intuitive when I build the AD domain itself due to the visual nature of the GUI making it simple. I expect some things to be changed or altered once I get to the actual build and see all the default OUs and containers on screen.
+
+However, I still want a small general framework planned beforehand. 
+
+I will be naming this domain `circle.lab` and this lab will have 4 accounts.
+
+* The built-in Domain Admin account: This will be the "emergency" admin account that is not used often
+* The IT-Admin account: This will be the primary administrator account used for operations by the IT "staff" at this small office.
+* 2 User/Staff accounts: These will be the regular user accounts operated by the common staff at the business.
+
+In the future, I may practice writing up a PowerShell Script to automate the creation of 100+ users for more potential ticket varieties in phase 2. 
+
+However for now, I will just be keeping it simple with these 2 user accounts.
+
+The DC will just be named `DC` while the workstation will simply be called `WKS01`
+
+We'll also have 2 simple security groups: `Admins` and `staff`. As for OUs, I think that is best to see when we get to the GUI.
 
 
 
