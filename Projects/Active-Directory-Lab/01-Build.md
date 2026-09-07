@@ -77,7 +77,7 @@ I created a Security Groups OU, named `groups`, which comprised of `Admins` and 
 
 I created a `Machines` OU, which will be where the client is. Lastly, I created the `Users` OU, which had a separate `IT` and `Staff` OU within.
 
-I made 2 staff users named `Staff-1` and `Staff-2` as well as the main IT-Admin account, named `IT-Admin` 
+I made 2 staff users named `Staff-1` and `Staff-2` as well as the main IT-Admin account, named `IT-Admin`. I made all simple passwords so that it's easily memorable.
 
 <img width="2056" height="1516" alt="Staff" src="https://github.com/user-attachments/assets/5b3bc8d0-f23a-4a60-a553-6943cb610992" />
 
@@ -91,6 +91,43 @@ After this, most of phase 1 is now done! We now just have to set up the Client M
 
 ## Setting Up the Client Machine
 
+Just like the DC, I set up the client machine with 2 CPUs, 3gb of RAM, as well as up to 50gb of storage. I then set up the network adapter as planned, connecting internally and ensuring it is named the same as the 2nd NIC in the DC: `ADLAN`
+
+<img width="1572" height="1092" alt="Client NIC" src="https://github.com/user-attachments/assets/dc245816-7688-46e4-82b6-4d2a10338633" />
+
+Doing this allowed me to connect automatically to the LAN from the DC once the machine has been booted up, since we already set the whole network up with the DC prior. 
+
+I did a few `ping` tests and diagnostics to confirm everything is working before changing the name of the machine and joining the domain.
+
+<img width="2182" height="1654" alt="Client Initial Ping" src="https://github.com/user-attachments/assets/7bb8878d-179e-4143-970f-41de0b1a31c1" />
+
+<img width="2002" height="1218" alt="Client Initial ipconfig" src="https://github.com/user-attachments/assets/7287c28b-d37c-418e-973a-75866be3ee7d" />
+
+Finally, I joined the domain using the IT-Admin account.
+
+<img width="2002" height="1218" alt="Join-Domain" src="https://github.com/user-attachments/assets/c4690ed2-e936-43c7-a978-f48c5ae5b664" />
+
+In attempting to login to the client machine on the IT-Admin account, I encountered a small issue of failing to being allowed to login.
+
+<img width="2010" height="1628" alt="IT-Admin login fail DC" src="https://github.com/user-attachments/assets/6eb811a5-bf20-4f26-a50a-09a9d2f172ce" />
+
+I realized that although I created Admin OUs and added the IT account into it, I never actually made that IT account into a Domain. 
+
+So I promptly fixed that issue on the DC by going into the built-in Users container and adding the IT-Admin account as an Admin. That fixed the issue and I was able to login. 
+
+<img width="2010" height="1628" alt="Fixed Login " src="https://github.com/user-attachments/assets/d29945a3-125a-49e6-b093-02ade7e67beb" />
+
+I then logged into the first Staff account to ensure that it works and subsequently changed the password at the prompt.
+
+<img width="2010" height="1628" alt="Change Password Staf--1" src="https://github.com/user-attachments/assets/a46fdb82-9d47-42b0-8dbd-699801eb0c55" />
+
+I did one last test of the network to ensure everything is working correctly and finally Phase 1 is done!
+
+<img width="2010" height="1628" alt="Testing Network" src="https://github.com/user-attachments/assets/135c56df-b4c0-4ae5-aea5-411d7ab0e79c" />
+
+Here is what the finished AD stucture looks like as I added the client machine(WKS01) into the new machines OU.
+
+<img width="2010" height="1628" alt="Finished AD Setup" src="https://github.com/user-attachments/assets/0d37523f-9c06-4a12-aa10-1cd0800e49c8" />
 
 
 
