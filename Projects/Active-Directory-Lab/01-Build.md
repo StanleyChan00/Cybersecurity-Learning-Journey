@@ -121,13 +121,77 @@ I then logged into the first Staff account to ensure that it works and subsequen
 
 <img width="2010" height="1628" alt="Change Password Staf--1" src="https://github.com/user-attachments/assets/a46fdb82-9d47-42b0-8dbd-699801eb0c55" />
 
-I did one last test of the network to ensure everything is working correctly and finally Phase 1 is done!
+I did one last test of the network to ensure everything is working correctly.
 
 <img width="2010" height="1628" alt="Testing Network" src="https://github.com/user-attachments/assets/135c56df-b4c0-4ae5-aea5-411d7ab0e79c" />
 
 Here is what the finished AD stucture looks like as I added the client machine(WKS01) into the new machines OU.
 
 <img width="2010" height="1628" alt="Finished AD Setup" src="https://github.com/user-attachments/assets/0d37523f-9c06-4a12-aa10-1cd0800e49c8" />
+
+
+
+## File Sharing and GPOs
+
+After that, I installed 2 RSAT utilities so that I could manage GPOs and do some AD work on the client machine using the IT-Admin account 
+
+ <img width="1346" height="1218" alt="RSAT" src="https://github.com/user-attachments/assets/6cd8086c-b32e-4562-a484-c3bc5835ae99" />
+
+Then, I enabled the recycle bin for more potential tickets in Phase 2.
+
+<img width="1346" height="1218" alt="Recycle Bin" src="https://github.com/user-attachments/assets/3a7637b4-9230-42ac-970d-6f74d7460ec5" />
+
+### File Sharing 
+
+First, I made the network discoverable on both machines to allow for file sharing.
+
+<img width="1346" height="1218" alt="Network Discovery" src="https://github.com/user-attachments/assets/12251f8d-74c7-4187-9c1a-73be99423da4" />
+
+
+Then I created two folders on the DC that I will be using for sharing: 
+
+* Public: Will act like a README for the general public of our company. Admins can alter this folder while everyone else can only read the contents.
+* Staff: This will be the shared folder that all Staff can use. They are free to write and alter the contents within.
+
+Once I created these folders and a simple test txt file within, I went to managing NTFS permissions.
+
+I disabled inheritance to avoid any wonky rights issues and then gave the proper privileges to the staff and IT-admins respectively.
+
+<img width="1346" height="1218" alt="IT-Admin Full Control" src="https://github.com/user-attachments/assets/0cff528a-5119-4f7b-b579-f91862734f4b" />
+
+After this, I managed the share permissions and did the same thing for each folder before finally getting these folders shared.
+
+<img width="1102" height="1014" alt="Share Permissions " src="https://github.com/user-attachments/assets/de12cdc5-780b-4190-bd30-1549e8fb5768" />
+
+Now, I needed to test that these file shares were working.
+
+So I logged into the Staff account on WKS01, checked if I could see the folders, and then checked to see if I had the proper permission levels for those folders as a Staff account. 
+
+Everything worked perfectly. I was able to alter the txt file for the staff account while being unable to do so on the public folder.
+
+<img width="1582" height="1288" alt="Staff File Altered" src="https://github.com/user-attachments/assets/529afe45-3647-44fa-a184-61f16dfbde91" />
+
+<img width="1582" height="1288" alt="Unable to Alter Public" src="https://github.com/user-attachments/assets/e57087db-9d88-4514-9f1f-fc7e33c4fca1" />
+
+### GPOs
+
+The last part of Phase 1 is setting a couple GPOs and ensuring that works as well.
+
+The first thing I did was alter the Default Domain Policy. I added a lockout policy so that users who have 5 invalid attempts would get locked out of the account for 30 minutes. This also gives me potential tickets that I can work on in Phase 2.
+
+<img width="1582" height="1288" alt="Lockout GPO" src="https://github.com/user-attachments/assets/66e3a869-44df-4f3f-8629-df37a71a510e" />
+
+Finally, I added one last GPO which mapped our shared drives. 
+
+After adding in the GPO, using `gpupdate /force`, and signing out/in again, Phase 1 has finally been completed with 2 successfully mapped shared drives!
+
+<img width="1646" height="910" alt="gpupdate" src="https://github.com/user-attachments/assets/e501d2e8-51e3-4d20-a265-cb252397a2da" />
+
+<img width="1646" height="1144" alt="Shared Drives Mapping " src="https://github.com/user-attachments/assets/29a1b456-4068-4af7-bf6c-150b6d3d43d6" />
+
+
+
+
 
 
 
