@@ -71,6 +71,8 @@ The DC will just be named `DC` while the workstation will simply be called `WKS0
 
 We'll also have 2 simple security groups: `Admins` and `staff`. As for OUs, I think that is best to see when we get to the GUI.
 
+(This was not in Phase 0 but during Phase 1, I added 2 file shares(Public and Staff) as well as a GPO that mapped those drives. I also edited the default GPO to have a lockout policy). 
+
 
 
 
