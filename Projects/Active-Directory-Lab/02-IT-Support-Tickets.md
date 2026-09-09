@@ -68,6 +68,23 @@ I confirmed that and ensured they can't alter the contents in the public folder.
 <img width="1877" height="984" alt="Ticket #2" src="https://github.com/user-attachments/assets/33a80928-cf70-4bd9-b93b-bc320f655c09" />
 
 
+## Ticket 3 - Can't Access Shared Drives 
+
+This ticket will have Staff-3 calling to say that he can't access the public and staff shared drives. He can see it but when attempting to open them, he gets a message telling him he does not have permissions to do so.
+
+This example will be one of someone simply accidentally removing Staff-3 from the Staff Security Group, which would be the set up here.
+
+In doing so, we can find the user being unable to access the drives. This is because the permission and NTFS rights are based off the security groups. So when Staff-3 leaves the Staff group, he no longer has the rights inherent to that group and thus is no longer able to access these drives.
+
+<img width="1764" height="1324" alt="Can&#39;t Access" src="https://github.com/user-attachments/assets/d5cc5d16-05b2-46d1-bac6-aed9bc63cd2b" />
+
+The simple fix here is simply adding him back to the group, which now allows him to access the drives again.
+
+<img width="1764" height="1324" alt="Add Staff-3" src="https://github.com/user-attachments/assets/b16cf880-e5bf-46a7-8867-b30f8884cd89" />
+
+### The Final ServiceNow Ticket:
+
+<img width="1822" height="987" alt="Ticket #3" src="https://github.com/user-attachments/assets/efcdac8f-70dc-4c68-88ee-aaaeb0c03866" />
 
 
 
