@@ -87,5 +87,24 @@ The simple fix here is simply adding him back to the group, which now allows him
 <img width="1822" height="987" alt="Ticket #3" src="https://github.com/user-attachments/assets/efcdac8f-70dc-4c68-88ee-aaaeb0c03866" />
 
 
+## Ticket 4 - Restore a Deleted Account
+
+This ticket will allow me to practice the use of the recycle bin we enabled earlier in phase 1. 
+
+The scenario is that an account of a hire was off-boarded, however that person ultimately did not end up leaving the company and has decided to stay.
+
+Thus, the manager has called asking us to restore his account.
+
+The set up is very simple. We just delete Staff-2's account and confirm by trying to login to it.
+
+After this, we just go to the Active Directory Administrative Center, go to the deleted objects folder, find the account, and restore it. Finally we confirm they are restored by checking their account in AD UC, verifying everything is in place, and have them attempt to log in again. 
+
+<img width="1884" height="1334" alt="Restore" src="https://github.com/user-attachments/assets/27a80ee9-f860-464e-a269-16381c13cedd" />
+
+### The Final ServiceNow Ticket:
+
+<img width="1869" height="996" alt="Ticket 4" src="https://github.com/user-attachments/assets/e05e2c65-eae5-4374-b0e0-6fa1f6cb40d8" />
+
+
 
 
