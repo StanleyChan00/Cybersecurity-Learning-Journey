@@ -107,11 +107,11 @@ Finally, I joined the domain using the IT-Admin account.
 
 <img width="2002" height="1218" alt="Join-Domain" src="https://github.com/user-attachments/assets/c4690ed2-e936-43c7-a978-f48c5ae5b664" />
 
-In attempting to login to the client machine on the IT-Admin account, I encountered a small issue of failing to being allowed to login.
+In attempting to login to the DC on the IT-Admin account, I encountered a small issue of failing to being allowed to login.
 
 <img width="2010" height="1628" alt="IT-Admin login fail DC" src="https://github.com/user-attachments/assets/6eb811a5-bf20-4f26-a50a-09a9d2f172ce" />
 
-I realized that although I created Admin OUs and added the IT account into it, I never actually made that IT account into a Domain. 
+I realized that although I created Admin OUs and added the IT account into it, I never actually made that IT account into a Domain Admin. 
 
 So I promptly fixed that issue on the DC by going into the built-in Users container and adding the IT-Admin account as an Admin. That fixed the issue and I was able to login. 
 
