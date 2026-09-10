@@ -2,7 +2,7 @@
 
 Hello!
 
-This repository is where I will be documenting the concepts that I encounter in my ongoing studies into IT & cybersecurity! It will include various courses, certification prep, as well as hands-on lab work.
+This repository is where I will be documenting the concepts that I encounter in my ongoing studies into IT & cybersecurity, as well as the labs that I built to practice them! It will include various courses, certification prep, as well as lab work.
 
 I put in a lot of effort into ensuring these notes are very comprehensive. Not only do they serve as good material for me to look back on if needed, but the method I use to study and document these notes really solidify my understanding of all these concepts
 
@@ -19,11 +19,10 @@ This is the general study methodology I use when I go through these courses or t
 In doing so, my notes usually go beyond the original scope of the lessons or courses that I am studying at that time. 
 
 # Current Goals
-- [x] Complete TryHackMe Pre Security course(Finished with 15,800+ words)
+- [x] Complete TryHackMe Pre Security course(Finished with 15,800+ words!)
 - [ ] Complete TryHackMe Cyber Security 101 course(In progress, now on module 4)
-- [ ] Build a home Active Directory Lab for IT Support practice(In Progress, now on the last Phase)
+- [x] Build a home Active Directory Environment and work ServiceNow Tickets against it(Finished!)
 - [ ] Obtain a CompTIA Security+ certification(In progress, now on Module 3)
-- [ ] Obtain a CompTIA CySA+ certification(Pending)
 
 # Repository Structure
 
