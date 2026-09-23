@@ -196,6 +196,13 @@ On top of this, we achieve authentication and non-repudiation through the use of
 The combination of these two factors is what allows us to trust the digital signature was indeed from the user and was not altered on the way through. 
 
 
+**Digital Certificates:** These validate public keys by linking them to a specific identity. They are issued by "Certificate Authorities"(CAs) that sign it using their private key. Thus so long as the CA is trusted, this identity/public key can also be trusted. X.509 is the standard format for these certificates.
 
+Root of trust is used to refer to this extension of trust granted by authorities such as CAs. 
 
+These occur on web browsers, for example. Built into our browsers are many CAs that are listed and used to verify the web server as being managed by the owner of that domain name. 
+
+There are also internal private CAs. For example, an organization may have their own CA built in-house for their own customized root of trust.
+
+**Wildcard Certificates & Subject Alternative Name(SAN):** These are the same singular Digital Certificates that extends that verification of the singular entity across multiple domains and domain names rather than a singular one. SAN = various domains(Google.com, yahoo.com, etc). While Wildcard = First level domains(Mail.google.com, admin.google.com, etc).
 
