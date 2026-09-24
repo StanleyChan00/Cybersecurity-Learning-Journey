@@ -206,3 +206,6 @@ There are also internal private CAs. For example, an organization may have their
 
 **Wildcard Certificates & Subject Alternative Name(SAN):** These are the same singular Digital Certificates that extends that verification of the singular entity across multiple domains and domain names rather than a singular one. SAN = various domains(Google.com, yahoo.com, etc). While Wildcard = First level domains(Mail.google.com, admin.google.com, etc).
 
+Key Revocation would be invalidating a certificate before its expiration and a Certificate Revocation List(CRL) would be the list of certificates that have been revoked and invalidated within a CA.
+
+Due to the fact that these CRLs can get pretty long, scalability becomes an issue. Online Certificate Status Protocol(OCSP) as well as OCSP stapling is used to scale it by verifying individual certificates or putting that burden onto the web server to "staple" the OSCP verification onto the SSL/TLS handshake.
