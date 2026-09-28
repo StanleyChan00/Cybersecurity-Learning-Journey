@@ -174,6 +174,16 @@ Thus if hashes aren't salted, they will be able to use their "Rainbow Table" to 
 
 Salting hashes prevent this from happening entirely due to the unique resulting hash that is generated.
 
+### Key Stretching 
+
+Key stretching is how we make it exponentially harder to crack password hashes. 
+
+It starts off with a regular salted hash of a password. It takes that resulting hash and runs it through the same algorithm(varies depending on the standard/algorithm used) to generate a new resulting hash.
+
+That new hash is run again through the same algorithm. This repeats over and over for thousands or even millions of rounds. 
+
+This makes it so that even simple passwords will require exponentially more power to crack. 
+
 ## Digital Signatures
 
 Using asymmetric keys and hashing, we can have digital signatures to achieve authentication, integrity, as well as non-repudiation(The principle that prevents someone from being able to deny that they performed an action, like sent a message).
