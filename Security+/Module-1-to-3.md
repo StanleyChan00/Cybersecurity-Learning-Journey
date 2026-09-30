@@ -219,3 +219,27 @@ There are also internal private CAs. For example, an organization may have their
 Key Revocation would be invalidating a certificate before its expiration and a Certificate Revocation List(CRL) would be the list of certificates that have been revoked and invalidated within a CA.
 
 Due to the fact that these CRLs can get pretty long, scalability becomes an issue. Online Certificate Status Protocol(OCSP) as well as OCSP stapling is used to scale it by verifying individual certificates or putting that burden onto the web server to "staple" the OSCP verification onto the SSL/TLS handshake.
+
+## Obfuscation 
+
+As it sounds, this is the concept of making data intentionally unclear such that its original meaning is hard to decipher or understand. It acts as a second layer of security in case other primary security methods are breached. It also slows down attackers as time is needed to find out what the obfuscated data originally meant. 
+
+The following are some methods in which obfuscation is achieved:
+
+### Steganography
+
+This comes from the greek words steangaós and graphia meaning "covered/hidden" and "writing" respectively. 
+
+In this sense, I may have a message I want to obfuscate. Using steganography, I would embed this message onto a carrier which itself will look like an ordinary file(whether it be a photo, or an audio clip, or a video, etc). 
+
+That ordinary file is called the covertext. It's what carries the payload. 
+
+That covertext will look completely normal but will have the hidden message concealed within its digital structure.
+
+### Tokenization
+
+### Data Masking
+
+### Code obfuscation & Packing 
+
+### De-identification 
