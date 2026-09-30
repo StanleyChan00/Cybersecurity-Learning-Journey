@@ -238,7 +238,14 @@ That covertext will look completely normal but will have the hidden message conc
 
 ### Tokenization
 
+This is fairly straightforward and covered implicitly in past TryHackMe courses. 
+
+It's simply the concept of taking sensitive data and replacing it with a non-sensitive placeholder.
+
+For example, this would be like taking a credit card number and storing it as `token01` in our database. Of course, this will require a token vault. A token vault being the encrypted, stored mapping of the token to the real data.
+
 ### Data Masking
+
 
 ### Code obfuscation & Packing 
 
