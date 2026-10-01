@@ -246,7 +246,22 @@ For example, this would be like taking a credit card number and storing it as `t
 
 ### Data Masking
 
+This is also very simple as we often see it in everyday life. It's simply redacting parts of sensitive data while keeping only some of it readable. 
 
-### Code obfuscation & Packing 
+This would be like redacting all of credit card number besides the last 4 digits.
+
+It would look like this:
+
+`**** - **** - **** - 4321`
+
+### Code Obfuscation & Packing 
+
+Code Obfuscation: This is the process of making code gibberish to our eyes by scrambling the variables and text. Although the code still runs, it is near unreadable in human eyes.
+
+The code is run through a tool that scrambles its text which "obfuscates" the code. 
+
+Code packing also "hides" the data but does so by "locking" it away in a "box". A packing tool is used to compress and encrypt the file before it's "locked" in the box. On top of this, an "unpacker stub" is attached to the front which is what decompresses and decrypts the box so it can be open. 
+
+This way, the original code/file is hidden away and the readable contents are only the wrapper. 
 
 ### De-identification 
