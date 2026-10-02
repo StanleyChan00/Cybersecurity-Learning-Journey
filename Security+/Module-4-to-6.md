@@ -30,6 +30,12 @@ In the past, this would always require a password beforehand. However, FIDO2 rem
 
 ### Soft Authentication Tokens
 
+These are software based authentication tokens. 
+
+This would be like being sent a code via SMS, email, or phone calls. It could also be authenticated using a push notification on an app or using an authenticator app. 
+
+
+
 ## Access Management
 
 
