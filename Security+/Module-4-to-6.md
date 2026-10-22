@@ -39,10 +39,6 @@ This would be like being sent a code via SMS, email, or phone calls. It could al
 ## Access Management
 
 
-
-
-## Identity Management 
-
 **Discrectionary Access Control(DAC):** 
 
 **Mandatory Access Control(MAC):** 
@@ -56,6 +52,15 @@ This would be like being sent a code via SMS, email, or phone calls. It could al
 
 **Principle of least privilege:** 
 
+### User Account provisioning 
+ As part of user acocunt provisioning, we need
+ -Identity proofing 
+ -Issuing of credentials
+ -Asset allocation
+ -Policy awareness and security education
+ -Assignment of proper permissions and rights
+
+## Identity Management 
  
 
 
