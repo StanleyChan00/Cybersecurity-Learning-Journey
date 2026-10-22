@@ -40,8 +40,23 @@ This would be like being sent a code via SMS, email, or phone calls. It could al
 
 
 
+
 ## Identity Management 
 
+**Discrectionary Access Control(DAC):** 
+
+**Mandatory Access Control(MAC):** 
+
+
+**Role-Based Access Control(RBAC):**
+
+**Attribute-Based Access Control(ABAC):** 
+
+**Rule-Based Access Control:**
+
+**Principle of least privilege:** 
+
+ 
 
 
 
