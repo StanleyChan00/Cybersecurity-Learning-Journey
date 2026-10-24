@@ -35,16 +35,23 @@ These are software based authentication tokens.
 This would be like being sent a code via SMS, email, or phone calls. It could also be authenticated using a push notification on an app or using an authenticator app. 
 
 
-
 ## Access Management
 
+Access control refers to how we manage and determine the permission levels to various resources. There are various models in how we do this. 
 
-**Discrectionary Access Control(DAC):** 
+### Discretionary Access Control(DAC)
 
-**Mandatory Access Control(MAC):** 
+This model has the owner of that specific resource deciding who has access to it as well as what permissions they have.
+
+Put simply, the owner has control. 
+
+It's managed via things like Access Control Lists(ACLs), standard file share settings, etc.
+
+### Mandatory Access Control(MAC)
 
 
-**Role-Based Access Control(RBAC):**
+### Role-Based Access Control(RBAC)
+
 
 **Attribute-Based Access Control(ABAC):** 
 
