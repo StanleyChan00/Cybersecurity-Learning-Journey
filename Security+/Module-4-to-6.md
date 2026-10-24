@@ -49,6 +49,17 @@ It's managed via things like Access Control Lists(ACLs), standard file share set
 
 ### Mandatory Access Control(MAC)
 
+This model has access controlled by a central authority determined by security clearance and labels.
+
+For example, a document may have a security label as either:
+
+* Top Secret
+* Confidential
+* Unclassified
+
+In this case, only the group of people with the security clearance of Top Secret can access Top Secret documents.
+
+You gain access by the security clearance that you are granted. 
 
 ### Role-Based Access Control(RBAC)
 
