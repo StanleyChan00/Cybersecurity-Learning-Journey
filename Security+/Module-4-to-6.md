@@ -63,6 +63,11 @@ You gain access by the security clearance that you are granted.
 
 ### Role-Based Access Control(RBAC)
 
+This is also centrally controlled. As it sounds, it works by giving users specific roles and having those roles assigned specific permission levels.
+
+For example, we may have an administrator role, a manager role, or a staff role. Each of these three roles will have varying levels of permission levels.
+
+These are security groups. I talked about it a bit previously [here](../TryHackMe/Cybersecurity-101/Module-1-to-3.md#security-groups) in the Active Directory module in TryHackMe as well.
 
 **Attribute-Based Access Control(ABAC):** 
 
