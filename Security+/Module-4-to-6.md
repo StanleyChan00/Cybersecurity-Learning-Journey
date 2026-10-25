@@ -83,7 +83,13 @@ For example, let's say there is a payroll file that the only specific people wit
 In this case, the access control wouldn't be a simple setting  to change but a set of conditions needing to be met before someone can access this payroll file. 
 
 
-**Rule-Based Access Control:**
+### Rule-Based Access Control:
+
+As this also sounds, it is access control that's determined by if/then rules. 
+
+For example, IF a user is attempting to access a file after 6:00pm, THEN block access to the file.
+
+It applies globally and can be used in a variety of ways
 
 **Principle of least privilege:** 
 
