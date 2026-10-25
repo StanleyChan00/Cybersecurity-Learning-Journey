@@ -91,17 +91,19 @@ For example, IF a user is attempting to access a file after 6:00pm, THEN block a
 
 It applies globally and can be used in a variety of ways
 
-**Principle of least privilege:** 
+**Principle of least privilege:** As always in security, this is the concept of a user having ONLY the sufficient permission levels needed for their work and nothing more. 
 
 ### User Account provisioning 
 
-As part of user acocunt provisioning, we need:
+As part of user account provisioning, we need:
  
- * Identity proofing 
+ * Identity proofing
  * Issuing of credentials
  * Asset allocation
  * Policy awareness and security education
  * Assignment of proper permissions and rights
+
+Deprovisioning, in the case of someone leaving a company for example, would be the opposite. 
 
 ## Identity Management 
  
