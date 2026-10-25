@@ -69,19 +69,33 @@ For example, we may have an administrator role, a manager role, or a staff role.
 
 These are security groups. I talked about it a bit previously [here](../TryHackMe/Cybersecurity-101/Module-1-to-3.md#security-groups) in the Active Directory module in TryHackMe as well.
 
-**Attribute-Based Access Control(ABAC):** 
+### Attribute-Based Access Control(ABAC)
+
+As this sounds, this sets access control based off the attributes and context of the user.
+
+For example, let's say there is a payroll file that the only specific people with a specific combination of attributes should be able to access. These attributes could be like:
+
+* Only finance employees
+* Must be signed in via MFA
+* Must use a compliant company device
+* User must be part of a highly confidential security group
+
+In this case, the access control wouldn't be a simple setting  to change but a set of conditions needing to be met before someone can access this payroll file. 
+
 
 **Rule-Based Access Control:**
 
 **Principle of least privilege:** 
 
 ### User Account provisioning 
- As part of user acocunt provisioning, we need
- -Identity proofing 
- -Issuing of credentials
- -Asset allocation
- -Policy awareness and security education
- -Assignment of proper permissions and rights
+
+As part of user acocunt provisioning, we need:
+ 
+ * Identity proofing 
+ * Issuing of credentials
+ * Asset allocation
+ * Policy awareness and security education
+ * Assignment of proper permissions and rights
 
 ## Identity Management 
  
