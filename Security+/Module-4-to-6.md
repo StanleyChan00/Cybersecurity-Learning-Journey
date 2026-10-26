@@ -107,8 +107,11 @@ Deprovisioning, in the case of someone leaving a company for example, would be t
 
 ## Identity Management 
  
+### 3 Types of Windows Authentication
 
-
+1) Local Sign In
+2) Network Sign In - Like Kerberos and NTLM, covered in depth [here](../TryHackMe/Cybersecurity-101/Module-1-to-3.md#authentication-methods)
+3) Remote Sign In - Like VPNs covered [here](../TryHackMe/Pre-Security/Module-2-Networking.md#vpn-basics)
 
 
 # Module 5 
