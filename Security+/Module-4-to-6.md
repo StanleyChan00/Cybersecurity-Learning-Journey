@@ -113,6 +113,11 @@ Deprovisioning, in the case of someone leaving a company for example, would be t
 2) Network Sign In - Like Kerberos and NTLM, covered in depth [here](../TryHackMe/Cybersecurity-101/Module-1-to-3.md#authentication-methods)
 3) Remote Sign In - Like VPNs covered [here](../TryHackMe/Pre-Security/Module-2-Networking.md#vpn-basics)
 
+### Single Sign-On Authentication 
+
+This is the concept of only having to log in once and then having access to multiple applications without having to reenter your credentials every time. 
+
+A simple example is logging into google and then having access to your gmail, google drive, google docs, etc through that single login. Kerberos, as talked about earlier, is also an example of this. 
 
 # Module 5 
 
