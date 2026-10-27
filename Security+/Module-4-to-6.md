@@ -119,6 +119,14 @@ This is the concept of only having to log in once and then having access to mult
 
 A simple example is logging into google and then having access to your gmail, google drive, google docs, etc through that single login. Kerberos, as talked about earlier, is also an example of this. 
 
+### Federation
+
+This is the concept of having an organization use the authentication of another to access their services.
+
+For example, I may have a google account and want to access a separate app or website to learn about networking. That networking app or website could use Google's authentication to login and allow access into their services despite being different companies. 
+
+In this case, the Identity Provider(IP) would be Google while the Service Provider(SP) would be the networking app/website. 
+
 # Module 5 
 
 
