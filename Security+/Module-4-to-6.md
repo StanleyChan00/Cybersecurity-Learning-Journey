@@ -129,10 +129,25 @@ In this case, the Identity Provider(IP) would be Google while the Service Provid
 
 # Module 5 
 
+## Enterprise Network Architecture 
+
+The OSI Model, which I covered previously [here](../TryHackMe/Pre-Security/Module-2-Networking.md#osi-model) was in this module
+
+Topologies were also in this module: Physical vs Logical. Physical being like [this](../TryHackMe/Pre-Security/Module-2-Networking.md#local-area-networklan-topologies) while logical being related to subnets(Covered in-depth [here](../TryHackMe/Pre-Security/Module-2-Networking.md#subnetting)) and VLANs.
+
+This part of the module also stressed the importance of enforcing segmentation through elements like VLANs and subnets as well as limiting the size of broadcast domains. 
+
+**Air Gapped:** This is when a single host or group of hosts is isolated and not connected to any other network. Since network is not connected, media devices like USBs would be needed to update these machines. 
 
 
 
 
+## Network Security Appliances 
+
+
+
+
+## VPNs
 
 
 
