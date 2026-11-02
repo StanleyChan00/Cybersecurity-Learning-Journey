@@ -173,8 +173,8 @@ In doing so, it can block various types of attacks like code injections, cross-s
 
 ## VPNs
 
+VPNs were also covered previously [here](../TryHackMe/Pre-Security/Module-2-Networking.md#vpn-basics)
 
-
-
+The main relevancy of VPNs in the corporate world are its use towards remote work and allowing encrypted remote office network connections from home. 
 
 # Module 6
