@@ -177,4 +177,17 @@ VPNs were also covered previously [here](../TryHackMe/Pre-Security/Module-2-Netw
 
 The main relevancy of VPNs in the corporate world are its use towards remote work and allowing encrypted remote office network connections from home. 
 
-# Module 6
+# Module 6 - Secure Cloud Network Architecture 
+
+
+## Cloud Infrastructure 
+
+Much of this module was covered previously [here](../TryHackMe/Pre-Security/Module-4-Computer-Fundamentals.md#cloud-computing-fundamentals), such as types of cloud and cloud service models.
+
+I also covered virtualization, hypervisors, containers, etc. which is crucial enabling Cloud at scale [here](../TryHackMe/Pre-Security/Module-4-Computer-Fundamentals.md#virtualisation-basics).
+
+
+## Embedded Systems and Zero Trust Architecture 
+
+
+
