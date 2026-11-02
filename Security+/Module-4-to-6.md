@@ -139,7 +139,16 @@ This part of the module also stressed the importance of enforcing segmentation t
 
 **Air Gapped:** This is when a single host or group of hosts is isolated and not connected to any other network. Since network is not connected, media devices like USBs would be needed to update these machines. 
 
+### Inline vs Tap/Monitor Intrusion Prevention/Detection Systems
 
+Two types here in regards to IPS/IDS. 
+
+**Inline:** This is when the IPS/IDS sits directly between the network devices. ALL traffic will be passing through it, which means that the IPS will be actively blocking malicious traffic before it gets to the device it is sitting between.
+
+If the IPS/IDS fails, that will also potentially interrupt network traffic as it sits between them. 
+
+
+**Tap/Monitor:**
 
 
 ## Network Security Appliances 
