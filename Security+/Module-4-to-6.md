@@ -147,9 +147,14 @@ Two types here in regards to IPS/IDS.
 
 If the IPS/IDS fails, that will also potentially interrupt network traffic as it sits between them. 
 
+Another name for this is "Bump in the Wire"
+
 
 **TAP(Test Access Point)/Monitor:** In this case, all network traffic is copied. Once copied, the IPS/IDS works ON that copy itself rather than the original network traffic. 
 
+One way to do this is port mirroring. This is when a switch is configured to copy data from one or more ports(or a VLAN) and then sending that copied traffic to a specified port where the IDS/IPS would be connected to so that it could be monitored.
+
+Cisco's term for this is SPAN(Switched Port Analyzer)
 
 ## Network Security Appliances 
 
