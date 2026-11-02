@@ -139,6 +139,9 @@ This part of the module also stressed the importance of enforcing segmentation t
 
 **Air Gapped:** This is when a single host or group of hosts is isolated and not connected to any other network. Since network is not connected, media devices like USBs would be needed to update these machines. 
 
+
+## Network Security Appliances 
+
 ### Inline vs TAP/Monitor Intrusion Prevention/Detection Systems
 
 Two types here in regards to IPS/IDS. 
@@ -156,9 +159,7 @@ One way to do this is port mirroring. This is when a switch is configured to cop
 
 Cisco's term for this is SPAN(Switched Port Analyzer)
 
-## Network Security Appliances 
-
-
+**Unified Threat Management(UTM)** would be combining essentially everything into a single agent or controlling management platform. 
 
 
 ## VPNs
