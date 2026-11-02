@@ -186,6 +186,11 @@ Much of this module was covered previously [here](../TryHackMe/Pre-Security/Modu
 
 I also covered virtualization, hypervisors, containers, etc. which is crucial enabling Cloud at scale [here](../TryHackMe/Pre-Security/Module-4-Computer-Fundamentals.md#virtualisation-basics).
 
+It's also important to note the benefits of Cloud vs on-prem servers. 
+
+* It is cheaper: You don't have to pay high out of pocket costs in deploying physical servers on premises nor worry about the time/money it takes to maintain or upgrade them.
+* It's easily scalable and elastic. You can scale horizontally by simply obtaining more servers instantly or you can scale vertically by upgrading the existing serve through RAM, storage or otherwise. The resources used can also be automatically adapted to the real time usage of these cloud servers.
+* Reliable uptime with current updated tech. 
 
 ## Embedded Systems and Zero Trust Architecture 
 
