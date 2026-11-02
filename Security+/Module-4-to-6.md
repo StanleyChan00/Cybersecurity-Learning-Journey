@@ -161,6 +161,15 @@ Cisco's term for this is SPAN(Switched Port Analyzer)
 
 **Unified Threat Management(UTM)** would be combining essentially everything into a single agent or controlling management platform. 
 
+This module also went over load balancers, which I also covered previously [here](../TryHackMe/Pre-Security/Module-3-Web.md#load-balancers)
+
+### Web Application Firewalls(WAFs)
+
+As it sounds, this would be a firewall which works over the web. They can be very flexible in its operation/ 
+
+In general though, they inspect the HTTP request(Covered [here](../TryHackMe/Pre-Security/Module-3-Web.md#making-a-request) and detect suspicious or malicious which it blocks. 
+
+In doing so, it can block various types of attacks like code injections, cross-site scripting, and more. 
 
 ## VPNs
 
