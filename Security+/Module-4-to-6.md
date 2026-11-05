@@ -194,5 +194,23 @@ It's also important to note the benefits of Cloud vs on-prem servers.
 
 ## Embedded Systems and Zero Trust Architecture 
 
+Embedded systems and IoT devices were also covered [here](../TryHackMe/Pre-Security/Module-4-Computer-Fundamentals.md#computer-types) briefly/
 
+### Zero Trust Methodology 
+As it sounds, this is the principle that we can never trust or assume that someone or something will act in good faith. We have to authenticate, authorize, verify, and continually evaluate everything as if everything is a potential threat.
 
+#### 3 Guiding Principles:
+
+1) Verify Explicitly - "Never trust but verify"
+2) Least privileged access - Everyone should only have the minimum access required and nothing more. 
+3) Assume breach - Work under the assumption that a breach has already occurred so that if it happens, damage will be limited and contained
+
+#### 6 Foundational Pillars:
+These are the pillars that are needed to be protected by zero trust. Each one needs to be secured. 
+
+1) Identities
+2) Devices
+3) Applications
+4) Data
+5) Infrastrucrture
+6) Networks 
