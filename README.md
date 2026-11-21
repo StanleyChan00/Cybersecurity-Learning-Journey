@@ -6,7 +6,7 @@ This repository is where I will be documenting the concepts that I encounter in 
 
 I put in a lot of effort into ensuring these notes are very comprehensive. Not only do they serve as good material for me to look back on if needed, but the method I use to study and document these notes really solidify my understanding of all these concepts
 
-**Current Total Documentation:** 26,000+ words of original, hand-written notes and concept explanations. (This word count does not include projects and labs)
+**Current Total Documentation:** 29,000+ words of original, hand-written notes and concept explanations.
 
 # My Study Method
 
@@ -22,7 +22,7 @@ In doing so, my notes usually go beyond the original scope of the lessons or cou
 - [x] Complete TryHackMe Pre Security course(Finished with 15,800+ words!)
 - [ ] Complete TryHackMe Cyber Security 101 course(In progress, now on module 4)
 - [x] Build a home Active Directory Environment and work ServiceNow Tickets against it(Finished!)
-- [ ] Obtain a CompTIA Security+ certification(In progress, now on Module 3)
+- [ ] Obtain a CompTIA Security+ certification(In progress, now on Module 7)
 
 # Repository Structure
 
@@ -38,6 +38,8 @@ Cybersecurity-Learning-Journey/
 │       └── README.md
 ├── Security+/
 │   ├── Module-1-to-3.md
+│   ├── Module-4-to-6.md
+│   ├── Module-7-to-10.md
 │   └── README.md
 ├── TryHackMe/
 │   ├── Pre-Security/
@@ -48,9 +50,9 @@ Cybersecurity-Learning-Journey/
 │   │   ├── Module-5-Operating-Systems.md
 │   │   ├── Module-6-Software.md
 │   │   └── Module-7-Attacks-Defenses.md
-│   ├── Cybersecurity-101/
-│   │   ├── Module-1-to-3.md
-│   │   └── Module-4-to-5.md
-│   └── README.md
+│   └── Cybersecurity-101/
+│       ├── Module-1-to-3.md
+│       ├── Module-4-to-5.md
+│       └── README.md
 └── README.md
 ```
