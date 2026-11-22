@@ -28,8 +28,21 @@ At scale, data requires continuous, recurring, and automatic backups. On top of 
 * Support for backups of various environments including on-prem servers, the cloud, VMs, etc.
 * Optimization of storage space of the backups through data deduplication as well as data compression.
 * Ransomware protection and data encryption
-* Alerts, monitering, and management tools for these data backups(For example, alerts of systems not being backed up in X days)
+* Alerts, monitoring, and management tools for these data backups(For example, alerts of systems not being backed up in X days)
 
+#### Snapshots:
+
+To review, snapshots are just "pictures" of a system that can be rolled back to. 
+
+We have: 
+
+* VM Snapshots
+* File System Snapshots such as a ZFS or BTRFS Snapshot
+* Storage Area Network(SAN) Snapshots
+
+A SAN is a network which connects to a centralized storage to use as a disk. For example, we may have 3 servers running. A SAN would have all those 3 servers connected to a centralized storage system allowing those servers to access that storage and store their data onto it. 
+
+They use "Block-level storage" meaning that the storage allocated to each server are allocated with fixed sized units called blocks. These blocks of storage appear as a virtual hard drive to each server to access and use as they please. The identifier for an aggregated amount of blocks, creating a disk would be called a LUN(Logical Unit Number).
 
 # Module 8 - Vulnerability Management 
 
