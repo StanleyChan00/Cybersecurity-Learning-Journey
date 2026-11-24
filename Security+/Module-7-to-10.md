@@ -54,6 +54,19 @@ There is:
 
 There can also be a certification that may be obtained to display that confidential data has been securely destroyed and disposed of. 
 
+## Redundancy Strategies 
+
+Have 2 of everything as well as backups of everything so that operations can continue or quickly resume in case anything critical is disrupted.
+
+**Hot Standby vs Cold Standby Backups:** 
+
+Hot standbys are actively running and are ready at any point in case of an immediate failure. However they are more expensive.
+
+Cold standbys are cheaper but are powered down and only kicks in when the failure actively occurs. 
+
+Continuity of Operations Plans(COOP): Plans to ensure that operations can continue after there is a disruption. Backups play a critical role in this. 
+
+**Capacity Planning:** The assessment of current and future resource requirements to ensure they meet the needed amounts for their business objectives. 
 
 # Module 8 - Vulnerability Management 
 
