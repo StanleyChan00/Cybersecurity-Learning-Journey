@@ -44,6 +44,17 @@ A SAN is a network which connects to a centralized storage to use as a disk. For
 
 They use "Block-level storage" meaning that the storage allocated to each server are allocated with fixed sized units called blocks. These blocks of storage appear as a virtual hard drive to each server to access and use as they please. The identifier for an aggregated amount of blocks, creating a disk would be called a LUN(Logical Unit Number).
 
+### Secure Data Destruction
+
+There is:
+
+1) Asset Disposal/Decomissioning
+2) Sanitization - Just deleting data does not destroy it. Forensics can still recover it. A software is used to securely wipe the disk and ensure it is unrecoverable.
+3) Destruction - 4 types: Incinerate, Shred, Drilling, and Degaussing(Eliminating the magnetic field of a disk) alongside sanitation. 
+
+There can also be a certification that may be obtained to display that confidential data has been securely destroyed and disposed of. 
+
+
 # Module 8 - Vulnerability Management 
 
 
