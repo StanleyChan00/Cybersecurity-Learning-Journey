@@ -68,6 +68,18 @@ Continuity of Operations Plans(COOP): Plans to ensure that operations can contin
 
 **Capacity Planning:** The assessment of current and future resource requirements to ensure they meet the needed amounts for their business objectives. 
 
+### Capacity Planning Risks
+
+The following are some of the risks of not properly planning for capacity. 
+
+* People Risks - Need to plan for the amount of people in your company. Could be budget, machines, licenses, bandwidth, firewall, etc. 
+* Cross-Training - Requires Staff members to understand or have a general idea of the other staff's jobs and responsibilities. If other people are suddenly no longer in the company or unavailable, you need to have other people be able to fill in so their responsibilities can be adapted or filled in. 
+* Remote work Plans - Have some sort of plan so that staff can work from home in case of an emergency like Covid-19
+* Alternative Reporting Structures - Need to plan to have staff be able to report to someone in case their main reporting manager is unavailable.
+* Changes in Workforce Capacity - Need to plan for rapid sudden changes in workforce whether it be a reduction or increase
+* Rapid Hiring - Hiring occuring too rapidly can be an issue. For example, who will train them all? Who will they be shadowing?
+* Layoffs - This is also an issue especially in regards to access control and identity management. They all needed to be offboarded correctly to ensure they do not have access to things they should not have access to anymore
+
 # Module 8 - Vulnerability Management 
 
 
